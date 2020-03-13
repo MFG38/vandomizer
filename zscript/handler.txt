@@ -30,7 +30,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				if(e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
+				else if(e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
 				e.Replacee is 'Cacodemon' || e.Replacee is 'Revenant')
 				{
 					switch(random[Replacement](0,4))
@@ -53,7 +53,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				if(e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
+				else if(e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
 				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental')
 				{
 					switch(random[Replacement](0,4))
