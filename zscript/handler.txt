@@ -1251,66 +1251,66 @@ class SpawningHandler : EventHandler
 					case 217:
 					case 218:
 					case 219:
+					case 220:
 						e.Replacement = 'HealthBonus';
 						break;
-					case 220:
 					case 221:
 					case 222:
 					case 223:
-						e.Replacement = 'Stimpack';
-						break;
 					case 224:
 					case 225:
+						e.Replacement = 'Stimpack';
+						break;
 					case 226:
 					case 227:
-						e.Replacement = 'Medikit';
-						break;
 					case 228:
 					case 229:
 					case 230:
-					case 231:
-						e.Replacement = 'ArmorBonus';
+						e.Replacement = 'Medikit';
 						break;
+					case 231:
 					case 232:
 					case 233:
 					case 234:
 					case 235:
-						e.Replacement = 'GreenArmor';
+						e.Replacement = 'ArmorBonus';
 						break;
 					case 236:
 					case 237:
 					case 238:
 					case 239:
-						e.Replacement = 'BlueArmor';
-						break;
 					case 240:
-						e.Replacement = 'Allmap';
+						e.Replacement = 'GreenArmor';
 						break;
 					case 241:
-						e.Replacement = 'BlurSphere';
-						break;
 					case 242:
 					case 243:
 					case 244:
-						e.Replacement = 'Berserk';
+						e.Replacement = 'BlueArmor';
 						break;
 					case 245:
-						e.Replacement = 'Infrared';
+						e.Replacement = 'Allmap';
 						break;
 					case 246:
-						e.Replacement = 'InvulnerabilitySphere';
+						e.Replacement = 'BlurSphere';
 						break;
 					case 247:
+						e.Replacement = 'Berserk';
+						break;
 					case 248:
+						e.Replacement = 'Infrared';
+						break;
 					case 249:
-						e.Replacement = 'RadSuit';
+						e.Replacement = 'InvulnerabilitySphere';
 						break;
 					case 250:
 					case 251:
 					case 252:
-						e.Replacement = 'Megasphere';
+						e.Replacement = 'RadSuit';
 						break;
 					case 253:
+						e.Replacement = 'Megasphere';
+						break;
 					case 254:
 					case 255:
 						e.Replacement = 'Soulsphere';
