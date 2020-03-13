@@ -48,7 +48,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
 				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
 				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
-				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangBNoBrain' || e.Replacee is 'HangNoGuts' ||
 				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
 				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
@@ -91,7 +91,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
 				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
 				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
-				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangBNoBrain' || e.Replacee is 'HangNoGuts' ||
 				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
 				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
@@ -124,7 +124,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
 				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
 				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
-				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangBNoBrain' || e.Replacee is 'HangNoGuts' ||
 				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
 				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||

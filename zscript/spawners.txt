@@ -228,7 +228,7 @@ class PropSpawner : RandomSpawner
 		DropItem "ColonGibs";
 		DropItem "DeadStick";
 		DropItem "Gibs";
-		DropItem "HangNoBrain";
+		DropItem "HangBNoBrain";
 		DropItem "HangNoGuts";
 		DropItem "HangTLookingDown";
 		DropItem "HangTLookingUp";
@@ -341,7 +341,7 @@ class TotalFuckingChaosSpawner : RandomSpawner
 		DropItem "ColonGibs";
 		DropItem "DeadStick";
 		DropItem "Gibs";
-		DropItem "HangNoBrain";
+		DropItem "HangBNoBrain";
 		DropItem "HangNoGuts";
 		DropItem "HangTLookingDown";
 		DropItem "HangTLookingUp";
