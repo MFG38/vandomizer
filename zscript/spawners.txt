@@ -80,7 +80,7 @@ class SmallAmmoSpawner : RandomSpawner
 	Default
 	{
 		DropItem "Clip";
-		DropItem "Shells";
+		DropItem "Shell";
 		DropItem "RocketAmmo";
 		DropItem "Cell";
 	}
@@ -102,7 +102,7 @@ class AnyAmmoSpawner : RandomSpawner
 	Default
 	{
 		DropItem "Clip";
-		DropItem "Shells";
+		DropItem "Shell";
 		DropItem "RocketAmmo";
 		DropItem "Cell";
 		DropItem "ClipBox";
@@ -270,7 +270,7 @@ class TotalFuckingChaosSpawner : RandomSpawner
 		DropItem "SpiderMastermind";
 		DropItem "Cyberdemon";
 		DropItem "Clip";
-		DropItem "Shells";
+		DropItem "Shell";
 		DropItem "RocketAmmo";
 		DropItem "Cell";
 		DropItem "ClipBox";

@@ -22,7 +22,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
 					{ e.Replacement = 'BossEnemySpawner'; }
 				
-				if(e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell')
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell')
 					{ e.Replacement = 'SmallAmmoSpawner'; }
 					
 				if(e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
@@ -67,7 +67,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
 					{ e.Replacement = 'AnyEnemySpawner'; }
 				
-				if(e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	e.Replacee is 'Backpack' ||
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	e.Replacee is 'Backpack' ||
 				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
 					{ e.Replacement = 'AnyAmmoSpawner'; }
 					
@@ -108,7 +108,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
 				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental' ||
 				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind' ||
-				e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	e.Replacee is 'Backpack' ||
+				e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	e.Replacee is 'Backpack' ||
 				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack' ||
 				e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit' ||
 				e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor' ||
