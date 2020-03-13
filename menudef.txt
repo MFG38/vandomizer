@@ -1,4 +1,10 @@
-AddOptionMenu "VandomizerSetup"
+AddOptionMenu "OptionsMenu"
+{
+	StaticText ""
+	Submenu "$VD_SETUPMENU", "VandomizerSetup"
+}
+
+OptionMenu "VandomizerSetup"
 {
 	Title "$VD_SETUPMENU"
 	Option "$VD_MODE", "vd_spawnmode", "SpawnMode"
