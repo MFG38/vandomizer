@@ -10,7 +10,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'ZombieMan' || e.Replacee is 'ShotgunGuy' || e.Replacee is 'ChaingunGuy' ||
 				e.Replacee is 'DoomImp' || e.Replacee is 'LostSoul')
 				{
-					switch(random(0,4))
+					switch(random[Replacement](0,4))
 					{
 					case 0:
 						e.Replacement = 'ZombieMan';
@@ -33,7 +33,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
 				e.Replacee is 'Cacodemon' || e.Replacee is 'Revenant')
 				{
-					switch(random(0,4))
+					switch(random[Replacement](0,4))
 					{
 					case 0:
 						e.Replacement = 'Demon';
@@ -56,7 +56,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
 				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental')
 				{
-					switch(random(0,4))
+					switch(random[Replacement](0,4))
 					{
 					case 0:
 						e.Replacement = 'Arachnotron';
@@ -78,7 +78,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
 				{
-					switch(random(0,1))
+					switch(random[Replacement](0,1))
 					{
 					case 0:
 						e.Replacement = 'Cyberdemon';
@@ -91,7 +91,7 @@ class SpawningHandler : EventHandler
 				
 				if(e.Replacee is 'Clip' ||e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell')
 				{
-					switch(random(0,3))
+					switch(random[Replacement](0,3))
 					{
 					case 0:
 						e.Replacement = 'Clip';
@@ -110,7 +110,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
 				{
-					switch(random(0,3))
+					switch(random[Replacement](0,3))
 					{
 					case 0:
 						e.Replacement = 'ClipBox';
@@ -130,7 +130,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Chainsaw' || e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' || e.Replacee is 'Chaingun' ||
 				e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
 				{
-					switch(random(0,6))
+					switch(random[Replacement](0,6))
 					{
 					case 0:
 						e.Replacement = 'Chainsaw';
@@ -158,7 +158,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit')
 				{
-					switch(random(0,2))
+					switch(random[Replacement](0,2))
 					{
 					case 0:
 						e.Replacement = 'HealthBonus';
@@ -174,7 +174,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor')
 				{
-					switch(random(0,2))
+					switch(random[Replacement](0,2))
 					{
 					case 0:
 						e.Replacement = 'ArmorBonus';
@@ -191,7 +191,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
 				e.Replacee is 'InvulnerabilitySphere' || e.Replacee is 'RadSuit' || e.Replacee is 'Megasphere' || e.Replacee is 'Soulsphere')
 				{
-					switch(random(0,7))
+					switch(random[Replacement](0,7))
 					{
 					case 0:
 						e.Replacement = 'Allmap';
@@ -236,7 +236,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
 				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
 				{
-					switch(random(0,58))
+					switch(random[Replacement](0,58))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -429,7 +429,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental' ||
 				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
 				{
-					switch(random(0,16))
+					switch(random[Replacement](0,16))
 					{
 					case 0:
 						e.Replacement = 'ZombieMan';
@@ -489,7 +489,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack' ||
 				e.Replacee is 'Backpack')
 				{
-					switch(random(0,8))
+					switch(random[Replacement](0,8))
 					{
 					case 0:
 						e.Replacement = 'Clip';
@@ -524,7 +524,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Chainsaw' || e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' || e.Replacee is 'Chaingun' ||
 				e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
 				{
-					switch(random(0,6))
+					switch(random[Replacement](0,6))
 					{
 					case 0:
 						e.Replacement = 'Chainsaw';
@@ -552,7 +552,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit')
 				{
-					switch(random(0,2))
+					switch(random[Replacement](0,2))
 					{
 					case 0:
 						e.Replacement = 'HealthBonus';
@@ -568,7 +568,7 @@ class SpawningHandler : EventHandler
 					
 				if(e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor')
 				{
-					switch(random(0,2))
+					switch(random[Replacement](0,2))
 					{
 					case 0:
 						e.Replacement = 'ArmorBonus';
@@ -585,7 +585,7 @@ class SpawningHandler : EventHandler
 				if(e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
 				e.Replacee is 'InvulnerabilitySphere' || e.Replacee is 'RadSuit' || e.Replacee is 'Megasphere' || e.Replacee is 'Soulsphere')
 				{
-					switch(random(0,7))
+					switch(random[Replacement](0,7))
 					{
 					case 0:
 						e.Replacement = 'Allmap';
@@ -630,7 +630,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
 				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
 				{
-					switch(random(0,58))
+					switch(random[Replacement](0,58))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -845,7 +845,7 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
 				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
 				{
-					switch(random(0,255))	// Holy shit.
+					switch(random[Replacement](0,255))	// Holy shit.
 					{
 					case 0:
 						e.Replacement = 'BigTree';
