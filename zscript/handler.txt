@@ -89,8 +89,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 				
-				if(!bDropped && e.Replacee is 'Clip' || !bDropped && e.Replacee is 'Shell' ||
-				!bDropped && e.Replacee is 'RocketAmmo' || !bDropped && e.Replacee is 'Cell')
+				if(e.Replacee is 'Clip' ||e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell')
 				{
 					switch(random(0,3))
 					{
@@ -128,8 +127,8 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				if(e.Replacee is 'Chainsaw' || !bDropped && e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' ||
-				!bDropped && e.Replacee is 'Chaingun' || e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
+				if(e.Replacee is 'Chainsaw' || e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' || e.Replacee is 'Chaingun' ||
+				e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
 				{
 					switch(random(0,6))
 					{
@@ -486,9 +485,9 @@ class SpawningHandler : EventHandler
 					}
 				}
 				
-				if(!bDropped && e.Replacee is 'Clip' || !bDropped && e.Replacee is 'Shell' ||
-				!bDropped && e.Replacee is 'RocketAmmo' || !bDropped && e.Replacee is 'Cell' || e.Replacee is 'Backpack' ||
-				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||
+				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack' ||
+				e.Replacee is 'Backpack')
 				{
 					switch(random(0,8))
 					{
@@ -522,8 +521,8 @@ class SpawningHandler : EventHandler
 					}
 				}
 				
-				if(e.Replacee is 'Chainsaw' || !bDropped && e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' ||
-				!bDropped && e.Replacee is 'Chaingun' || e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
+				if(e.Replacee is 'Chainsaw' || e.Replacee is 'Shotgun' || e.Replacee is 'SuperShotgun' || e.Replacee is 'Chaingun' ||
+				e.Replacee is 'RocketLauncher' || e.Replacee is 'PlasmaRifle' || e.Replacee is 'BFG9000')
 				{
 					switch(random(0,6))
 					{
@@ -823,9 +822,9 @@ class SpawningHandler : EventHandler
 				e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
 				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental' ||
 				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind' ||
-				!bDropped && e.Replacee is 'Clip' || !bDropped && e.Replacee is 'Shell' ||
-				!bDropped && e.Replacee is 'RocketAmmo' || !bDropped && e.Replacee is 'Cell' || e.Replacee is 'Backpack' ||
+				e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||
 				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack' ||
+				e.Replacee is 'Backpack' ||
 				e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit' ||
 				e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor' ||
 				e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
