@@ -485,7 +485,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 				
-				if(e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	e.Replacee is 'Backpack' ||
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shell' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' || e.Replacee is 'Backpack' ||
 				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
 				{
 					switch(random(0,8))
