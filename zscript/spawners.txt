@@ -1,0 +1,362 @@
+////////////////////
+// ENEMY SPAWNERS //
+////////////////////
+
+class LowTierEnemySpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "ZombieMan"
+		DropItem "ShotgunGuy"
+		DropItem "LostSoul"
+		DropItem "DoomImp"
+		DropItem "ChaingunGuy"
+	}
+}
+
+class MidTierEnemySpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Demon"
+		DropItem "Spectre"
+		DropItem "HellKnight"
+		DropItem "Cacodemon"
+		DropItem "Revenant"
+	}
+}
+
+class HighTierEnemySpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Arachnotron"
+		DropItem "Archvile"
+		DropItem "BaronOfHell"
+		DropItem "Fatso"
+		DropItem "PainElemental"
+	}
+}
+
+class BossEnemySpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "SpiderMastermind"
+		DropItem "Cyberdemon"
+	}
+}
+
+class AnyEnemySpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "ZombieMan"
+		DropItem "ShotgunGuy"
+		DropItem "LostSoul"
+		DropItem "DoomImp"
+		DropItem "ChaingunGuy"
+		DropItem "Demon"
+		DropItem "Spectre"
+		DropItem "HellKnight"
+		DropItem "Cacodemon"
+		DropItem "Revenant"
+		DropItem "Arachnotron"
+		DropItem "Archvile"
+		DropItem "BaronOfHell"
+		DropItem "Fatso"
+		DropItem "PainElemental"
+		DropItem "SpiderMastermind"
+		DropItem "Cyberdemon"
+	}
+}
+
+///////////////////
+// AMMO SPAWNERS //
+///////////////////
+
+class SmallAmmoSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Clip"
+		DropItem "Shells"
+		DropItem "RocketAmmo"
+		DropItem "Cell"
+	}
+}
+
+class BigAmmoSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "ClipBox"
+		DropItem "ShellBox"
+		DropItem "RocketBox"
+		DropItem "CellPack"
+	}
+}
+
+class AnyAmmoSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Clip"
+		DropItem "Shells"
+		DropItem "RocketAmmo"
+		DropItem "Cell"
+		DropItem "ClipBox"
+		DropItem "ShellBox"
+		DropItem "RocketBox"
+		DropItem "CellPack"
+		DropItem "Backpack"
+	}
+}
+
+////////////////////
+// WEAPON SPAWNER //
+////////////////////
+
+class WeaponSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Chainsaw"
+		DropItem "Shotgun"
+		DropItem "SuperShotgun"
+		DropItem "Chaingun"
+		DropItem "RocketLauncher"
+		DropItem "PlasmaRifle"
+		DropItem "BFG9000"
+	}
+}
+
+////////////////////
+// HEALTH SPAWNER //
+////////////////////
+
+class HealthSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "HealthBonus"
+		DropItem "Stimpack"
+		DropItem "Medikit"
+	}
+}
+
+///////////////////
+// ARMOR SPAWNER //
+///////////////////
+
+class ArmorSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "ArmorBonus"
+		DropItem "GreenArmor"
+		DropItem "BlueArmor"
+	}
+}
+
+/////////////////////
+// POWERUP SPAWNER //
+/////////////////////
+
+class PowerupSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "Allmap"
+		DropItem "Berserk"
+		DropItem "BlurSphere"
+		DropItem "Infrared"
+		DropItem "InvulnerabilitySphere"
+		DropItem "Megasphere"
+		DropItem "RadSuit"
+		DropItem "Soulsphere"
+	}
+}
+
+////////////////////
+// MISC. SPAWNERS //
+////////////////////
+
+class PropSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "BigTree"
+		DropItem "BlueTorch"
+		DropItem "Candelabra"
+		DropItem "Candlestick"
+		DropItem "EvilEye"
+		DropItem "FloatingSkull"
+		DropItem "GreenTorch"
+		DropItem "HeadCandles"
+		DropItem "HeadOnAStick"
+		DropItem "HeadsOnAStick"
+		DropItem "HeartColumn"
+		DropItem "RedTorch"
+		DropItem "ShortBlueTorch"
+		DropItem "ShortGreenTorch"
+		DropItem "ShortRedTorch"
+		DropItem "ShortGreenColumn"
+		DropItem "ShortRedColumn"
+		DropItem "SkullColumn"
+		DropItem "Stalagtite"
+		DropItem "TallGreenColumn"
+		DropItem "TallRedColumn"
+		DropItem "TorchTree"
+		DropItem "DeadCacodemon"
+		DropItem "DeadDemon"
+		DropItem "DeadDoomImp"
+		DropItem "DeadLostSoul"
+		DropItem "DeadMarine"
+		DropItem "DeadShotgunGuy"
+		DropItem "DeadZombieMan"
+		DropItem "GibbedMarine"
+		DropItem "GibbedMarineExtra"
+		DropItem "Column"
+		DropItem "ExplosiveBarrel"
+		DropItem "BurningBarrel"
+		DropItem "TechLamp"
+		DropItem "TechLamp2"
+		DropItem "TechPillar"
+		DropItem "BloodyTwitch"
+		DropItem "BrainStem"
+		DropItem "ColonGibs"
+		DropItem "DeadStick"
+		DropItem "Gibs"
+		DropItem "HangNoBrain"
+		DropItem "HangNoGuts"
+		DropItem "HangTLookingDown"
+		DropItem "HangTLookingUp"
+		DropItem "HangTNoBrain"
+		DropItem "HangTSkull"
+		DropItem "LiveStick"
+		DropItem "Meat2"
+		DropItem "Meat3"
+		DropItem "Meat4"
+		DropItem "Meat5"
+		DropItem "NonsolidMeat2"
+		DropItem "NonsolidMeat3"
+		DropItem "NonsolidMeat4"
+		DropItem "NonsolidMeat5"
+		DropItem "NonsolidTwitch"
+		DropItem "SmallBloodPool"
+	}
+}
+
+class TotalFuckingChaosSpawner : RandomSpawner
+{
+	Default
+	{
+		DropItem "ZombieMan"
+		DropItem "ShotgunGuy"
+		DropItem "LostSoul"
+		DropItem "DoomImp"
+		DropItem "ChaingunGuy"
+		DropItem "Demon"
+		DropItem "Spectre"
+		DropItem "HellKnight"
+		DropItem "Cacodemon"
+		DropItem "Revenant"
+		DropItem "Arachnotron"
+		DropItem "Archvile"
+		DropItem "BaronOfHell"
+		DropItem "Fatso"
+		DropItem "PainElemental"
+		DropItem "SpiderMastermind"
+		DropItem "Cyberdemon"
+		DropItem "Clip"
+		DropItem "Shells"
+		DropItem "RocketAmmo"
+		DropItem "Cell"
+		DropItem "ClipBox"
+		DropItem "ShellBox"
+		DropItem "RocketBox"
+		DropItem "CellPack"
+		DropItem "Backpack"
+		DropItem "Chainsaw"
+		DropItem "Shotgun"
+		DropItem "SuperShotgun"
+		DropItem "Chaingun"
+		DropItem "RocketLauncher"
+		DropItem "PlasmaRifle"
+		DropItem "BFG9000"
+		DropItem "HealthBonus"
+		DropItem "Stimpack"
+		DropItem "Medikit"
+		DropItem "ArmorBonus"
+		DropItem "GreenArmor"
+		DropItem "BlueArmor"
+		DropItem "Allmap"
+		DropItem "Berserk"
+		DropItem "BlurSphere"
+		DropItem "Infrared"
+		DropItem "InvulnerabilitySphere"
+		DropItem "Megasphere"
+		DropItem "RadSuit"
+		DropItem "Soulsphere"
+		DropItem "BigTree"
+		DropItem "BlueTorch"
+		DropItem "Candelabra"
+		DropItem "Candlestick"
+		DropItem "EvilEye"
+		DropItem "FloatingSkull"
+		DropItem "GreenTorch"
+		DropItem "HeadCandles"
+		DropItem "HeadOnAStick"
+		DropItem "HeadsOnAStick"
+		DropItem "HeartColumn"
+		DropItem "RedTorch"
+		DropItem "ShortBlueTorch"
+		DropItem "ShortGreenTorch"
+		DropItem "ShortRedTorch"
+		DropItem "ShortGreenColumn"
+		DropItem "ShortRedColumn"
+		DropItem "SkullColumn"
+		DropItem "Stalagtite"
+		DropItem "TallGreenColumn"
+		DropItem "TallRedColumn"
+		DropItem "TorchTree"
+		DropItem "DeadCacodemon"
+		DropItem "DeadDemon"
+		DropItem "DeadDoomImp"
+		DropItem "DeadLostSoul"
+		DropItem "DeadMarine"
+		DropItem "DeadShotgunGuy"
+		DropItem "DeadZombieMan"
+		DropItem "GibbedMarine"
+		DropItem "GibbedMarineExtra"
+		DropItem "Column"
+		DropItem "ExplosiveBarrel"
+		DropItem "BurningBarrel"
+		DropItem "TechLamp"
+		DropItem "TechLamp2"
+		DropItem "TechPillar"
+		DropItem "BloodyTwitch"
+		DropItem "BrainStem"
+		DropItem "ColonGibs"
+		DropItem "DeadStick"
+		DropItem "Gibs"
+		DropItem "HangNoBrain"
+		DropItem "HangNoGuts"
+		DropItem "HangTLookingDown"
+		DropItem "HangTLookingUp"
+		DropItem "HangTNoBrain"
+		DropItem "HangTSkull"
+		DropItem "LiveStick"
+		DropItem "Meat2"
+		DropItem "Meat3"
+		DropItem "Meat4"
+		DropItem "Meat5"
+		DropItem "NonsolidMeat2"
+		DropItem "NonsolidMeat3"
+		DropItem "NonsolidMeat4"
+		DropItem "NonsolidMeat5"
+		DropItem "NonsolidTwitch"
+		DropItem "SmallBloodPool"
+	}
+}

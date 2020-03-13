@@ -1,0 +1,7 @@
+[enu default]
+VD_SETUPMENU = "Vandomizer Settings";
+VD_MODE = "Randomization mode";
+
+VD_CVAR0 = "Same tier enemy and ammo spawns";
+VD_CVAR1 = "All enemy and ammo spawns";
+VD_CVAR2 = "TOTAL FUCKING CHAOS";

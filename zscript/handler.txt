@@ -1,0 +1,137 @@
+class SpawningHandler : EventHandler
+{
+	override void CheckReplacement(ReplaceEvent e)
+	{
+		cvar mode = CVar.FindCVar('vd_spawnmode');
+		
+		switch(mode.GetInt())
+		{
+			case 0:		// Same-tier enemy and ammo spawns
+				if(e.Replacee is 'ZombieMan' || e.Replacee is 'ShotgunGuy' || e.Replacee is 'ChaingunGuy' ||
+				e.Replacee is 'DoomImp' || e.Replacee is 'LostSoul')
+					{ e.Replacement = 'LowTierEnemySpawner'; }
+					
+				if(e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
+				e.Replacee is 'Cacodemon' || e.Replacee is 'Revenant')
+					{ e.Replacement = 'MidTierEnemySpawner'; }
+					
+				if(e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
+				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental')
+					{ e.Replacement = 'HighTierEnemySpawner'; }
+					
+				if(e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
+					{ e.Replacement = 'BossEnemySpawner'; }
+				
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell')
+					{ e.Replacement = 'SmallAmmoSpawner'; }
+					
+				if(e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
+					{ e.Replacement = 'BigAmmoSpawner'; }
+					
+				if(e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit')
+					{ e.Replacement = 'HealthSpawner'; }
+					
+				if(e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor')
+					{ e.Replacement = 'ArmorSpawner'; }
+					
+				if(e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
+				e.Replacee is 'InvulnerabilitySphere' || e.Replacee is 'RadSuit' || e.Replacee is 'Megasphere' || e.Replacee is 'Soulsphere')
+					{ e.Replacement = 'PowerupSpawner'; }
+					
+				if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' || e.Replacee is 'Candelabra' || e.Replacee is 'Candlestick' ||
+				e.Replacee is 'EvilEye' || e.Replacee is 'FloatingSkull' || e.Replacee is 'GreenTorch' || e.Replacee is 'HeadCandles' ||
+				e.Replacee is 'HeadOnAStick' || e.Replacee is 'HeadsOnAStick' || e.Replacee is 'HeartColumn' || e.Replacee is 'RedTorch' ||
+				e.Replacee is 'ShortBlueTorch' || e.Replacee is 'ShortGreenTorch' || e.Replacee is 'ShortRedTorch' || e.Replacee is 'ShortGreenColumn' ||
+				e.Replacee is 'ShortRedColumn' || e.Replacee is 'SkullColumn' || e.Replacee is 'Stalagtite' || e.Replacee is 'TallGreenColumn' ||
+				e.Replacee is 'TallRedColumn' || e.Replacee is 'TorchTree' || e.Replacee is 'DeadCacodemon' || e.Replacee is 'DeadDemon' ||
+				e.Replacee is 'DeadDoomImp' || e.Replacee is 'DeadLostSoul' || e.Replacee is 'DeadMarine' || e.Replacee is 'DeadShotgunGuy' ||
+				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
+				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
+				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
+				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
+				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
+				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
+					{ e.Replacement = 'PropSpawner'; }
+				
+				break;
+					
+			case 1:		// Any enemy and ammo can spawn anywhere
+				if(e.Replacee is 'ZombieMan' || e.Replacee is 'ShotgunGuy' || e.Replacee is 'ChaingunGuy' ||
+				e.Replacee is 'DoomImp' || e.Replacee is 'LostSoul' ||
+				e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
+				e.Replacee is 'Cacodemon' || e.Replacee is 'Revenant' ||
+				e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
+				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental' ||
+				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind')
+					{ e.Replacement = 'AnyEnemySpawner'; }
+				
+				if(e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	
+				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack')
+					{ e.Replacement = 'AnyAmmoSpawner'; }
+					
+				if(e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit')
+					{ e.Replacement = 'HealthSpawner'; }
+					
+				if(e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor')
+					{ e.Replacement = 'ArmorSpawner'; }
+					
+				if(e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
+				e.Replacee is 'InvulnerabilitySphere' || e.Replacee is 'RadSuit' || e.Replacee is 'Megasphere' || e.Replacee is 'Soulsphere')
+					{ e.Replacement = 'PowerupSpawner'; }
+					
+				if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' || e.Replacee is 'Candelabra' || e.Replacee is 'Candlestick' ||
+				e.Replacee is 'EvilEye' || e.Replacee is 'FloatingSkull' || e.Replacee is 'GreenTorch' || e.Replacee is 'HeadCandles' ||
+				e.Replacee is 'HeadOnAStick' || e.Replacee is 'HeadsOnAStick' || e.Replacee is 'HeartColumn' || e.Replacee is 'RedTorch' ||
+				e.Replacee is 'ShortBlueTorch' || e.Replacee is 'ShortGreenTorch' || e.Replacee is 'ShortRedTorch' || e.Replacee is 'ShortGreenColumn' ||
+				e.Replacee is 'ShortRedColumn' || e.Replacee is 'SkullColumn' || e.Replacee is 'Stalagtite' || e.Replacee is 'TallGreenColumn' ||
+				e.Replacee is 'TallRedColumn' || e.Replacee is 'TorchTree' || e.Replacee is 'DeadCacodemon' || e.Replacee is 'DeadDemon' ||
+				e.Replacee is 'DeadDoomImp' || e.Replacee is 'DeadLostSoul' || e.Replacee is 'DeadMarine' || e.Replacee is 'DeadShotgunGuy' ||
+				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
+				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
+				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
+				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
+				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
+				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
+					{ e.Replacement = 'PropSpawner'; }
+				
+				break;
+				
+			case 2:		// TOTAL FUCKIGN CHOAS (typos are intentional)
+				if(e.Replacee is 'ZombieMan' || e.Replacee is 'ShotgunGuy' || e.Replacee is 'ChaingunGuy' ||
+				e.Replacee is 'DoomImp' || e.Replacee is 'LostSoul' ||
+				e.Replacee is 'Demon' || e.Replacee is 'Spectre' || e.Replacee is 'HellKnight' ||
+				e.Replacee is 'Cacodemon' || e.Replacee is 'Revenant' ||
+				e.Replacee is 'Arachnotron' || e.Replacee is 'Archvile' || e.Replacee is 'BaronOfHell' ||
+				e.Replacee is 'Fatso' || e.Replacee is 'PainElemental' ||
+				e.Replacee is 'Cyberdemon' || e.Replacee is 'SpiderMastermind' ||
+				e.Replacee is 'Clip' || e.Replacee is 'Shells' || e.Replacee is 'RocketAmmo' || e.Replacee is 'Cell' ||	
+				e.Replacee is 'ClipBox' || e.Replacee is 'ShellBox' || e.Replacee is 'RocketBox' || e.Replacee is 'CellPack' ||
+				e.Replacee is 'HealthBonus' || e.Replacee is 'Stimpack' || e.Replacee is 'Medikit' ||
+				e.Replacee is 'ArmorBonus' || e.Replacee is 'GreenArmor' || e.Replacee is 'BlueArmor' ||
+				e.Replacee is 'Allmap' || e.Replacee is 'BlurSphere' || e.Replacee is 'Berserk' || e.Replacee is 'Infrared' ||
+				e.Replacee is 'InvulnerabilitySphere' || e.Replacee is 'RadSuit' || e.Replacee is 'Megasphere' || e.Replacee is 'Soulsphere' ||
+				e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' || e.Replacee is 'Candelabra' || e.Replacee is 'Candlestick' ||
+				e.Replacee is 'EvilEye' || e.Replacee is 'FloatingSkull' || e.Replacee is 'GreenTorch' || e.Replacee is 'HeadCandles' ||
+				e.Replacee is 'HeadOnAStick' || e.Replacee is 'HeadsOnAStick' || e.Replacee is 'HeartColumn' || e.Replacee is 'RedTorch' ||
+				e.Replacee is 'ShortBlueTorch' || e.Replacee is 'ShortGreenTorch' || e.Replacee is 'ShortRedTorch' || e.Replacee is 'ShortGreenColumn' ||
+				e.Replacee is 'ShortRedColumn' || e.Replacee is 'SkullColumn' || e.Replacee is 'Stalagtite' || e.Replacee is 'TallGreenColumn' ||
+				e.Replacee is 'TallRedColumn' || e.Replacee is 'TorchTree' || e.Replacee is 'DeadCacodemon' || e.Replacee is 'DeadDemon' ||
+				e.Replacee is 'DeadDoomImp' || e.Replacee is 'DeadLostSoul' || e.Replacee is 'DeadMarine' || e.Replacee is 'DeadShotgunGuy' ||
+				e.Replacee is 'DeadZombieMan' || e.Replacee is 'GibbedMarine' || e.Replacee is 'GibbedMarineExtra' || e.Replacee is 'Column' ||
+				e.Replacee is 'ExplosiveBarrel' || e.Replacee is 'BurningBarrel' || e.Replacee is 'TechLamp' || e.Replacee is 'TechLamp2' ||
+				e.Replacee is 'TechPillar' || e.Replacee is 'BloodyTwitch' || e.Replacee is 'BrainStem' || e.Replacee is 'ColonGibs' ||
+				e.Replacee is 'DeadStick' || e.Replacee is 'Gibs' || e.Replacee is 'HangNoBrain' || e.Replacee is 'HangNoGuts' ||
+				e.Replacee is 'HangTLookingDown' || e.Replacee is 'HangTLookingUp' || e.Replacee is 'HangTNoBrain' || e.Replacee is 'HangTSkull' ||
+				e.Replacee is 'LiveStick' || e.Replacee is 'Meat2' || e.Replacee is 'Meat3' || e.Replacee is 'Meat4' ||
+				e.Replacee is 'Meat5' || e.Replacee is 'NonsolidMeat2' || e.Replacee is 'NonsolidMeat3' || e.Replacee is 'NonsolidMeat4' ||
+				e.Replacee is 'NonsolidMeat5' || e.Replacee is 'NonsolidTwitch' || e.Replacee is 'SmallBloodPool')
+					{ e.Replacement = 'TotalFuckingChaosSpawner'; }
+				
+				break;
+		}
+	}
+}

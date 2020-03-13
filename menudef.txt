@@ -1,0 +1,12 @@
+AddOptionMenu "VandomizerSetup"
+{
+	Title "$VD_SETUPMENU"
+	Option "$VD_MODE", "vd_spawnmode", "SpawnMode"
+}
+
+OptionValue "SpawnMode"
+{
+	0, "$VD_CVAR0"
+	1, "$VD_CVAR1"
+	2, "$VD_CVAR2"
+}
