@@ -18,21 +18,21 @@ that the mod does not include any custom weapons or monsters - rather, it merely
 randomizes the pre-existing Doom things. The mod provides three different modes of
 randomization:
 
-	1.	Same tier enemy and ammo spawns - Enemies are randomized based on
-		the "tier" of the original enemy, with the enemies categorized into
-		four different tiers based roughly on their health and relative threat
-		level. Ammo pickups are randomized based on the amount given by the
-		original pickup. Everything else is randomized normally, with the
-		exception of keys and backpacks.
+1.	Same tier enemy and ammo spawns - Enemies are randomized based on
+	the "tier" of the original enemy, with the enemies categorized into
+	four different tiers based roughly on their health and relative threat
+	level. Ammo pickups are randomized based on the amount given by the
+	original pickup. Everything else is randomized normally, with the
+	exception of keys and backpacks.
 
-	2.	All enemy and ammo spawns - Enemies are fully randomized, with no
-		restrictions on which enemy can spawn. Ammo pickups are fully
-		randomized, with a chance to spawn a backpack instead of an ammo
-		pickup. Everything else is randomized normally, with the exception of
-		keys.
+2.	All enemy and ammo spawns - Enemies are fully randomized, with no
+	restrictions on which enemy can spawn. Ammo pickups are fully
+	randomized, with a chance to spawn a backpack instead of an ammo
+	pickup. Everything else is randomized normally, with the exception of
+	keys.
 
-	3.	TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,
-		with the exception of keys. Beatability is not guaranteed.
+3.	TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,
+	with the exception of keys. Beatability is not guaranteed.
 
 
 2. REQUIREMENTS

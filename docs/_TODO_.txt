@@ -1,0 +1,12 @@
+CRITICAL:
+- Pain Elementals can spawn anything instead of just Lost Souls.
+- Zombies can drop anything upon dying.
+- Doom 2 MAP07 is broken.
+
+NOT-SO-CRITICAL:
+- Rebalance spawns for Total Fucking Chaos mode.
+- Implement Doom 1/Ultimate Doom compatibility.
+
+FOR CONSIDERATION:
+- Implement Heretic compatibility.
+- Implement Hexen compatibility.
