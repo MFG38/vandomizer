@@ -5,3 +5,20 @@ VD_MODE = "Randomization mode";
 VD_CVAR0 = "Same tier enemy and ammo spawns";
 VD_CVAR1 = "All enemy and ammo spawns";
 VD_CVAR2 = "TOTAL FUCKING CHAOS";
+
+VD_DESCS =
+	"Same tier enemy and ammo spawns - Enemies are randomized based on\n"
+	"the tier of the original enemy, with the enemies categorized into\n"
+	"four different tiers based roughly on their health and relative threat\n"
+	"level. Ammo pickups are randomized based on the amount given by the\n"
+	"original pickup. Everything else is randomized normally, with the\n"
+	"exception of keys and backpacks.\n"
+	"\n"
+	"All enemy and ammo spawns - Enemies are fully randomized, with no\n"
+	"restrictions on which enemy can spawn. Ammo pickups are fully\n"
+	"randomized, with a chance to spawn a backpack instead of an ammo\n"
+	"pickup. Everything else is randomized normally, with the exception of\n"
+	"keys.\n"
+	"\n"
+	"TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,\n"
+	"with the exception of keys. Beatability is not guaranteed.";

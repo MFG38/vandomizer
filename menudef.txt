@@ -8,6 +8,8 @@ OptionMenu "VandomizerSetup"
 {
 	Title "$VD_SETUPMENU"
 	Option "$VD_MODE", "vd_spawnmode", "SpawnMode"
+	StaticText ""
+	StaticText "$VD_DESCS", "Red"
 }
 
 OptionValue "SpawnMode"
