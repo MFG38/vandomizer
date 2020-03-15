@@ -15,13 +15,13 @@ class SpawningHandler : EventHandler
 					switch(random[Replacement](0,3))
 					{
 					case 0:
-						e.Replacement = 'ZombieMan';
+						e.Replacement = 'FixedZombieMan';
 						break;
 					case 1:
-						e.Replacement = 'ShotgunGuy';
+						e.Replacement = 'FixedShotgunGuy';
 						break;
 					case 2:
-						e.Replacement = 'ChaingunGuy';
+						e.Replacement = 'FixedChaingunGuy';
 						break;
 					case 3:
 						e.Replacement = 'DoomImp';
@@ -64,7 +64,7 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'Revenant';
 						break;
 					case 3:
-						e.Replacement = 'PainElemental';
+						e.Replacement = 'FixedPainElemental';
 						break;
 					}
 				}
@@ -486,13 +486,13 @@ class SpawningHandler : EventHandler
 					switch(random[Replacement](0,16))
 					{
 					case 0:
-						e.Replacement = 'ZombieMan';
+						e.Replacement = 'FixedZombieMan';
 						break;
 					case 1:
-						e.Replacement = 'ShotgunGuy';
+						e.Replacement = 'FixedShotgunGuy';
 						break;
 					case 2:
-						e.Replacement = 'ChaingunGuy';
+						e.Replacement = 'FixedChaingunGuy';
 						break;
 					case 3:
 						e.Replacement = 'DoomImp';
@@ -528,7 +528,7 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'Fatso';
 						break;
 					case 14:
-						e.Replacement = 'PainElemental';
+						e.Replacement = 'FixedPainElemental';
 						break;
 					case 15:
 						e.Replacement = 'Cyberdemon';
@@ -1107,7 +1107,7 @@ class SpawningHandler : EventHandler
 					case 64:
 					case 65:
 					case 66:
-						e.Replacement = 'ZombieMan';
+						e.Replacement = 'FixedZombieMan';
 						break;
 					case 67:
 					case 68:
@@ -1117,7 +1117,7 @@ class SpawningHandler : EventHandler
 					case 72:
 					case 73:
 					case 74:
-						e.Replacement = 'ShotgunGuy';
+						e.Replacement = 'FixedShotgunGuy';
 						break;
 					case 75:
 					case 76:
@@ -1127,7 +1127,7 @@ class SpawningHandler : EventHandler
 					case 80:
 					case 81:
 					case 82:
-						e.Replacement = 'ChaingunGuy';
+						e.Replacement = 'FixedChaingunGuy';
 						break;
 					case 83:
 					case 84:
@@ -1237,7 +1237,7 @@ class SpawningHandler : EventHandler
 					case 166:
 					case 167:
 					case 168:
-						e.Replacement = 'PainElemental';
+						e.Replacement = 'FixedPainElemental';
 						break;
 					case 169:
 					case 170:
@@ -1397,3 +1397,49 @@ class SpawningHandler : EventHandler
 		}
 	}
 }
+
+class SpawnedLostSoul : LostSoul {}
+
+class FixedPainElemental : PainElemental
+{
+    States
+    {
+        Missile:
+            PAIN D 5 A_FaceTarget;
+            PAIN E 5 A_FaceTarget;
+            PAIN F 5 BRIGHT A_FaceTarget;
+            PAIN F 0 BRIGHT A_PainAttack('SpawnedLostSoul');
+            Goto See;
+        Death:
+            PAIN H 8 BRIGHT;
+            PAIN I 8 BRIGHT A_Scream;
+            PAIN JK 8 BRIGHT;
+            PAIN L 8 BRIGHT A_PainDie('SpawnedLostSoul');
+            PAIN M 8 BRIGHT;
+            Stop;
+    }
+}
+
+class FixedZombieMan : ZombieMan
+{
+	Default { DropItem "DroppedClip"; }
+}
+
+class FixedWolfensteinSS : WolfensteinSS
+{
+	Default { DropItem "DroppedClip"; }
+}
+
+class FixedShotgunGuy : ShotgunGuy
+{
+	Default { DropItem "DroppedShotgun"; }
+}
+
+class FixedChaingunGuy : ChaingunGuy
+{
+	Default { DropItem "DroppedChaingun"; }
+}
+
+class DroppedClip : Clip {}
+class DroppedShotgun : Shotgun {}
+class DroppedChaingun : Chaingun {}
