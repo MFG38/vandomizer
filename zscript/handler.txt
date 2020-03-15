@@ -257,7 +257,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				else if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' ||
+				if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' ||
 				e.Replacee is 'Candelabra' || e.Replacee is 'Candlestick' ||
 				e.Replacee is 'EvilEye' || e.Replacee is 'FloatingSkull' ||
 				e.Replacee is 'GreenTorch' || e.Replacee is 'HeadCandles' ||
@@ -674,7 +674,7 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				else if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' ||
+				if(e.Replacee is 'BigTree' || e.Replacee is 'BlueTorch' ||
 				e.Replacee is 'Candelabra' || e.Replacee is 'Candlestick' ||
 				e.Replacee is 'EvilEye' || e.Replacee is 'FloatingSkull' ||
 				e.Replacee is 'GreenTorch' || e.Replacee is 'HeadCandles' ||
