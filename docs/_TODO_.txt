@@ -4,7 +4,6 @@ CRITICAL:
 - Doom 2 MAP07 is broken.
 
 NOT-SO-CRITICAL:
-- Rebalance spawns for Total Fucking Chaos mode.
 - Implement Doom 1/Ultimate Doom compatibility.
 
 FOR CONSIDERATION:
