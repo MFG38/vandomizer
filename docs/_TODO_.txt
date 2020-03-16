@@ -1,6 +1,4 @@
 CRITICAL:
-- Pain Elementals can spawn anything instead of just Lost Souls.
-- Zombies can drop anything upon dying.
 - Doom 2 MAP07 is broken.
 
 NOT-SO-CRITICAL:

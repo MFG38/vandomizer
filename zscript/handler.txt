@@ -1233,132 +1233,132 @@ class SpawningHandler : EventHandler
 						break;
 					case 163:
 					case 164:
+						e.Replacement = 'FixedPainElemental';
+						break;
 					case 165:
 					case 166:
+						e.Replacement = 'Cyberdemon';
+						break;
 					case 167:
 					case 168:
-						e.Replacement = 'FixedPainElemental';
+						e.Replacement = 'SpiderMastermind';
 						break;
 					case 169:
 					case 170:
-						e.Replacement = 'Cyberdemon';
+						e.Replacement = 'Clip';
 						break;
 					case 171:
 					case 172:
-						e.Replacement = 'SpiderMastermind';
+						e.Replacement = 'Shell';
 						break;
 					case 173:
 					case 174:
-						e.Replacement = 'Clip';
+						e.Replacement = 'RocketAmmo';
 						break;
 					case 175:
 					case 176:
-						e.Replacement = 'Shell';
+						e.Replacement = 'Cell';
 						break;
 					case 177:
 					case 178:
-						e.Replacement = 'RocketAmmo';
+						e.Replacement = 'ClipBox';
 						break;
 					case 179:
 					case 180:
-						e.Replacement = 'Cell';
+						e.Replacement = 'ShellBox';
 						break;
 					case 181:
 					case 182:
-						e.Replacement = 'ClipBox';
+						e.Replacement = 'RocketBox';
 						break;
 					case 183:
 					case 184:
-						e.Replacement = 'ShellBox';
+						e.Replacement = 'CellPack';
 						break;
 					case 185:
 					case 186:
-						e.Replacement = 'RocketBox';
-						break;
-					case 187:
-					case 188:
-						e.Replacement = 'CellPack';
-						break;
-					case 189:
-					case 190:
 						e.Replacement = 'Backpack';
 						break;
-					case 191:
+					case 187:
 						e.Replacement = 'Chainsaw';
 						break;
-					case 192:
+					case 188:
 						e.Replacement = 'Shotgun';
 						break;
-					case 193:
+					case 189:
 						e.Replacement = 'SuperShotgun';
 						break;
-					case 194:
+					case 190:
 						e.Replacement = 'Chaingun';
 						break;
-					case 195:
+					case 191:
 						e.Replacement = 'RocketLauncher';
 						break;
-					case 196:
+					case 192:
 						e.Replacement = 'PlasmaRifle';
 						break;
-					case 197:
+					case 193:
 						e.Replacement = 'BFG9000';
 						break;
+					case 194:
+					case 195:
+					case 196:
+					case 197:
 					case 198:
 					case 199:
 					case 200:
 					case 201:
 					case 202:
 					case 203:
+						e.Replacement = 'HealthBonus';
+						break;
 					case 204:
 					case 205:
 					case 206:
 					case 207:
-						e.Replacement = 'HealthBonus';
-						break;
 					case 208:
 					case 209:
 					case 210:
 					case 211:
 					case 212:
 					case 213:
+						e.Replacement = 'Stimpack';
+						break;
 					case 214:
 					case 215:
 					case 216:
 					case 217:
-						e.Replacement = 'Stimpack';
-						break;
 					case 218:
 					case 219:
 					case 220:
 					case 221:
 					case 222:
 					case 223:
+						e.Replacement = 'Medikit';
+						break;
 					case 224:
 					case 225:
 					case 226:
 					case 227:
-						e.Replacement = 'Medikit';
-						break;
 					case 228:
 					case 229:
 					case 230:
 					case 231:
 					case 232:
 					case 233:
+						e.Replacement = 'ArmorBonus';
+						break;
 					case 234:
 					case 235:
 					case 236:
 					case 237:
-						e.Replacement = 'ArmorBonus';
-						break;
 					case 238:
 					case 239:
 					case 240:
 					case 241:
-					case 242:
 						e.Replacement = 'GreenArmor';
 						break;
+					case 242:
 					case 243:
 					case 244:
 					case 245:
