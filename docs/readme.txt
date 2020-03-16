@@ -20,7 +20,7 @@ randomization:
 
 1.	Same tier enemy and ammo spawns - Enemies are randomized based on
 	the "tier" of the original enemy, with the enemies categorized into
-	four different tiers based roughly on their health and relative threat
+	five different tiers based roughly on their health and relative threat
 	level. Ammo pickups are randomized based on the amount given by the
 	original pickup. Everything else is randomized normally, with the
 	exception of keys and backpacks.
