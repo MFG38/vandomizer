@@ -1432,29 +1432,14 @@ class FixedWolfensteinSS : WolfensteinSS
 
 class FixedShotgunGuy : ShotgunGuy
 {
-	Default { DropItem "DroppedShotgun"; }
+	Default { DropItem "DroppedShell"; }
 }
 
 class FixedChaingunGuy : ChaingunGuy
 {
-	Default { DropItem "DroppedChaingun"; }
+	Default { DropItem "DroppedClipCG"; }
 }
 
 class DroppedClip : Clip {}
-class DroppedShotgun : Shotgun {}
-class DroppedChaingun : Chaingun {}
-
-class FixedDoomPlayer : DoomPlayer
-{
-	Default
-	{
-		// Override all weapon slots, just in case.
-		Player.WeaponSlot 1, "Fist", "Chainsaw";
-		Player.WeaponSlot 2, "Pistol";
-		Player.WeaponSlot 3, "Shotgun", "SuperShotgun", "DroppedShotgun";
-		Player.WeaponSlot 4, "Chaingun", "DroppedChaingun";
-		Player.WeaponSlot 5, "RocketLauncher";
-		Player.WeaponSlot 6, "PlasmaRifle";
-		Player.WeaponSlot 7, "BFG9000";
-	}
-}
+class DroppedClipCG : Clip { Default { Inventory.Amount 20; } }
+class DroppedShell : Shell { Default { Inventory.Amount 8; } }

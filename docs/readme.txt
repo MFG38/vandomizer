@@ -34,6 +34,11 @@ randomization:
 3.	TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,
 	with the exception of keys. Beatability is not guaranteed.
 
+The only noteworthy gameplay change in the mod is that Shotgunners and Chaingunners
+drop shells and ammo clips respectively, instead of shotguns and chainguns. This was
+implemented as a workaround to some issues that occurred with attempting to override
+the weapon drops.
+
 
 2. REQUIREMENTS
 ===============
