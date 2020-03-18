@@ -74,7 +74,7 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'BaronOfHell' ||
 				e.Replacee == 'Fatso')
 				{
-					switch(random[Replacement](0,4))
+					switch(random[Replacement](0,3))
 					{
 					case 0:
 						e.Replacement = 'Arachnotron';
