@@ -23,12 +23,11 @@ randomization:
 	five different tiers based roughly on their health and relative threat
 	level. Ammo pickups are randomized based on the amount given by the
 	original pickup. Everything else is randomized normally, with the
-	exception of keys and backpacks.
+	exception of keys.
 
 2.	All enemy and ammo spawns - Enemies are fully randomized, with no
 	restrictions on which enemy can spawn. Ammo pickups are fully
-	randomized, with a chance to spawn a backpack instead of an ammo
-	pickup. Everything else is randomized normally, with the exception of
+	randomized. Everything else is randomized normally, with the exception of
 	keys.
 
 3.	TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,

@@ -226,9 +226,10 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'InvulnerabilitySphere' ||
 				e.Replacee == 'RadSuit' ||
 				e.Replacee == 'Megasphere' ||
-				e.Replacee == 'Soulsphere')
+				e.Replacee == 'Soulsphere'
+				e.Replacee == 'Backpack')
 				{
-					switch(random[Replacement](0,7))
+					switch(random[Replacement](0,8))
 					{
 					case 0:
 						e.Replacement = 'Allmap';
@@ -253,6 +254,9 @@ class SpawningHandler : EventHandler
 						break;
 					case 7:
 						e.Replacement = 'Soulsphere';
+						break;
+					case 8:
+						e.Replacement = 'Backpack';
 						break;
 					}
 				}
@@ -542,10 +546,9 @@ class SpawningHandler : EventHandler
 				else if(e.Replacee == 'Clip' || e.Replacee == 'Shell' ||
 				e.Replacee == 'RocketAmmo' || e.Replacee == 'Cell' ||
 				e.Replacee == 'ClipBox' || e.Replacee == 'ShellBox' ||
-				e.Replacee == 'RocketBox' || e.Replacee == 'CellPack' ||
-				e.Replacee == 'Backpack')
+				e.Replacee == 'RocketBox' || e.Replacee == 'CellPack')
 				{
-					switch(random[Replacement](0,8))
+					switch(random[Replacement](0,7))
 					{
 					case 0:
 						e.Replacement = 'Clip';
@@ -570,9 +573,6 @@ class SpawningHandler : EventHandler
 						break;
 					case 7:
 						e.Replacement = 'CellPack';
-						break;
-					case 8:
-						e.Replacement = 'Backpack';
 						break;
 					}
 				}
@@ -643,9 +643,10 @@ class SpawningHandler : EventHandler
 				else if(e.Replacee == 'Allmap' || e.Replacee == 'BlurSphere' ||
 				e.Replacee == 'Berserk' || e.Replacee == 'Infrared' ||
 				e.Replacee == 'InvulnerabilitySphere' || e.Replacee == 'RadSuit' ||
-				e.Replacee == 'Megasphere' || e.Replacee == 'Soulsphere')
+				e.Replacee == 'Megasphere' || e.Replacee == 'Soulsphere' ||
+				e.Replacee == 'Backpack')
 				{
-					switch(random[Replacement](0,7))
+					switch(random[Replacement](0,8))
 					{
 					case 0:
 						e.Replacement = 'Allmap';
@@ -670,6 +671,9 @@ class SpawningHandler : EventHandler
 						break;
 					case 7:
 						e.Replacement = 'Soulsphere';
+						break;
+					case 8:
+						e.Replacement = 'Backpack';
 						break;
 					}
 				}
