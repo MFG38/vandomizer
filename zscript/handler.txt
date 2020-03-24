@@ -11,7 +11,7 @@ class SpawningHandler : EventHandler
 				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
-				if(e.Replacee == 'ZombieMan' ||
+				else if(e.Replacee == 'ZombieMan' ||
 				e.Replacee == 'ShotgunGuy' ||
 				e.Replacee == 'ChaingunGuy' ||
 				e.Replacee == 'DoomImp')
@@ -484,7 +484,7 @@ class SpawningHandler : EventHandler
 				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
-				if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' ||
+				else if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' ||
 				e.Replacee == 'ChaingunGuy' || e.Replacee == 'DoomImp' ||
 				e.Replacee == 'LostSoul' || e.Replacee == 'Demon' ||
 				e.Replacee == 'Spectre' || e.Replacee == 'HellKnight' ||
@@ -904,7 +904,7 @@ class SpawningHandler : EventHandler
 				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
-				if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' || e.Replacee == 'ChaingunGuy' ||
+				else if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' || e.Replacee == 'ChaingunGuy' ||
 				e.Replacee == 'DoomImp' || e.Replacee == 'LostSoul' ||
 				e.Replacee == 'Demon' || e.Replacee == 'Spectre' || e.Replacee == 'HellKnight' ||
 				e.Replacee == 'Cacodemon' || e.Replacee == 'Revenant' ||
