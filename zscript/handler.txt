@@ -8,7 +8,7 @@ class SpawningHandler : EventHandler
 		{
 			case 0:		// Same tier enemy and ammo spawns
 				// Prevent randomization of Mancubi and Arachnotrons in MAP07, otherwise the map breaks.
-				if((level.mapname == "MAP07") && (e.Replacee == "Fatso" || e.Replacee == "Arachnotron"))
+				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
 				if(e.Replacee == 'ZombieMan' ||
@@ -481,7 +481,7 @@ class SpawningHandler : EventHandler
 				break;
 					
 			case 1:		// All enemy and ammo spawns
-				if((level.mapname == "MAP07") && (e.Replacee == "Fatso" || e.Replacee == "Arachnotron"))
+				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
 				if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' ||
@@ -901,7 +901,7 @@ class SpawningHandler : EventHandler
 				break;
 				
 			case 2:		// TOTAL FUCKING CHAOS
-				if((level.mapname == "MAP07") && (e.Replacee == "Fatso" || e.Replacee == "Arachnotron"))
+				if(level.mapname == "MAP07" && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron')))
 				{ return; }
 				
 				if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' || e.Replacee == 'ChaingunGuy' ||
