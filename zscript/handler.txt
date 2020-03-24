@@ -230,7 +230,7 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'InvulnerabilitySphere' ||
 				e.Replacee == 'RadSuit' ||
 				e.Replacee == 'Megasphere' ||
-				e.Replacee == 'Soulsphere'
+				e.Replacee == 'Soulsphere' ||
 				e.Replacee == 'Backpack')
 				{
 					switch(random[Replacement](0,8))
