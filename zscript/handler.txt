@@ -2,6 +2,10 @@ class SpawningHandler : EventHandler
 {
 	override void CheckReplacement(ReplaceEvent e)
 	{
+		// Prevent randomization of Mancubi and Arachnotrons in MAP07
+		if((level.mapname == "MAP07") && (e.Replacee == "Fatso" || e.Replacee == "Arachnotron"))
+		{ return; }
+		
 		cvar mode = CVar.FindCVar('vd_spawnmode');
 		
 		switch(mode.GetInt())
