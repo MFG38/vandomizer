@@ -1,5 +1,5 @@
 CRITICAL:
-- Doom 2 MAP07 is broken.
+[no issues]
 
 NOT-SO-CRITICAL:
 - Implement Doom 1/Ultimate Doom compatibility.
