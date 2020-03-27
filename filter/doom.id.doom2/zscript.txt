@@ -1441,7 +1441,7 @@ class FixedZombieMan : ZombieMan
 	Default { DropItem "DroppedClip"; }
 }
 
-class FixedWolfensteinSS : WolfensteinSS
+class FixedWolfensteinSS : WolfensteinSS replaces WolfensteinSS
 {
 	Default { DropItem "DroppedClip"; }
 }
