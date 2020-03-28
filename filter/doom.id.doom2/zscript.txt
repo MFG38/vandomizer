@@ -190,36 +190,42 @@ class SpawningHandler : EventHandler
 				}
 					
 				else if(e.Replacee == 'HealthBonus' ||
-				e.Replacee == 'Stimpack' ||
-				e.Replacee == 'Medikit')
+				e.Replacee == 'ArmorBonus')
 				{
-					switch(random[Replacement](0,2))
+					switch(random[Replacement](0,1))
 					{
 					case 0:
 						e.Replacement = 'HealthBonus';
 						break;
 					case 1:
+						e.Replacement = 'ArmorBonus';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Stimpack' ||
+				e.Replacee == 'Medikit')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
 						e.Replacement = 'Stimpack';
 						break;
-					case 2:
+					case 1:
 						e.Replacement = 'Medikit';
 						break;
 					}
 				}
 					
-				else if(e.Replacee == 'ArmorBonus' ||
-				e.Replacee == 'GreenArmor' ||
+				else if(e.Replacee == 'GreenArmor' ||
 				e.Replacee == 'BlueArmor')
 				{
-					switch(random[Replacement](0,2))
+					switch(random[Replacement](0,1))
 					{
 					case 0:
-						e.Replacement = 'ArmorBonus';
-						break;
-					case 1:
 						e.Replacement = 'GreenArmor';
 						break;
-					case 2:
+					case 1:
 						e.Replacement = 'BlueArmor';
 						break;
 					}
@@ -617,33 +623,43 @@ class SpawningHandler : EventHandler
 					}
 				}
 					
-				else if(e.Replacee == 'HealthBonus' || e.Replacee == 'Stimpack' || e.Replacee == 'Medikit')
+				else if(e.Replacee == 'HealthBonus' ||
+				e.Replacee == 'ArmorBonus')
 				{
-					switch(random[Replacement](0,2))
+					switch(random[Replacement](0,1))
 					{
 					case 0:
 						e.Replacement = 'HealthBonus';
 						break;
 					case 1:
+						e.Replacement = 'ArmorBonus';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Stimpack' ||
+				e.Replacee == 'Medikit')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
 						e.Replacement = 'Stimpack';
 						break;
-					case 2:
+					case 1:
 						e.Replacement = 'Medikit';
 						break;
 					}
 				}
 					
-				else if(e.Replacee == 'ArmorBonus' || e.Replacee == 'GreenArmor' || e.Replacee == 'BlueArmor')
+				else if(e.Replacee == 'GreenArmor' ||
+				e.Replacee == 'BlueArmor')
 				{
-					switch(random[Replacement](0,2))
+					switch(random[Replacement](0,1))
 					{
 					case 0:
-						e.Replacement = 'ArmorBonus';
-						break;
-					case 1:
 						e.Replacement = 'GreenArmor';
 						break;
-					case 2:
+					case 1:
 						e.Replacement = 'BlueArmor';
 						break;
 					}
