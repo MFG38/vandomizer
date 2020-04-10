@@ -3,7 +3,6 @@ CRITICAL:
 
 NOT-SO-CRITICAL:
 - MAP07 still has a chance to break in mode 2 if a Mancubus is spawned beyond the inner courtyard.
-- Implement Doom 1/Ultimate Doom compatibility.
 
 FOR CONSIDERATION:
 - Implement Heretic compatibility.
