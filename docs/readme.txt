@@ -42,9 +42,9 @@ the weapon drops.
 2. REQUIREMENTS
 ===============
 
-Vandomizer requires GZDoom 4.3.0 at a minimum to run. It is currently only compatible
-with Doom 2. Compatibility for Ultimate Doom is planned down the line, however. I may
-also implement Heretic and Hexen compatibility in the future.
+Vandomizer requires GZDoom 4.3.0 at a minimum to run. It is currently compatible with
+(Ultimate) Doom and Doom 2. I may also implement Heretic and Hexen compatibility in
+the future.
 
 
 3. RUNNING THE MOD
