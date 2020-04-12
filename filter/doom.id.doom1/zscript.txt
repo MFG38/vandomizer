@@ -254,21 +254,15 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' ||
 				e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
 				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' ||
-				e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
 				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' ||
-				e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
 				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' ||
-				e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
-				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' ||
-				e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
 				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' ||
 				e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
 				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' ||
 				e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
-				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' ||
-				e.Replacee == 'SmallBloodPool')
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch')
 				{
-					switch(random[Replacement](0,58))
+					switch(random[Replacement](0,47))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -373,79 +367,46 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'BurningBarrel';
 						break;
 					case 34:
-						e.Replacement = 'TechLamp';
-						break;
-					case 35:
-						e.Replacement = 'TechLamp2';
-						break;
-					case 36:
 						e.Replacement = 'TechPillar';
 						break;
-					case 37:
+					case 35:
 						e.Replacement = 'BloodyTwitch';
 						break;
-					case 38:
-						e.Replacement = 'BrainStem';
-						break;
-					case 39:
-						e.Replacement = 'ColonGibs';
-						break;
-					case 40:
+					case 36:
 						e.Replacement = 'DeadStick';
 						break;
-					case 41:
+					case 37:
 						e.Replacement = 'Gibs';
 						break;
-					case 42:
-						e.Replacement = 'HangBNoBrain';
-						break;
-					case 43:
-						e.Replacement = 'HangNoGuts';
-						break;
-					case 44:
-						e.Replacement = 'HangTLookingDown';
-						break;
-					case 45:
-						e.Replacement = 'HangTLookingUp';
-						break;
-					case 46:
-						e.Replacement = 'HangTNoBrain';
-						break;
-					case 47:
-						e.Replacement = 'HangTSkull';
-						break;
-					case 48:
+					case 38:
 						e.Replacement = 'LiveStick';
 						break;
-					case 49:
+					case 39:
 						e.Replacement = 'Meat2';
 						break;
-					case 50:
+					case 40:
 						e.Replacement = 'Meat3';
 						break;
-					case 51:
+					case 41:
 						e.Replacement = 'Meat4';
 						break;
-					case 52:
+					case 42:
 						e.Replacement = 'Meat5';
 						break;
-					case 53:
+					case 43:
 						e.Replacement = 'NonsolidMeat2';
 						break;
-					case 54:
+					case 44:
 						e.Replacement = 'NonsolidMeat3';
 						break;
-					case 55:
+					case 45:
 						e.Replacement = 'NonsolidMeat4';
 						break;
-					case 56:
+					case 46:
 						e.Replacement = 'NonsolidMeat5';
 						break;
-					case 57:
+					case 47:
 						e.Replacement = 'NonsolidTwitch';
-						break;
-					case 58:
-						e.Replacement = 'SmallBloodPool';
 						break;
 					}
 				}
@@ -644,7 +605,7 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'GreenTorch' || e.Replacee == 'HeadCandles' ||
 				e.Replacee == 'HeadOnAStick' || e.Replacee == 'HeadsOnAStick' ||
 				e.Replacee == 'HeartColumn' || e.Replacee == 'RedTorch' ||
-				e.Replacee == 'ShortBlueTorch' || e.Replacee == 'ShortGreenTorch' ||
+				e.Replacee == 'ShortBlueTorch' || e.Replacee == 'ShortGreenTorch'||
 				e.Replacee == 'ShortRedTorch' || e.Replacee == 'ShortGreenColumn' ||
 				e.Replacee == 'ShortRedColumn' || e.Replacee == 'SkullColumn' ||
 				e.Replacee == 'Stalagtite' || e.Replacee == 'TallGreenColumn' ||
@@ -655,21 +616,15 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' ||
 				e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
 				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' ||
-				e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
 				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' ||
-				e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
 				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' ||
-				e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
-				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' ||
-				e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
 				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' ||
 				e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
 				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' ||
 				e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
-				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' ||
-				e.Replacee == 'SmallBloodPool')
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch')
 				{
-					switch(random[Replacement](0,58))
+					switch(random[Replacement](0,47))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -774,79 +729,46 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'BurningBarrel';
 						break;
 					case 34:
-						e.Replacement = 'TechLamp';
-						break;
-					case 35:
-						e.Replacement = 'TechLamp2';
-						break;
-					case 36:
 						e.Replacement = 'TechPillar';
 						break;
-					case 37:
+					case 35:
 						e.Replacement = 'BloodyTwitch';
 						break;
-					case 38:
-						e.Replacement = 'BrainStem';
-						break;
-					case 39:
-						e.Replacement = 'ColonGibs';
-						break;
-					case 40:
+					case 36:
 						e.Replacement = 'DeadStick';
 						break;
-					case 41:
+					case 37:
 						e.Replacement = 'Gibs';
 						break;
-					case 42:
-						e.Replacement = 'HangBNoBrain';
-						break;
-					case 43:
-						e.Replacement = 'HangNoGuts';
-						break;
-					case 44:
-						e.Replacement = 'HangTLookingDown';
-						break;
-					case 45:
-						e.Replacement = 'HangTLookingUp';
-						break;
-					case 46:
-						e.Replacement = 'HangTNoBrain';
-						break;
-					case 47:
-						e.Replacement = 'HangTSkull';
-						break;
-					case 48:
+					case 38:
 						e.Replacement = 'LiveStick';
 						break;
-					case 49:
+					case 39:
 						e.Replacement = 'Meat2';
 						break;
-					case 50:
+					case 40:
 						e.Replacement = 'Meat3';
 						break;
-					case 51:
+					case 41:
 						e.Replacement = 'Meat4';
 						break;
-					case 52:
+					case 42:
 						e.Replacement = 'Meat5';
 						break;
-					case 53:
+					case 43:
 						e.Replacement = 'NonsolidMeat2';
 						break;
-					case 54:
+					case 44:
 						e.Replacement = 'NonsolidMeat3';
 						break;
-					case 55:
+					case 45:
 						e.Replacement = 'NonsolidMeat4';
 						break;
-					case 56:
+					case 46:
 						e.Replacement = 'NonsolidMeat5';
 						break;
-					case 57:
+					case 47:
 						e.Replacement = 'NonsolidTwitch';
-						break;
-					case 58:
-						e.Replacement = 'SmallBloodPool';
 						break;
 					}
 				}
@@ -883,15 +805,14 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'TallRedColumn' || e.Replacee == 'TorchTree' || e.Replacee == 'DeadCacodemon' || e.Replacee == 'DeadDemon' ||
 				e.Replacee == 'DeadDoomImp' || e.Replacee == 'DeadLostSoul' || e.Replacee == 'DeadMarine' || e.Replacee == 'DeadShotgunGuy' ||
 				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' || e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
-				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' || e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
-				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' || e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
-				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' || e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
-				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' || e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
+				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' ||
+				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' ||
+				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' ||
 				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' || e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
 				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' || e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
-				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' || e.Replacee == 'SmallBloodPool')
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch')
 				{
-					switch(random[Replacement](0,208))
+					switch(random[Replacement](0,198))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -996,217 +917,197 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'BurningBarrel';
 						break;
 					case 34:
-						e.Replacement = 'TechLamp';
-						break;
-					case 35:
-						e.Replacement = 'TechLamp2';
-						break;
-					case 36:
 						e.Replacement = 'TechPillar';
 						break;
-					case 37:
+					case 35:
 						e.Replacement = 'BloodyTwitch';
 						break;
-					case 38:
-						e.Replacement = 'BrainStem';
-						break;
-					case 39:
-						e.Replacement = 'ColonGibs';
-						break;
-					case 40:
+					case 36:
 						e.Replacement = 'DeadStick';
 						break;
-					case 41:
+					case 37:
 						e.Replacement = 'Gibs';
 						break;
-					case 42:
-						e.Replacement = 'HangBNoBrain';
-						break;
-					case 43:
-						e.Replacement = 'HangNoGuts';
-						break;
-					case 44:
-						e.Replacement = 'HangTLookingDown';
-						break;
-					case 45:
-						e.Replacement = 'HangTLookingUp';
-						break;
-					case 46:
-						e.Replacement = 'HangTNoBrain';
-						break;
-					case 47:
-						e.Replacement = 'HangTSkull';
-						break;
-					case 48:
+					case 38:
 						e.Replacement = 'LiveStick';
 						break;
-					case 49:
+					case 39:
 						e.Replacement = 'Meat2';
 						break;
-					case 50:
+					case 40:
 						e.Replacement = 'Meat3';
 						break;
-					case 51:
+					case 41:
 						e.Replacement = 'Meat4';
 						break;
-					case 52:
+					case 42:
 						e.Replacement = 'Meat5';
 						break;
-					case 53:
+					case 43:
 						e.Replacement = 'NonsolidMeat2';
 						break;
-					case 54:
+					case 44:
 						e.Replacement = 'NonsolidMeat3';
 						break;
-					case 55:
+					case 45:
 						e.Replacement = 'NonsolidMeat4';
 						break;
-					case 56:
+					case 46:
 						e.Replacement = 'NonsolidMeat5';
 						break;
-					case 57:
+					case 47:
 						e.Replacement = 'NonsolidTwitch';
 						break;
-					case 58:
-						e.Replacement = 'SmallBloodPool';
+					case 48:
+					case 49:
+					case 50:
+					case 51:
+					case 52:
+					case 53:
+					case 54:
+					case 55:
+					case 56:
+						e.Replacement = 'FixedZombieMan';
 						break;
+					case 57:
+					case 58:
 					case 59:
 					case 60:
 					case 61:
 					case 62:
 					case 63:
 					case 64:
+						e.Replacement = 'FixedShotgunGuy';
+						break;
 					case 65:
 					case 66:
-						e.Replacement = 'FixedZombieMan';
-						break;
 					case 67:
 					case 68:
-					case 69:	// Heh.
+					case 69:
 					case 70:
 					case 71:
 					case 72:
+						e.Replacement = 'DoomImp';
+						break;
 					case 73:
 					case 74:
-						e.Replacement = 'FixedShotgunGuy';
-						break;
 					case 75:
 					case 76:
 					case 77:
 					case 78:
 					case 79:
 					case 80:
+						e.Replacement = 'LostSoul';
+						break;
 					case 81:
 					case 82:
-						e.Replacement = 'DoomImp';
-						break;
 					case 83:
 					case 84:
 					case 85:
 					case 86:
 					case 87:
 					case 88:
+						e.Replacement = 'Demon';
+						break;
 					case 89:
 					case 90:
-						e.Replacement = 'LostSoul';
-						break;
 					case 91:
 					case 92:
 					case 93:
 					case 94:
 					case 95:
 					case 96:
+						e.Replacement = 'Spectre';
+						break;
 					case 97:
 					case 98:
-						e.Replacement = 'Demon';
-						break;
 					case 99:
 					case 100:
 					case 101:
 					case 102:
 					case 103:
 					case 104:
+						e.Replacement = 'Cacodemon';
+						break;
 					case 105:
 					case 106:
-						e.Replacement = 'Spectre';
-						break;
 					case 107:
 					case 108:
+						e.Replacement = 'BaronOfHell';
+						break;
 					case 109:
 					case 110:
+						e.Replacement = 'Cyberdemon';
+						break;
 					case 111:
 					case 112:
+						e.Replacement = 'SpiderMastermind';
+						break;
 					case 113:
 					case 114:
-						e.Replacement = 'Cacodemon';
+						e.Replacement = 'Clip';
 						break;
 					case 115:
 					case 116:
+						e.Replacement = 'Shell';
+						break;
 					case 117:
 					case 118:
-						e.Replacement = 'BaronOfHell';
+						e.Replacement = 'RocketAmmo';
 						break;
 					case 119:
 					case 120:
-						e.Replacement = 'Cyberdemon';
+						e.Replacement = 'Cell';
 						break;
 					case 121:
 					case 122:
-						e.Replacement = 'SpiderMastermind';
+						e.Replacement = 'ClipBox';
 						break;
 					case 123:
 					case 124:
-						e.Replacement = 'Clip';
+						e.Replacement = 'ShellBox';
 						break;
 					case 125:
 					case 126:
-						e.Replacement = 'Shell';
+						e.Replacement = 'RocketBox';
 						break;
 					case 127:
 					case 128:
-						e.Replacement = 'RocketAmmo';
+						e.Replacement = 'CellPack';
 						break;
 					case 129:
 					case 130:
-						e.Replacement = 'Cell';
+						e.Replacement = 'Backpack';
 						break;
 					case 131:
+						e.Replacement = 'Chainsaw';
+						break;
 					case 132:
-						e.Replacement = 'ClipBox';
+						e.Replacement = 'Shotgun';
 						break;
 					case 133:
+						e.Replacement = 'Chaingun';
+						break;
 					case 134:
-						e.Replacement = 'ShellBox';
+						e.Replacement = 'RocketLauncher';
 						break;
 					case 135:
+						e.Replacement = 'PlasmaRifle';
+						break;
 					case 136:
-						e.Replacement = 'RocketBox';
+						e.Replacement = 'BFG9000';
 						break;
 					case 137:
 					case 138:
-						e.Replacement = 'CellPack';
-						break;
 					case 139:
 					case 140:
-						e.Replacement = 'Backpack';
-						break;
 					case 141:
-						e.Replacement = 'Chainsaw';
-						break;
 					case 142:
-						e.Replacement = 'Shotgun';
-						break;
 					case 143:
-						e.Replacement = 'Chaingun';
-						break;
 					case 144:
-						e.Replacement = 'RocketLauncher';
-						break;
 					case 145:
-						e.Replacement = 'PlasmaRifle';
-						break;
 					case 146:
-						e.Replacement = 'BFG9000';
+						e.Replacement = 'HealthBonus';
 						break;
 					case 147:
 					case 148:
@@ -1218,7 +1119,7 @@ class SpawningHandler : EventHandler
 					case 154:
 					case 155:
 					case 156:
-						e.Replacement = 'HealthBonus';
+						e.Replacement = 'Stimpack';
 						break;
 					case 157:
 					case 158:
@@ -1230,7 +1131,7 @@ class SpawningHandler : EventHandler
 					case 164:
 					case 165:
 					case 166:
-						e.Replacement = 'Stimpack';
+						e.Replacement = 'Medikit';
 						break;
 					case 167:
 					case 168:
@@ -1242,7 +1143,7 @@ class SpawningHandler : EventHandler
 					case 174:
 					case 175:
 					case 176:
-						e.Replacement = 'Medikit';
+						e.Replacement = 'ArmorBonus';
 						break;
 					case 177:
 					case 178:
@@ -1252,48 +1153,36 @@ class SpawningHandler : EventHandler
 					case 182:
 					case 183:
 					case 184:
+						e.Replacement = 'GreenArmor';
+						break;
 					case 185:
 					case 186:
-						e.Replacement = 'ArmorBonus';
-						break;
 					case 187:
 					case 188:
 					case 189:
 					case 190:
-					case 191:
-					case 192:
-					case 193:
-					case 194:
-						e.Replacement = 'GreenArmor';
-						break;
-					case 195:
-					case 196:
-					case 197:
-					case 198:
-					case 199:
-					case 200:
 						e.Replacement = 'BlueArmor';
 						break;
-					case 201:
+					case 191:
 						e.Replacement = 'Allmap';
 						break;
-					case 202:
+					case 192:
 						e.Replacement = 'BlurSphere';
 						break;
-					case 203:
+					case 193:
 						e.Replacement = 'Berserk';
 						break;
-					case 204:
+					case 194:
 						e.Replacement = 'Infrared';
 						break;
-					case 205:
+					case 195:
 						e.Replacement = 'InvulnerabilitySphere';
 						break;
-					case 206:
+					case 196:
 						e.Replacement = 'RadSuit';
 						break;
-					case 207:
-					case 208:
+					case 197:
+					case 198:
 						e.Replacement = 'Soulsphere';
 						break;
 					}
