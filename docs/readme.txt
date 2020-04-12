@@ -27,8 +27,8 @@ randomization:
 
 2.	All enemy and ammo spawns - Enemies are fully randomized, with no
 	restrictions on which enemy can spawn. Ammo pickups are fully
-	randomized. Everything else is randomized normally, with the exception of
-	keys.
+	randomized. Everything else is randomized normally, with the exception
+	of keys.
 
 3.	TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,
 	with the exception of keys. Beatability is not guaranteed.
