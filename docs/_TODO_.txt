@@ -1,9 +1,0 @@
-CRITICAL:
-[no issues]
-
-NOT-SO-CRITICAL:
-- MAP07 still has a chance to break in mode 2 if a Mancubus is spawned beyond the inner courtyard.
-
-FOR CONSIDERATION:
-- Implement Heretic compatibility.
-- Implement Hexen compatibility.
