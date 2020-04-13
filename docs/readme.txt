@@ -50,8 +50,9 @@ the future.
 3. RUNNING THE MOD
 ==================
 
-To run the mod, all you need to do is drag vandomizer-master.zip over gzdoom.exe or
-use your launcher of choice to load the mod.
+To run the mod, all you need to do is drag the unzipped PK3 (or vandomizer-master.zip
+if you downloaded the mod from GitHub) over gzdoom.exe or use your launcher of choice
+to load the mod.
 
 
 4. CHANGING THE RANDOMIZATION MODE
