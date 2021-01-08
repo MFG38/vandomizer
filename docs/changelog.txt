@@ -1,2 +1,5 @@
+[??-??-????] v1.0.1:
+- Decreased chance of Pain Elementals spawning in spawnmodes 0 and 1.
+
 [12-04-2020] v1.0:
 - Initial release.

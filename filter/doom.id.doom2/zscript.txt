@@ -58,18 +58,21 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'Revenant' ||
 				e.Replacee == 'PainElemental')
 				{
-					switch(random[Replacement](0,3))
+					switch(random[Replacement](0,6))
 					{
 					case 0:
+					case 1:
 						e.Replacement = 'HellKnight';
 						break;
-					case 1:
+					case 2:
+					case 3:
 						e.Replacement = 'Cacodemon';
 						break;
-					case 2:
+					case 4:
+					case 5:
 						e.Replacement = 'Revenant';
 						break;
-					case 3:
+					case 6:
 						e.Replacement = 'FixedPainElemental';
 						break;
 					}
@@ -502,57 +505,73 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'PainElemental' || e.Replacee == 'Cyberdemon' ||
 				e.Replacee == 'SpiderMastermind')
 				{
-					switch(random[Replacement](0,16))
+					switch(random[Replacement](0,32))
 					{
 					case 0:
+					case 1:
 						e.Replacement = 'FixedZombieMan';
 						break;
-					case 1:
+					case 2:
+					case 3:
 						e.Replacement = 'FixedShotgunGuy';
 						break;
-					case 2:
+					case 4:
+					case 5:
 						e.Replacement = 'FixedChaingunGuy';
 						break;
-					case 3:
+					case 6:
+					case 7:
 						e.Replacement = 'DoomImp';
 						break;
-					case 4:
+					case 8:
+					case 9:
 						e.Replacement = 'LostSoul';
 						break;
-					case 5:
+					case 10:
+					case 11:
 						e.Replacement = 'Demon';
 						break;
-					case 6:
+					case 12:
+					case 13:
 						e.Replacement = 'Spectre';
 						break;
-					case 7:
+					case 14:
+					case 15:
 						e.Replacement = 'HellKnight';
 						break;
-					case 8:
+					case 16:
+					case 17:
 						e.Replacement = 'Cacodemon';
 						break;
-					case 9:
+					case 18:
+					case 19:
 						e.Replacement = 'Revenant';
 						break;
-					case 10:
+					case 20:
+					case 21:
 						e.Replacement = 'Arachnotron';
 						break;
-					case 11:
+					case 22:
+					case 23:
 						e.Replacement = 'Archvile';
 						break;
-					case 12:
+					case 24:
+					case 25:
 						e.Replacement = 'BaronOfHell';
 						break;
-					case 13:
+					case 26:
+					case 27:
 						e.Replacement = 'Fatso';
 						break;
-					case 14:
+					case 28:
 						e.Replacement = 'FixedPainElemental';
 						break;
-					case 15:
+					case 29:
+					case 30:
 						e.Replacement = 'Cyberdemon';
 						break;
-					case 16:
+					case 31:
+					case 32:
 						e.Replacement = 'SpiderMastermind';
 						break;
 					}
