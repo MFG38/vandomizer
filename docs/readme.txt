@@ -6,8 +6,9 @@
 2. Requirements
 3. Running the mod
 4. Changing the randomization mode
-5. License information
-6. Credits
+5. Known issues
+6. License information
+7. Credits
 
 
 1. INTRODUCTION
@@ -74,7 +75,15 @@ Note that if the cvar is changed mid-game, the change will not take effect until
 level is loaded or the current level is reloaded.
 
 
-5. LICENSE INFORMATION
+5. KNOWN ISSUES
+===============
+
+- Doom 2 MAP07 has a chance to break in TOTAL FUCKING CHAOS mode if a Mancubus is spawned
+  beyond the inner courtyard area.
+- Softlocks due to decorations being spawned in inconvenient places are possible.
+
+
+6. LICENSE INFORMATION
 ======================
 
 This work is licensed under the Creative Commons
@@ -91,7 +100,7 @@ material, you must distribute your contributions under the same license as
 the original.
 
 
-6. CREDITS
+7. CREDITS
 ==========
 
 Vandomizer is created by Santtu "MFG38" Pesonen.
