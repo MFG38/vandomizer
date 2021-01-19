@@ -3,7 +3,7 @@
 ============
 
 1. Introduction
-2. Requirements
+2. Requirements & list of compatible IWADs
 3. Running the mod
 4. Changing the randomization mode
 5. Known issues
@@ -40,12 +40,16 @@ implemented as a workaround to some issues that occurred with attempting to over
 the weapon drops.
 
 
-2. REQUIREMENTS
-===============
+2. REQUIREMENTS & LIST OF COMPATIBLE IWADS
+==========================================
 
 Vandomizer requires GZDoom 4.3.0 at a minimum to run. It is currently compatible with
-(Ultimate) Doom and Doom 2. I may also implement Heretic and Hexen compatibility in
-the future.
+the following IWADs:
+
+doom.wad
+doom2.wad
+plutonia.wad
+tnt.wad
 
 
 3. RUNNING THE MOD
