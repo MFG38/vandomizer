@@ -1486,14 +1486,34 @@ class FixedWolfensteinSS : WolfensteinSS replaces WolfensteinSS
 
 class FixedShotgunGuy : ShotgunGuy
 {
-	Default { DropItem "DroppedShell"; }
+	Default { DropItem "DroppedShotgun"; }
 }
 
 class FixedChaingunGuy : ChaingunGuy
 {
-	Default { DropItem "DroppedClipCG"; }
+	Default { DropItem "DroppedChaingun"; }
 }
 
 class DroppedClip : Clip {}
-class DroppedClipCG : Clip { Default { Inventory.Amount 20; } }
-class DroppedShell : Shell { Default { Inventory.Amount 8; } }
+
+class DroppedShotgun : WeaponGiver
+{
+	Default { DropItem "Shotgun"; }
+	States
+	{
+	Spawn:
+		SHOT A -1;
+		Stop;
+	}
+}
+
+class DroppedChaingun : WeaponGiver
+{
+	Default { DropItem "Chaingun"; }
+	States
+	{
+	Spawn:
+		MGUN A -1;
+		Stop;
+	}
+}

@@ -1,6 +1,7 @@
 [??-??-????] v1.0.2:
 - Fixed the potential Doom 2 MAP07 softlock in spawnmode 2.
 - Fixed weapon pickups not getting randomized in spawnmode 2.
+- Shotgunners and Chaingunners now drop their weapons.
 
 [06-03-2021] v1.0.1:
 - Decreased chance of Pain Elementals spawning in spawnmodes 0 and 1.

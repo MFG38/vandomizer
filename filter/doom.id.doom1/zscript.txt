@@ -1201,8 +1201,18 @@ class FixedZombieMan : ZombieMan
 
 class FixedShotgunGuy : ShotgunGuy
 {
-	Default { DropItem "DroppedShell"; }
+	Default { DropItem "DroppedShotgun"; }
 }
 
 class DroppedClip : Clip {}
-class DroppedShell : Shell { Default { Inventory.Amount 8; } }
+
+class DroppedShotgun : WeaponGiver
+{
+	Default { DropItem "Shotgun"; }
+	States
+	{
+	Spawn:
+		SHOT A -1;
+		Stop;
+	}
+}
