@@ -1280,7 +1280,8 @@ class SpawningHandler : EventHandler
 					case 160:
 					case 161:
 					case 162:
-						e.Replacement = 'Fatso';
+						if(level.mapname ~== "MAP07" ) { e.Replacement = 'Revenant'; } 
+						else { e.Replacement = 'Fatso'; }
 						break;
 					case 163:
 					case 164:
