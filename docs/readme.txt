@@ -82,9 +82,7 @@ level is loaded or the current level is reloaded.
 5. KNOWN ISSUES
 ===============
 
-- Doom 2 MAP07 has a chance to break in TOTAL FUCKING CHAOS mode if a Mancubus is spawned
-  beyond the inner courtyard area.
-- Softlocks due to decorations being spawned in inconvenient places are possible.
+- Softlocks due to big enemies or decorations being spawned in inconvenient places are possible.
 
 
 6. LICENSE INFORMATION
