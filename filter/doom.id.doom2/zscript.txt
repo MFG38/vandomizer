@@ -951,7 +951,8 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'Cyberdemon' || e.Replacee == 'SpiderMastermind' ||
 				e.Replacee == 'Clip' || e.Replacee == 'Shell' || e.Replacee == 'RocketAmmo' || e.Replacee == 'Cell' ||
 				e.Replacee == 'ClipBox' || e.Replacee == 'ShellBox' || e.Replacee == 'RocketBox' || e.Replacee == 'CellPack' ||
-				e.Replacee == 'Backpack' ||
+				e.Replacee == 'Chainsaw' || e.Replacee == 'Shotgun' || e.Replacee == 'SuperShotgun' || e.Replacee == 'Chaingun' ||
+				e.Replacee == 'RocketLauncher' || e.Replacee == 'PlasmaRifle' || e.Replacee == 'BFG9000' || e.Replacee == 'Backpack' ||
 				e.Replacee == 'HealthBonus' || e.Replacee == 'Stimpack' || e.Replacee == 'Medikit' ||
 				e.Replacee == 'ArmorBonus' || e.Replacee == 'GreenArmor' || e.Replacee == 'BlueArmor' ||
 				e.Replacee == 'Allmap' || e.Replacee == 'BlurSphere' || e.Replacee == 'Berserk' || e.Replacee == 'Infrared' ||
@@ -1485,12 +1486,12 @@ class FixedWolfensteinSS : WolfensteinSS replaces WolfensteinSS
 
 class FixedShotgunGuy : ShotgunGuy
 {
-	Default { DropItem "Shotgun"; }
+	Default { DropItem "DroppedShell"; }
 }
 
 class FixedChaingunGuy : ChaingunGuy
 {
-	Default { DropItem "Chaingun"; }
+	Default { DropItem "DroppedClipCG; }
 }
 
 class DroppedClip : Clip {}
