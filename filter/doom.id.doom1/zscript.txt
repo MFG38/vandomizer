@@ -4,6 +4,7 @@ class SpawningHandler : EventHandler
 {
 	override void CheckReplacement(ReplaceEvent e)
 	{
+		e.IsFinal = true;
 		cvar mode = CVar.FindCVar('vd_spawnmode');
 		
 		switch(mode.GetInt())
