@@ -1485,12 +1485,12 @@ class FixedWolfensteinSS : WolfensteinSS replaces WolfensteinSS
 
 class FixedShotgunGuy : ShotgunGuy
 {
-	Default { DropItem "DroppedShell"; }
+	Default { DropItem "Shotgun"; }
 }
 
 class FixedChaingunGuy : ChaingunGuy
 {
-	Default { DropItem "DroppedClipCG"; }
+	Default { DropItem "Chaingun"; }
 }
 
 class DroppedClip : Clip {}
