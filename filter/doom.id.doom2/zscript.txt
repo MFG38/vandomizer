@@ -1491,7 +1491,7 @@ class FixedShotgunGuy : ShotgunGuy
 
 class FixedChaingunGuy : ChaingunGuy
 {
-	Default { DropItem "DroppedClipCG; }
+	Default { DropItem "DroppedClipCG"; }
 }
 
 class DroppedClip : Clip {}
