@@ -1208,7 +1208,7 @@ class DroppedClip : Clip {}
 
 class DroppedShotgun : WeaponGiver
 {
-	Default { DropItem "Shotgun"; }
+	Default { DropItem "Shotgun"; Inventory.PickupMessage "$GOTSHOTGUN"; }
 	States
 	{
 	Spawn:

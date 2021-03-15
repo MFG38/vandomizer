@@ -1498,7 +1498,7 @@ class DroppedClip : Clip {}
 
 class DroppedShotgun : WeaponGiver
 {
-	Default { DropItem "Shotgun"; }
+	Default { DropItem "Shotgun"; Inventory.PickupMessage "$GOTSHOTGUN"; }
 	States
 	{
 	Spawn:
@@ -1509,7 +1509,7 @@ class DroppedShotgun : WeaponGiver
 
 class DroppedChaingun : WeaponGiver
 {
-	Default { DropItem "Chaingun"; }
+	Default { DropItem "Chaingun"; Inventory.PickupMessage "$GOTCHAINGUN"; }
 	States
 	{
 	Spawn:
