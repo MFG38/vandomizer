@@ -813,7 +813,7 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' || e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
 				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch')
 				{
-					switch(random[Replacement](0,198))
+					switch(random[Replacement](0,199))
 					{
 					case 0:
 						e.Replacement = 'BigTree';
@@ -1180,10 +1180,11 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'InvulnerabilitySphere';
 						break;
 					case 196:
+					case 197:
 						e.Replacement = 'RadSuit';
 						break;
-					case 197:
 					case 198:
+					case 199:
 						e.Replacement = 'Soulsphere';
 						break;
 					}
