@@ -9,7 +9,7 @@ VD_CVAR2 = "TOTAL FUCKING CHAOS";
 VD_DESCS =
 	"Same tier enemy and ammo spawns - Enemies are randomized based on\n"
 	"the tier of the original enemy, with the enemies categorized into\n"
-	"five different tiers based roughly on their health and relative threat\n"
+	"different tiers based roughly on their health and relative threat\n"
 	"level. Ammo pickups are randomized based on the amount given by the\n"
 	"original pickup. Everything else is randomized normally, with the\n"
 	"exception of keys.\n"
