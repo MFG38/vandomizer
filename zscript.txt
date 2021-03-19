@@ -15,6 +15,3 @@ class VD_VersionHandler : StaticEventHandler
 		vdVer.ver = StringTable.Localize("$VD_VERSION");
 	}
 }
-
-#include "filter/doom.id.doom1/vd_doom1.txt"
-#include "filter/doom.id.doom2/vd_doom2.txt"
