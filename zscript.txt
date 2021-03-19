@@ -2,10 +2,10 @@ version "4.3"
 
 class VD_VersionHandler : StaticEventHandler
 // Technically this just exists to throw the version number to the console.
+// If I could just get the damn thing working as intended...
 {
 	override void OnRegister()
 	{
-		string vdVersion = string.Format(StringTable.Localize("$VD_VERSION"));
-		Console.Printf("%s%s",vdVersion);
+		Console.Printf("Vandomizer %s",StringTable.Localize("$VD_VERSIONNUM"));
 	}
 }
