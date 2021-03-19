@@ -1,6 +1,6 @@
 version "4.3"
 
-class VD_VersionHandler : StaticEventHandler
+class VD_VersionPrinter : StaticEventHandler
 // Technically this just exists to throw the version number to the console.
 // If I could just get the damn thing working as intended...
 {
