@@ -1,18 +1,11 @@
 version "4.3"
 
-/* class VD_VersionData : Thinker
-{
-	string ver;
-} */
-
 class VD_VersionHandler : StaticEventHandler
-// Technically this just exists to store the version number data.
+// Technically this just exists to throw the version number to the console.
 {
-	override void NewGame()
+	override void OnRegister()
 	{
-		/* let vdVer = new("VD_VersionData");
-		vdVer.ChangeStatNum(Thinker.STAT_STATIC);
-		vdVer.ver = StringTable.Localize("$VD_VERSION"); */
-		Console.Printf("$VD_VERSION");
+		string vdVersion = string.Format(StringTable.Localize("$VD_VERSION"));
+		Console.Printf("%s%s",vdVersion);
 	}
 }
