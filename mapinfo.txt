@@ -1,4 +1,4 @@
 gameinfo
 {
-	AddEventHandlers = "SpawningHandler", "VD_VersionPrinter"
+	AddEventHandlers = "VD_VersionPrinter", "SpawningHandler"
 }
