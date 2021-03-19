@@ -5,6 +5,6 @@ class VD_VersionPrinter : StaticEventHandler
 {
 	override void OnRegister()
 	{
-		Console.Printf("Vandomizer %s",StringTable.Localize("$VD_VERSIONNUM"));
+		Console.Printf("\chVandomizer %s\c-",StringTable.Localize("$VD_VERSIONNUM"));
 	}
 }
