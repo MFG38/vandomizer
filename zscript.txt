@@ -1,0 +1,20 @@
+version "4.3"
+
+class VD_VersionData : Thinker
+{
+	string ver;
+}
+
+class VD_VersionHandler : StaticEventHandler
+// Technically this just exists to store the version number data.
+{
+	override void NewGame()
+	{
+		let vdVer = new("VD_VersionData");
+		vdVer.ChangeStatNum(Thinker.STAT_STATIC);
+		vdVer.ver = StringTable.Localize("$VD_VERSION");
+	}
+}
+
+#include "filter/doom.id.doom1/vd_doom1.txt"
+#include "filter/doom.id.doom2/vd_doom2.txt"
