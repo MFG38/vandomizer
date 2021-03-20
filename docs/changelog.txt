@@ -1,4 +1,4 @@
-[??-??-????] v1.0.3:
+[20-03-2021] v1.0.3:
 - Fixed dropped Shotguns and Chainguns not displaying proper pickup messages.
 - Slightly tweaked spawning balance for (Ultimate) Doom in spawnmode 2.
 - Updated language.enu and readme.txt to reflect differences in the number of tiers between games in spawnmode 0.
