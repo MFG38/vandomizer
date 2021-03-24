@@ -1,3 +1,6 @@
+[??-??-????] v1.0.4:
+- Fixed weapon pickups not getting randomized in spawnmode 2 in (Ultimate) Doom.
+
 [20-03-2021] v1.0.3:
 - Fixed dropped Shotguns and Chainguns not displaying proper pickup messages.
 - Slightly tweaked spawning balance for (Ultimate) Doom in spawnmode 2.
@@ -6,7 +9,7 @@
 
 [09-03-2021] v1.0.2:
 - Fixed the potential Doom 2 MAP07 softlock in spawnmode 2.
-- Fixed weapon pickups not getting randomized in spawnmode 2.
+- Fixed weapon pickups not getting randomized in spawnmode 2 in Doom 2.
 - Shotgunners and Chaingunners now drop their weapons.
 
 [06-03-2021] v1.0.1:
