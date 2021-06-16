@@ -1,1 +1,1 @@
-//
+class SpawningHandler : EventHandler {}
