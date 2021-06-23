@@ -1,0 +1,5 @@
+addkeysection "Vandomizer Keybinds" VD_KeyCommands
+
+alias quicknoclip "noclip"
+addmenukey "Quick noclip" quicknoclip
+defaultbind n quicknoclip

@@ -1,3 +1,6 @@
+[??-??-????] v1.1:
+- Implemented a shortcut noclip key command.
+
 [28-03-2021] v1.0.4:
 - Fixed weapon pickups not getting randomized in spawnmode 2 in (Ultimate) Doom.
 
