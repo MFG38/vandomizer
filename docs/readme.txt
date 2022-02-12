@@ -16,7 +16,7 @@
 
 Vandomizer is a vanilla randomizer mod for GZDoom. By "vanilla randomizer", I mean
 that the mod does not include any custom weapons or monsters - rather, it merely
-randomizes the pre-existing Doom things. The mod provides three different modes of
+randomizes the pre-existing things. The mod provides three different modes of
 randomization:
 
 1.	Same tier enemy and ammo spawns - Enemies are randomized based on
