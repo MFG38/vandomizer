@@ -9,7 +9,11 @@ class SpawningHandler : EventHandler
 		
 		switch(mode.GetInt())
 		{
-			case 0:		// Same tier enemy and ammo spawns
+			case 0:		// Off
+				return;
+				break;
+			
+			case 1:		// Same tier enemy and ammo spawns
 				// Prevent randomization of bosses in ExM8 maps.
 				if((level.mapname ~== "E1M8") && (e.Replacee == 'BaronOfHell'))
 				{ return; }
@@ -414,7 +418,7 @@ class SpawningHandler : EventHandler
 				
 				break;
 					
-			case 1:		// All enemy and ammo spawns
+			case 2:		// All enemy and ammo spawns
 				if((level.mapname ~== "E1M8") && (e.Replacee == 'BaronOfHell'))
 				{ return; }
 
@@ -776,7 +780,7 @@ class SpawningHandler : EventHandler
 				
 				break;
 				
-			case 2:		// TOTAL FUCKING CHAOS
+			case 3:		// TOTAL FUCKING CHAOS
 				if((level.mapname ~== "E1M8") && (e.Replacee == 'BaronOfHell'))
 				{ return; }
 

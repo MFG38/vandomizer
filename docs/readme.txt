@@ -63,12 +63,13 @@ submenu within GZDoom's option menu named "Vandomizer Settings" where the random
 mode can be changed between the three different modes.
 
 Alternatively, you can change the cvar through the console by typing "vd_spawnmode #",
-where # is an integer value between 0 and 2. The respective modes for each value are as
+where # is an integer value between 0 and 3. The respective modes for each value are as
 follows:
 
-	0 = Same tier enemy and ammo spawns
-	1 = All enemy and ammo spawns
-	2 = TOTAL FUCKING CHAOS
+	0 = Disabled
+	1 = Same tier enemy and ammo spawns
+	2 = All enemy and ammo spawns
+	3 = TOTAL FUCKING CHAOS
 
 Note that if the cvar is changed mid-game, the change will not take effect until a new
 level is loaded or the current level is reloaded.

@@ -1,1 +1,1 @@
-server int vd_spawnmode = 0;
+server int vd_spawnmode = 1;

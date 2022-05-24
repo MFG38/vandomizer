@@ -2,11 +2,14 @@
 VD_SETUPMENU = "Vandomizer Settings";
 VD_MODE = "Randomization mode";
 
-VD_CVAR0 = "Same tier enemy and ammo spawns";
-VD_CVAR1 = "All enemy and ammo spawns";
-VD_CVAR2 = "TOTAL FUCKING CHAOS";
+VD_CVAR0 = "Disabled";
+VD_CVAR1 = "Same tier enemy and ammo spawns";
+VD_CVAR2 = "All enemy and ammo spawns";
+VD_CVAR3 = "TOTAL FUCKING CHAOS";
 
 VD_DESCS =
+	"Disabled - Randomization is disabled.\n"
+	"\n"
 	"Same tier enemy and ammo spawns - Enemies are randomized based on\n"
 	"the tier of the original enemy, with the enemies categorized into\n"
 	"different tiers based roughly on their health and relative threat\n"

@@ -17,4 +17,5 @@ OptionValue "SpawnMode"
 	0, "$VD_CVAR0"
 	1, "$VD_CVAR1"
 	2, "$VD_CVAR2"
+	3, "$VD_CVAR3"
 }
