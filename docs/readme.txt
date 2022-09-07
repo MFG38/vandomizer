@@ -50,9 +50,11 @@ tnt.wad
 3. RUNNING THE MOD
 ==================
 
-To run the mod, all you need to do is drag the unzipped PK3 (or vandomizer-master.zip
-if you downloaded the mod from GitHub) over gzdoom.exe or use your launcher of choice
-to load the mod.
+To run the mod, all you need to do is drag the unzipped .pk3 over gzdoom.exe or use your
+launcher of choice to load the mod. If you downloaded the mod's source from GitHub, unzip
+the archive to your folder of choice and run either _build.bat or _build.sh, depending on
+your OS. This will generate a .pk3 file in the _build folder which can then be loaded in
+GZDoom.
 
 
 4. CHANGING THE RANDOMIZATION MODE
