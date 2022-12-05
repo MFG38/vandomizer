@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/ env bash
 VERNUM="v11-pre-r090"
 
 echo Building...
