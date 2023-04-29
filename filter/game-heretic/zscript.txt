@@ -1,3 +1,197 @@
 version "4.3"
 
-class SpawningHandler : EventHandler {}
+class SpawningHandler : EventHandler
+{
+    override void CheckReplacement(ReplaceEvent e)
+    {
+        e.IsFinal = true;
+        cvar mode = CVar.FindCVar('vd_spawnmode');
+
+        switch(mode.GetInt())
+        {
+            case 0:     // Off
+                return;
+                break;
+
+            case 1:     // Same tier spawns
+                if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
+                e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
+                e.Replacee == 'SkullRod')
+                {
+                    switch(Random[Replacement](0,12))
+                    {
+                    case 0:
+                    case 1:
+                        e.Replacement = 'Blaster';
+                        break;
+                    case 2:
+                    case 3:
+                        e.Replacement = 'Crossbow';
+                        break;
+                    case 4:
+                    case 5:
+                        e.Replacement = 'Gauntlets';
+                        break;
+                    case 6:
+                    case 7:
+                        e.Replacement = 'GoldWand';
+                        break;
+                    case 8:
+                    case 9:
+                        e.Replacement = 'Mace';
+                        break;
+                    case 10:
+                    case 11:
+                        e.Replacement = 'SkullRod';
+                        break;
+                    case 12:
+                        e.Replacement = 'PhoenixRod';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'ArtiEgg' || e.Replacee == 'ArtiFly' || e.Replacee == 'ArtiInvisibility' ||
+                e.Replacee == 'ArtiInvulnerability' || e.Replacee == 'ArtiSuperHealth' || e.Replacee == 'ArtiTeleport' ||
+                e.Replacee == 'ArtiTimeBomb' || e.Replacee == 'ArtiTomeOfPower' || e.Replacee == 'ArtiTorch')
+                {
+                    switch(Random[Replacement](0,8))
+                    {
+                    case 0:
+                        e.Replacement = 'ArtiEgg';
+                        break;
+                    case 1:
+                        e.Replacement = 'ArtiFly';
+                        break;
+                    case 2:
+                        e.Replacement = 'ArtiInvisibility';
+                        break;
+                    case 3:
+                        e.Replacement = 'ArtiInvulnerability';
+                        break;
+                    case 4:
+                        e.Replacement = 'ArtiSuperHealth';
+                        break;
+                    case 5:
+                        e.Replacement = 'ArtiTeleport';
+                        break;
+                    case 6:
+                        e.Replacement = 'ArtiTimeBomb';
+                        break;
+                    case 7:
+                        e.Replacement = 'ArtiTomeOfPower';
+                        break;
+                    case 8:
+                        e.Replacement = 'ArtiTorch';
+                        break;  
+                    }
+                }
+
+                else if(e.Replacee == 'CrystalVial' || e.Replacee == 'ArtiHealth')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'CrystalVial';
+                        break;
+                    case 1:
+                        e.Replacement = 'ArtiHealth';
+                        break;
+                    }
+                }
+
+                break;
+
+            case 2:     // All spawns
+                if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
+                e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
+                e.Replacee == 'SkullRod')
+                {
+                    switch(Random[Replacement](0,12))
+                    {
+                    case 0:
+                    case 1:
+                        e.Replacement = 'Blaster';
+                        break;
+                    case 2:
+                    case 3:
+                        e.Replacement = 'Crossbow';
+                        break;
+                    case 4:
+                    case 5:
+                        e.Replacement = 'Gauntlets';
+                        break;
+                    case 6:
+                    case 7:
+                        e.Replacement = 'GoldWand';
+                        break;
+                    case 8:
+                    case 9:
+                        e.Replacement = 'Mace';
+                        break;
+                    case 10:
+                    case 11:
+                        e.Replacement = 'SkullRod';
+                        break;
+                    case 12:
+                        e.Replacement = 'PhoenixRod';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'ArtiEgg' || e.Replacee == 'ArtiFly' || e.Replacee == 'ArtiInvisibility' ||
+                e.Replacee == 'ArtiInvulnerability' || e.Replacee == 'ArtiSuperHealth' || e.Replacee == 'ArtiTeleport' ||
+                e.Replacee == 'ArtiTimeBomb' || e.Replacee == 'ArtiTomeOfPower' || e.Replacee == 'ArtiTorch')
+                {
+                    switch(Random[Replacement](0,8))
+                    {
+                    case 0:
+                        e.Replacement = 'ArtiEgg';
+                        break;
+                    case 1:
+                        e.Replacement = 'ArtiFly';
+                        break;
+                    case 2:
+                        e.Replacement = 'ArtiInvisibility';
+                        break;
+                    case 3:
+                        e.Replacement = 'ArtiInvulnerability';
+                        break;
+                    case 4:
+                        e.Replacement = 'ArtiSuperHealth';
+                        break;
+                    case 5:
+                        e.Replacement = 'ArtiTeleport';
+                        break;
+                    case 6:
+                        e.Replacement = 'ArtiTimeBomb';
+                        break;
+                    case 7:
+                        e.Replacement = 'ArtiTomeOfPower';
+                        break;
+                    case 8:
+                        e.Replacement = 'ArtiTorch';
+                        break;  
+                    }
+                }
+
+                else if(e.Replacee == 'CrystalVial' || e.Replacee == 'ArtiHealth')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'CrystalVial';
+                        break;
+                    case 1:
+                        e.Replacement = 'ArtiHealth';
+                        break;
+                    }
+                }
+
+                break;
+            
+            case 3:     // TOTAL FUCKING CHAOS
+                return; // Disable for now until the other two modes are fully implemented.
+                break;
+        }
+    }
+}
