@@ -99,6 +99,32 @@ class SpawningHandler : EventHandler
                     }
                 }
 
+                else if(e.Replacee == 'EnchantedShield' || e.Replacee == 'SilverShield')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'EnchantedShield';
+                        break;
+                    case 1:
+                        e.Replacement = 'SilverShield';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'BagOfHolding' || e.Replacee == 'SuperMap')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'BagOfHolding';
+                        break;
+                    case 1:
+                        e.Replacement = 'SuperMap';
+                        break;
+                    }
+                }
+
                 break;
 
             case 2:     // All spawns
@@ -183,6 +209,32 @@ class SpawningHandler : EventHandler
                         break;
                     case 1:
                         e.Replacement = 'ArtiHealth';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'EnchantedShield' || e.Replacee == 'SilverShield')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'EnchantedShield';
+                        break;
+                    case 1:
+                        e.Replacement = 'SilverShield';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'BagOfHolding' || e.Replacee == 'SuperMap')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'BagOfHolding';
+                        break;
+                    case 1:
+                        e.Replacement = 'SuperMap';
                         break;
                     }
                 }
