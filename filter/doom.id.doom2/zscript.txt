@@ -510,7 +510,7 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'PainElemental' || e.Replacee == 'Cyberdemon' ||
 				e.Replacee == 'SpiderMastermind')
 				{
-					switch(random[Replacement](0,32))
+					switch(random[Replacement](0,30))
 					{
 					case 0:
 					case 1:
@@ -572,11 +572,9 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'FixedPainElemental';
 						break;
 					case 29:
-					case 30:
 						e.Replacement = 'Cyberdemon';
 						break;
-					case 31:
-					case 32:
+					case 30:
 						e.Replacement = 'SpiderMastermind';
 						break;
 					}

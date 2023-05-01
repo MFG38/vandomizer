@@ -433,36 +433,43 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'Cacodemon' || e.Replacee == 'BaronOfHell' ||
 				e.Replacee == 'Cyberdemon' || e.Replacee == 'SpiderMastermind')
 				{
-					switch(random[Replacement](0,9))
+					switch(random[Replacement](0,16))
 					{
 					case 0:
+					case 1:
 						e.Replacement = 'FixedZombieMan';
 						break;
-					case 1:
+					case 2:
+					case 3:
 						e.Replacement = 'FixedShotgunGuy';
 						break;
-					case 2:
+					case 4:
+					case 5:
 						e.Replacement = 'DoomImp';
 						break;
-					case 3:
+					case 6:
+					case 7:
 						e.Replacement = 'LostSoul';
 						break;
-					case 4:
+					case 8:
+					case 9:
 						e.Replacement = 'Demon';
 						break;
-					case 5:
+					case 10:
+					case 11:
 						e.Replacement = 'Spectre';
 						break;
-					case 6:
+					case 12:
+					case 13:
 						e.Replacement = 'Cacodemon';
 						break;
-					case 7:
+					case 14:
 						e.Replacement = 'BaronOfHell';
 						break;
-					case 8:
+					case 15:
 						e.Replacement = 'Cyberdemon';
 						break;
-					case 9:
+					case 16:
 						e.Replacement = 'SpiderMastermind';
 						break;
 					}

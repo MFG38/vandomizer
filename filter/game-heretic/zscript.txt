@@ -14,7 +14,139 @@ class SpawningHandler : EventHandler
                 break;
 
             case 1:     // Same tier spawns
-                if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
+                if(e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'HereticImp';
+                        break;
+                    case 1:
+                        e.Replacement = 'HereticImpLeader';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Mummy' || e.Replacee == 'MummyGhost' ||
+                e.Replacee == 'MummyLeader' || e.Replacee == 'MummyLeaderGhost')
+                {
+                    switch(Random[Replacement](0,3))
+                    {
+                    case 0:
+                        e.Replacement = 'Mummy';
+                        break;
+                    case 1:
+                        e.Replacement = 'MummyGhost';
+                        break;
+                    case 2:
+                        e.Replacement = 'MummyLeader';
+                        break;
+                    case 3:
+                        e.Replacement = 'MummyLeaderGhost';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Clink')
+                {
+                    switch(Random[Replacement](0,2))
+                    {
+                    case 0:
+                        e.Replacement = 'Knight';
+                        break;
+                    case 1:
+                        e.Replacement = 'KnightGhost';
+                        break;
+                    case 2:
+                        e.Replacement = 'Clink';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Beast' || e.Replacee == 'Snake' || e.Replacee == 'Wizard')
+                {
+                    switch(Random[Replacement](0,2))
+                    {
+                    case 0:
+                        e.Replacement = 'Beast';
+                        break;
+                    case 1:
+                        e.Replacement = 'Snake';
+                        break;
+                    case 2:
+                        e.Replacement = 'Wizard';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Ironlich' || e.Replacee == 'Minotaur')
+                {
+                    switch(Random[Replacement](0,1))
+                    {
+                    case 0:
+                        e.Replacement = 'Ironlich';
+                        break;
+                    case 1:
+                        e.Replacement = 'Minotaur';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'BlasterAmmo' || e.Replacee == 'CrossbowAmmo' ||
+                e.Replacee == 'GoldWandAmmo' || e.Replacee == 'MaceAmmo' ||
+                e.Replacee == 'PhoenixRodAmmo' || e.Replacee == 'SkullRodAmmo')
+                {
+                    switch(Random[Replacement](0,5))
+                    {
+                    case 0:
+                        e.Replacement = 'BlasterAmmo';
+                        break;
+                    case 1:
+                        e.Replacement = 'CrossbowAmmo';
+                        break;
+                    case 2:
+                        e.Replacement = 'GoldWandAmmo';
+                        break;
+                    case 3:
+                        e.Replacement = 'MaceAmmo';
+                        break;
+                    case 4:
+                        e.Replacement = 'PhoenixRodAmmo';
+                        break;
+                    case 5:
+                        e.Replacement = 'SkullRodAmmo';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'BlasterHefty' || e.Replacee == 'CrossbowHefty' ||
+                e.Replacee == 'GoldWandHefty' || e.Replacee == 'MaceHefty' ||
+                e.Replacee == 'PhoenixRodHefty' || e.Replacee == 'SkullRodHefty')
+                {
+                    switch(Random[Replacement](0,5))
+                    {
+                    case 0:
+                        e.Replacement = 'BlasterHefty';
+                        break;
+                    case 1:
+                        e.Replacement = 'CrossbowHefty';
+                        break;
+                    case 2:
+                        e.Replacement = 'GoldWandHefty';
+                        break;
+                    case 3:
+                        e.Replacement = 'MaceHefty';
+                        break;
+                    case 4:
+                        e.Replacement = 'PhoenixRodHefty';
+                        break;
+                    case 5:
+                        e.Replacement = 'SkullRodHefty';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
                 e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
                 e.Replacee == 'SkullRod')
                 {
@@ -38,14 +170,14 @@ class SpawningHandler : EventHandler
                         break;
                     case 8:
                     case 9:
-                        e.Replacement = 'Mace';
+                        e.Replacement = 'PhoenixRod';
                         break;
                     case 10:
                     case 11:
                         e.Replacement = 'SkullRod';
                         break;
                     case 12:
-                        e.Replacement = 'PhoenixRod';
+                        e.Replacement = 'Mace';
                         break;
                     }
                 }
@@ -128,7 +260,120 @@ class SpawningHandler : EventHandler
                 break;
 
             case 2:     // All spawns
-                if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
+                if(e.Replacee == 'Beast' || e.Replacee == 'Clink' || e.Replacee == 'Ironlich' ||
+                e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Minotaur' ||
+                e.Replacee == 'Mummy' || e.Replacee == 'MummyGhost' || e.Replacee == 'MummyLeader' ||
+                e.Replacee == 'MummyLeaderGhost' || e.Replacee == 'Snake' || e.Replacee == 'Wizard' ||
+                e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader')
+                {
+                    switch(Random[Replacement](0,25))
+                    {
+                    case 0:
+                    case 1:
+                        e.Replacement = 'Beast';
+                        break;
+                    case 2:
+                    case 3:
+                        e.Replacement = 'Clink';
+                        break;
+                    case 4:
+                    case 5:
+                        e.Replacement = 'Knight';
+                        break;
+                    case 6:
+                    case 7:
+                        e.Replacement = 'KnightGhost';
+                        break;
+                    case 8:
+                    case 9:
+                        e.Replacement = 'Mummy';
+                        break;
+                    case 10:
+                    case 11:
+                        e.Replacement = 'MummyGhost';
+                        break;
+                    case 12:
+                    case 13:
+                        e.Replacement = 'MummyLeader';
+                        break;
+                    case 14:
+                    case 15:
+                        e.Replacement = 'MummyLeaderGhost';
+                        break;
+                    case 16:
+                    case 17:
+                        e.Replacement = 'Snake';
+                        break;
+                    case 18:
+                    case 19:
+                        e.Replacement = 'Wizard';
+                        break;
+                    case 20:
+                    case 21:
+                        e.Replacement = 'HereticImp';
+                        break;
+                    case 22:
+                    case 23:
+                        e.Replacement = 'HereticImpLeader';
+                        break;
+                    case 24:
+                        e.Replacement = 'Ironlich';
+                        break;
+                    case 25:
+                        e.Replacement = 'Minotaur';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'BlasterAmmo' || e.Replacee == 'CrossbowAmmo' ||
+                e.Replacee == 'GoldWandAmmo' || e.Replacee == 'MaceAmmo' ||
+                e.Replacee == 'PhoenixRodAmmo' || e.Replacee == 'SkullRodAmmo' ||
+                e.Replacee == 'BlasterHefty' || e.Replacee == 'CrossbowHefty' ||
+                e.Replacee == 'GoldWandHefty' || e.Replacee == 'MaceHefty' ||
+                e.Replacee == 'PhoenixRodHefty' || e.Replacee == 'SkullRodHefty')
+                {
+                    switch(Random[Replacement](0,11))
+                    {
+                    case 0:
+                        e.Replacement = 'BlasterAmmo';
+                        break;
+                    case 1:
+                        e.Replacement = 'CrossbowAmmo';
+                        break;
+                    case 2:
+                        e.Replacement = 'GoldWandAmmo';
+                        break;
+                    case 3:
+                        e.Replacement = 'MaceAmmo';
+                        break;
+                    case 4:
+                        e.Replacement = 'PhoenixRodAmmo';
+                        break;
+                    case 5:
+                        e.Replacement = 'SkullRodAmmo';
+                        break;
+                    case 6:
+                        e.Replacement = 'BlasterHefty';
+                        break;
+                    case 7:
+                        e.Replacement = 'CrossbowHefty';
+                        break;
+                    case 8:
+                        e.Replacement = 'GoldWandHefty';
+                        break;
+                    case 9:
+                        e.Replacement = 'MaceHefty';
+                        break;
+                    case 10:
+                        e.Replacement = 'PhoenixRodHefty';
+                        break;
+                    case 11:
+                        e.Replacement = 'SkullRodHefty';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
                 e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
                 e.Replacee == 'SkullRod')
                 {
@@ -152,14 +397,14 @@ class SpawningHandler : EventHandler
                         break;
                     case 8:
                     case 9:
-                        e.Replacement = 'Mace';
+                        e.Replacement = 'PhoenixRod';
                         break;
                     case 10:
                     case 11:
                         e.Replacement = 'SkullRod';
                         break;
                     case 12:
-                        e.Replacement = 'PhoenixRod';
+                        e.Replacement = 'Mace';
                         break;
                     }
                 }

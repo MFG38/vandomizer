@@ -1,7 +1,9 @@
 [??-??-????] v1.1:
+- Implemented Heretic compatibility.
 - Implemented a shortcut noclip key command.
 - Added a mode that disables randomization entirely (spawnmode 0).
 - Reorganized existing spawnmodes (mode 0 is now mode 1 etc.).
+- Reduced chance of spawning boss monsters in Doom and Doom 2 in spawnmode 2.
 
 [28-03-2021] v1.0.4:
 - Fixed weapon pickups not getting randomized in spawnmode 2 in (Ultimate) Doom.
