@@ -257,6 +257,79 @@ class SpawningHandler : EventHandler
                     }
                 }
 
+                else if(e.Replacee == 'Barrel' || e.Replacee == 'BrownPillar' || e.Replacee == 'Chandelier' || 
+                e.Replacee == 'FireBrazier' || e.Replacee == 'HangingCorpse' || e.Replacee == 'Moss1' || 
+                e.Replacee == 'Moss2' || e.Replacee == 'Pod' || e.Replacee == 'SerpentTorch' || 
+                e.Replacee == 'SkullHang35' || e.Replacee == 'SkullHang45' || e.Replacee == 'SkullHang60' || 
+                e.Replacee == 'SkullHang70' || e.Replacee == 'SmallPillar' || e.Replacee == 'StalactiteLarge' ||
+                e.Replacee == 'StalactiteSmall' || e.Replacee == 'StalagmiteLarge' || e.Replacee == 'StalagmiteSmall' || 
+                e.Replacee == 'Volcano' || e.Replacee == 'WallTorch')
+                {
+                    switch(Random[Replacement](0,19))
+                    {
+                    case 0:
+                        e.Replacement = 'Barrel';
+                        break;
+                    case 1:
+                        e.Replacement = 'BrownPillar';
+                        break;
+                    case 2:
+                        e.Replacement = 'Chandelier';
+                        break;
+                    case 3:
+                        e.Replacement = 'FireBrazier';
+                        break;
+                    case 4:
+                        e.Replacement = 'HangingCorpse';
+                        break;
+                    case 5:
+                        e.Replacement = 'Moss1';
+                        break;
+                    case 6:
+                        e.Replacement = 'Moss2';
+                        break;
+                    case 7:
+                        e.Replacement = 'Pod';
+                        break;
+                    case 8:
+                        e.Replacement = 'SerpentTorch';
+                        break;
+                    case 9:
+                        e.Replacement = 'SkullHang35';
+                        break;
+                    case 10:
+                        e.Replacement = 'SkullHang45';
+                        break;
+                    case 11:
+                        e.Replacement = 'SkullHang60';
+                        break;
+                    case 12:
+                        e.Replacement = 'SkullHang70';
+                        break;
+                    case 13:
+                        e.Replacement = 'SmallPillar';
+                        break;
+                    case 14:
+                        e.Replacement = 'StalactiteLarge';
+                        break;
+                    case 15:
+                        e.Replacement = 'StalactiteSmall';
+                        break;
+                    case 16:
+                        e.Replacement = 'StalagmiteLarge';
+                        break;
+                    case 17:
+                        e.Replacement = 'StalagmiteSmall';
+                        break;
+                    case 18:
+                        e.Replacement = 'Volcano';
+                        break;
+                    case 19:
+                        e.Replacement = 'WallTorch';
+                        break;
+                    }
+                }
+
                 break;
 
             case 2:     // All spawns
@@ -480,6 +553,79 @@ class SpawningHandler : EventHandler
                         break;
                     case 1:
                         e.Replacement = 'SuperMap';
+                        break;
+                    }
+                }
+
+                else if(e.Replacee == 'Barrel' || e.Replacee == 'BrownPillar' || e.Replacee == 'Chandelier' || 
+                e.Replacee == 'FireBrazier' || e.Replacee == 'HangingCorpse' || e.Replacee == 'Moss1' || 
+                e.Replacee == 'Moss2' || e.Replacee == 'Pod' || e.Replacee == 'SerpentTorch' || 
+                e.Replacee == 'SkullHang35' || e.Replacee == 'SkullHang45' || e.Replacee == 'SkullHang60' || 
+                e.Replacee == 'SkullHang70' || e.Replacee == 'SmallPillar' || e.Replacee == 'StalactiteLarge' ||
+                e.Replacee == 'StalactiteSmall' || e.Replacee == 'StalagmiteLarge' || e.Replacee == 'StalagmiteSmall' || 
+                e.Replacee == 'Volcano' || e.Replacee == 'WallTorch')
+                {
+                    switch(Random[Replacement](0,19))
+                    {
+                    case 0:
+                        e.Replacement = 'Barrel';
+                        break;
+                    case 1:
+                        e.Replacement = 'BrownPillar';
+                        break;
+                    case 2:
+                        e.Replacement = 'Chandelier';
+                        break;
+                    case 3:
+                        e.Replacement = 'FireBrazier';
+                        break;
+                    case 4:
+                        e.Replacement = 'HangingCorpse';
+                        break;
+                    case 5:
+                        e.Replacement = 'Moss1';
+                        break;
+                    case 6:
+                        e.Replacement = 'Moss2';
+                        break;
+                    case 7:
+                        e.Replacement = 'Pod';
+                        break;
+                    case 8:
+                        e.Replacement = 'SerpentTorch';
+                        break;
+                    case 9:
+                        e.Replacement = 'SkullHang35';
+                        break;
+                    case 10:
+                        e.Replacement = 'SkullHang45';
+                        break;
+                    case 11:
+                        e.Replacement = 'SkullHang60';
+                        break;
+                    case 12:
+                        e.Replacement = 'SkullHang70';
+                        break;
+                    case 13:
+                        e.Replacement = 'SmallPillar';
+                        break;
+                    case 14:
+                        e.Replacement = 'StalactiteLarge';
+                        break;
+                    case 15:
+                        e.Replacement = 'StalactiteSmall';
+                        break;
+                    case 16:
+                        e.Replacement = 'StalagmiteLarge';
+                        break;
+                    case 17:
+                        e.Replacement = 'StalagmiteSmall';
+                        break;
+                    case 18:
+                        e.Replacement = 'Volcano';
+                        break;
+                    case 19:
+                        e.Replacement = 'WallTorch';
                         break;
                     }
                 }
