@@ -633,7 +633,461 @@ class SpawningHandler : EventHandler
                 break;
             
             case 3:     // TOTAL FUCKING CHAOS
-                return; // Disable for now until the other two modes are fully implemented.
+                if(e.Replacee == 'Barrel' || e.Replacee == 'BrownPillar' || e.Replacee == 'Chandelier' || 
+                e.Replacee == 'FireBrazier' || e.Replacee == 'HangingCorpse' || e.Replacee == 'Moss1' || 
+                e.Replacee == 'Moss2' || e.Replacee == 'Pod' || e.Replacee == 'SerpentTorch' || 
+                e.Replacee == 'SkullHang35' || e.Replacee == 'SkullHang45' || e.Replacee == 'SkullHang60' || 
+                e.Replacee == 'SkullHang70' || e.Replacee == 'SmallPillar' || e.Replacee == 'StalactiteLarge' ||
+                e.Replacee == 'StalactiteSmall' || e.Replacee == 'StalagmiteLarge' || e.Replacee == 'StalagmiteSmall' || 
+                e.Replacee == 'Volcano' || e.Replacee == 'WallTorch' ||
+                e.Replacee == 'Beast' || e.Replacee == 'Clink' || e.Replacee == 'Ironlich' ||
+                e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Minotaur' ||
+                e.Replacee == 'Mummy' || e.Replacee == 'MummyGhost' || e.Replacee == 'MummyLeader' ||
+                e.Replacee == 'MummyLeaderGhost' || e.Replacee == 'Snake' || e.Replacee == 'Wizard' ||
+                e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader' ||
+                e.Replacee == 'BlasterAmmo' || e.Replacee == 'CrossbowAmmo' ||
+                e.Replacee == 'GoldWandAmmo' || e.Replacee == 'MaceAmmo' ||
+                e.Replacee == 'PhoenixRodAmmo' || e.Replacee == 'SkullRodAmmo' ||
+                e.Replacee == 'BlasterHefty' || e.Replacee == 'CrossbowHefty' ||
+                e.Replacee == 'GoldWandHefty' || e.Replacee == 'MaceHefty' ||
+                e.Replacee == 'PhoenixRodHefty' || e.Replacee == 'SkullRodHefty' ||
+                e.Replacee == 'Blaster' || e.Replacee == 'Crossbow' || e.Replacee == 'Gauntlets' ||
+                e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' || e.Replacee == 'SkullRod' ||
+                e.Replacee == 'ArtiEgg' || e.Replacee == 'ArtiFly' || e.Replacee == 'ArtiInvisibility' ||
+                e.Replacee == 'ArtiInvulnerability' || e.Replacee == 'ArtiSuperHealth' || e.Replacee == 'ArtiTeleport' ||
+                e.Replacee == 'ArtiTimeBomb' || e.Replacee == 'ArtiTomeOfPower' || e.Replacee == 'ArtiTorch' ||
+                e.Replacee == 'CrystalVial' || e.Replacee == 'ArtiHealth' ||
+                e.Replacee == 'EnchantedShield' || e.Replacee == 'SilverShield' ||
+                e.Replacee == 'BagOfHolding' || e.Replacee == 'SuperMap')
+                {
+                    switch(Random[Replacement](0,299))
+                    {
+                    case 0:
+                        e.Replacement = 'Barrel';
+                        break;
+                    case 1:
+                        e.Replacement = 'BrownPillar';
+                        break;
+                    case 2:
+                        e.Replacement = 'Chandelier';
+                        break;
+                    case 3:
+                        e.Replacement = 'FireBrazier';
+                        break;
+                    case 4:
+                        e.Replacement = 'HangingCorpse';
+                        break;
+                    case 5:
+                        e.Replacement = 'Moss1';
+                        break;
+                    case 6:
+                        e.Replacement = 'Moss2';
+                        break;
+                    case 7:
+                        e.Replacement = 'Pod';
+                        break;
+                    case 8:
+                        e.Replacement = 'SerpentTorch';
+                        break;
+                    case 9:
+                        e.Replacement = 'SkullHang35';
+                        break;
+                    case 10:
+                        e.Replacement = 'SkullHang45';
+                        break;
+                    case 11:
+                        e.Replacement = 'SkullHang60';
+                        break;
+                    case 12:
+                        e.Replacement = 'SkullHang70';
+                        break;
+                    case 13:
+                        e.Replacement = 'SmallPillar';
+                        break;
+                    case 14:
+                        e.Replacement = 'StalactiteLarge';
+                        break;
+                    case 15:
+                        e.Replacement = 'StalactiteSmall';
+                        break;
+                    case 16:
+                        e.Replacement = 'StalagmiteLarge';
+                        break;
+                    case 17:
+                        e.Replacement = 'StalagmiteSmall';
+                        break;
+                    case 18:
+                        e.Replacement = 'Volcano';
+                        break;
+                    case 19:
+                        e.Replacement = 'WallTorch';
+                        break;
+                    case 20:
+                    case 21:
+                    case 22:
+                    case 23:
+                    case 24:
+                    case 25:
+                        e.Replacement = 'Crossbow';
+                        break;
+                    case 26:
+                    case 27:
+                    case 28:
+                    case 29:
+                    case 30:
+                    case 31:
+                        e.Replacement = 'Blaster';
+                        break;
+                    case 32:
+                    case 33:
+                    case 34:
+                    case 35:
+                    case 36:
+                    case 37:
+                        e.Replacement = 'Gauntlets';
+                        break;
+                    case 38:
+                    case 39:
+                    case 40:
+                    case 41:
+                    case 42:
+                    case 43:
+                        e.Replacement = 'GoldWand';
+                        break;
+                    case 44:
+                    case 45:
+                    case 46:
+                    case 47:
+                    case 48:
+                    case 49:
+                        e.Replacement = 'PhoenixRod';
+                        break;
+                    case 50:
+                    case 51:
+                    case 52:
+                    case 53:
+                    case 54:
+                    case 55:
+                        e.Replacement = 'SkullRod';
+                        break;
+                    case 56:
+                    case 57:
+                    case 58:
+                        e.Replacement = 'Mace';
+                        break;
+                    case 59:
+                    case 60:
+                        e.Replacement = 'BagOfHolding';
+                        break;
+                    case 61:
+                    case 62:
+                        e.Replacement = 'SuperMap';
+                        break;
+                    case 63:
+                    case 64:
+                    case 65:
+                        e.Replacement = 'SilverShield';
+                        break;
+                    case 66:
+                    case 67:
+                    case 68:
+                        e.Replacement = 'EnchantedShield';
+                        break;
+                    case 69:
+                    case 70:
+                    case 71:
+                    case 72:
+                        e.Replacement = 'CrystalVial';
+                        break;
+                    case 73:
+                    case 74:
+                    case 75:
+                    case 76:
+                        e.Replacement = 'ArtiHealth';
+                        break;
+                    case 77:
+                    case 78:
+                    case 79:
+                    case 80:
+                    case 81:
+                    case 82:
+                    case 83:
+                    case 84:
+                    case 85:
+                    case 86:
+                        e.Replacement = 'Beast';
+                        break;
+                    case 87:
+                    case 88:
+                    case 89:
+                    case 90:
+                    case 91:
+                    case 92:
+                    case 93:
+                    case 94:
+                    case 95:
+                    case 96:
+                        e.Replacement = 'Clink';
+                        break;
+                    case 97:
+                    case 98:
+                    case 99:
+                    case 100:
+                    case 101:
+                    case 102:
+                    case 103:
+                    case 104:
+                    case 105:
+                    case 106:
+                        e.Replacement = 'HereticImp';
+                        break;
+                    case 107:
+                    case 108:
+                    case 109:
+                    case 110:
+                    case 111:
+                    case 112:
+                    case 113:
+                    case 114:
+                    case 115:
+                    case 116:
+                        e.Replacement = 'HereticImpLeader';
+                        break;
+                    case 117:
+                    case 118:
+                    case 119:
+                    case 120:
+                    case 121:
+                    case 122:
+                    case 123:
+                    case 124:
+                    case 125:
+                    case 126:
+                        e.Replacement = 'Mummy';
+                        break;
+                    case 127:
+                    case 128:
+                    case 129:
+                    case 130:
+                    case 131:
+                    case 132:
+                    case 133:
+                    case 134:
+                    case 135:
+                    case 136:
+                        e.Replacement = 'MummyGhost';
+                        break;
+                    case 137:
+                    case 138:
+                    case 139:
+                    case 140:
+                    case 141:
+                    case 142:
+                    case 143:
+                    case 144:
+                    case 145:
+                    case 146:
+                        e.Replacement = 'MummyLeader';
+                        break;
+                    case 147:
+                    case 148:
+                    case 149:
+                    case 150:
+                    case 151:
+                    case 152:
+                    case 153:
+                    case 154:
+                    case 155:
+                    case 156:
+                        e.Replacement = 'MummyLeaderGhost';
+                        break;
+                    case 157:
+                    case 158:
+                    case 159:
+                    case 160:
+                    case 161:
+                    case 162:
+                    case 163:
+                    case 164:
+                    case 165:
+                    case 166:
+                        e.Replacement = 'Knight';
+                        break;
+                    case 167:
+                    case 168:
+                    case 169:
+                    case 170:
+                    case 171:
+                    case 172:
+                    case 173:
+                    case 174:
+                    case 175:
+                    case 176:
+                        e.Replacement = 'KnightGhost';
+                        break;
+                    case 177:
+                    case 178:
+                    case 179:
+                    case 180:
+                    case 181:
+                    case 182:
+                    case 183:
+                    case 184:
+                    case 185:
+                    case 186:
+                        e.Replacement = 'Snake';
+                        break;
+                    case 187:
+                    case 188:
+                    case 189:
+                    case 190:
+                    case 191:
+                    case 192:
+                    case 193:
+                    case 194:
+                    case 195:
+                    case 196:
+                        e.Replacement = 'Wizard';
+                        break;
+                    case 197:
+                    case 198:
+                    case 199:
+                    case 200:
+                    case 201:
+                        e.Replacement = 'Minotaur';
+                        break;
+                    case 202:
+                    case 203:
+                    case 204:
+                    case 205:
+                    case 206:
+                        e.Replacement = 'Ironlich';
+                        break;
+                    case 207:
+                    case 208:
+                    case 209:
+                    case 210:
+                    case 211:
+                    case 212:
+                        e.Replacement = 'CrossbowAmmo';
+                        break;
+                    case 213:
+                    case 214:
+                    case 215:
+                    case 216:
+                    case 217:
+                    case 218:
+                        e.Replacement = 'CrossbowHefty';
+                        break;
+                    case 219:
+                    case 220:
+                    case 221:
+                    case 222:
+                    case 223:
+                    case 224:
+                        e.Replacement = 'GoldWandAmmo';
+                        break;
+                    case 225:
+                    case 226:
+                    case 227:
+                    case 228:
+                    case 229:
+                    case 230:
+                        e.Replacement = 'GoldWandHefty';
+                        break;
+                    case 231:
+                    case 232:
+                    case 233:
+                    case 234:
+                    case 235:
+                    case 236:
+                        e.Replacement = 'PhoenixRodAmmo';
+                        break;
+                    case 237:
+                    case 238:
+                    case 239:
+                    case 240:
+                    case 241:
+                    case 242:
+                        e.Replacement = 'PhoenixRodHefty';
+                        break;
+                    case 243:
+                    case 244:
+                    case 245:
+                    case 246:
+                    case 247:
+                    case 248:
+                        e.Replacement = 'MaceAmmo';
+                        break;
+                    case 249:
+                    case 250:
+                    case 251:
+                    case 252:
+                    case 253:
+                    case 254:
+                        e.Replacement = 'MaceHefty';
+                        break;
+                    case 255:
+                    case 256:
+                    case 257:
+                    case 258:
+                    case 259:
+                    case 260:
+                        e.Replacement = 'SkullRodAmmo'
+                        break;
+                    case 261:
+                    case 262:
+                    case 263:
+                    case 264:
+                    case 265:
+                    case 266:
+                        e.Replacement = 'SkullRodHefty';
+                        break;
+                    case 267:
+                    case 268:
+                    case 269:
+                    case 270:
+                    case 271:
+                    case 272:
+                        e.Replacement = 'BlasterAmmo';
+                        break;
+                    case 273:
+                    case 274:
+                    case 275:
+                    case 276:
+                    case 277:
+                    case 278:
+                        e.Replacement = 'BlasterHefty';
+                        break;
+                    case 279:
+                        e.Replacement = 'ArtiEgg';
+                        break;
+                    case 280:
+                        e.Replacement = 'ArtiFly';
+                        break;
+                    case 281:
+                        e.Replacement = 'ArtiInvisibility';
+                        break;
+                    case 282:
+                        e.Replacement = 'ArtiInvulnerability';
+                        break;
+                    case 283:
+                        e.Replacement = 'ArtiSuperHealth';
+                        break;
+                    case 284:
+                        e.Replacement = 'ArtiTeleport';
+                        break;
+                    case 285:
+                        e.Replacement = 'ArtiTimeBomb';
+                        break;
+                    case 286:
+                        e.Replacement = 'ArtiTomeOfPower';
+                        break;
+                    case 287:
+                        e.Replacement = 'ArtiTorch';
+                        break;
+                    }
+                }
                 break;
         }
     }
