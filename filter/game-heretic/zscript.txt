@@ -1033,7 +1033,7 @@ class SpawningHandler : EventHandler
                     case 258:
                     case 259:
                     case 260:
-                        e.Replacement = 'SkullRodAmmo'
+                        e.Replacement = 'SkullRodAmmo';
                         break;
                     case 261:
                     case 262:
