@@ -660,7 +660,7 @@ class SpawningHandler : EventHandler
                 e.Replacee == 'EnchantedShield' || e.Replacee == 'SilverShield' ||
                 e.Replacee == 'BagOfHolding' || e.Replacee == 'SuperMap')
                 {
-                    switch(Random[Replacement](0,299))
+                    switch(Random[Replacement](0,287))
                     {
                     case 0:
                         e.Replacement = 'Barrel';
@@ -797,13 +797,11 @@ class SpawningHandler : EventHandler
                     case 70:
                     case 71:
                     case 72:
-                        e.Replacement = 'CrystalVial';
-                        break;
                     case 73:
                     case 74:
                     case 75:
                     case 76:
-                        e.Replacement = 'ArtiHealth';
+                        e.Replacement = 'CrystalVial';
                         break;
                     case 77:
                     case 78:
@@ -813,10 +811,10 @@ class SpawningHandler : EventHandler
                     case 82:
                     case 83:
                     case 84:
+                        e.Replacement = 'ArtiHealth';
+                        break;
                     case 85:
                     case 86:
-                        e.Replacement = 'Beast';
-                        break;
                     case 87:
                     case 88:
                     case 89:
@@ -825,36 +823,38 @@ class SpawningHandler : EventHandler
                     case 92:
                     case 93:
                     case 94:
+                        e.Replacement = 'Beast';
+                        break;
                     case 95:
                     case 96:
-                        e.Replacement = 'Clink';
-                        break;
                     case 97:
                     case 98:
                     case 99:
                     case 100:
                     case 101:
                     case 102:
+                        e.Replacement = 'Clink';
+                        break;
                     case 103:
                     case 104:
                     case 105:
                     case 106:
-                        e.Replacement = 'HereticImp';
-                        break;
                     case 107:
                     case 108:
                     case 109:
                     case 110:
+                        e.Replacement = 'HereticImp';
+                        break;
                     case 111:
                     case 112:
                     case 113:
                     case 114:
                     case 115:
                     case 116:
-                        e.Replacement = 'HereticImpLeader';
-                        break;
                     case 117:
                     case 118:
+                        e.Replacement = 'HereticImpLeader';
+                        break;
                     case 119:
                     case 120:
                     case 121:
@@ -873,36 +873,38 @@ class SpawningHandler : EventHandler
                     case 132:
                     case 133:
                     case 134:
-                    case 135:
-                    case 136:
                         e.Replacement = 'MummyGhost';
                         break;
+                    case 135:
+                    case 136:
                     case 137:
                     case 138:
                     case 139:
                     case 140:
                     case 141:
                     case 142:
+                        e.Replacement = 'MummyLeader';
+                        break;
                     case 143:
                     case 144:
                     case 145:
                     case 146:
-                        e.Replacement = 'MummyLeader';
-                        break;
                     case 147:
                     case 148:
                     case 149:
                     case 150:
+                        e.Replacement = 'MummyLeaderGhost';
+                        break;
                     case 151:
                     case 152:
                     case 153:
                     case 154:
                     case 155:
                     case 156:
-                        e.Replacement = 'MummyLeaderGhost';
-                        break;
                     case 157:
                     case 158:
+                        e.Replacement = 'Knight';
+                        break;
                     case 159:
                     case 160:
                     case 161:
@@ -911,7 +913,7 @@ class SpawningHandler : EventHandler
                     case 164:
                     case 165:
                     case 166:
-                        e.Replacement = 'Knight';
+                        e.Replacement = 'KnightGhost';
                         break;
                     case 167:
                     case 168:
@@ -921,10 +923,10 @@ class SpawningHandler : EventHandler
                     case 172:
                     case 173:
                     case 174:
+                        e.Replacement = 'Snake';
+                        break;
                     case 175:
                     case 176:
-                        e.Replacement = 'KnightGhost';
-                        break;
                     case 177:
                     case 178:
                     case 179:
@@ -933,75 +935,75 @@ class SpawningHandler : EventHandler
                     case 182:
                     case 183:
                     case 184:
+                        e.Replacement = 'Wizard';
+                        break;
                     case 185:
                     case 186:
-                        e.Replacement = 'Snake';
-                        break;
                     case 187:
                     case 188:
                     case 189:
+                        e.Replacement = 'Minotaur';
+                        break;
                     case 190:
                     case 191:
                     case 192:
                     case 193:
                     case 194:
+                        e.Replacement = 'Ironlich';
+                        break;
                     case 195:
                     case 196:
-                        e.Replacement = 'Wizard';
-                        break;
                     case 197:
                     case 198:
                     case 199:
                     case 200:
                     case 201:
-                        e.Replacement = 'Minotaur';
+                        e.Replacement = 'CrossbowAmmo';
                         break;
                     case 202:
                     case 203:
                     case 204:
                     case 205:
                     case 206:
-                        e.Replacement = 'Ironlich';
-                        break;
                     case 207:
                     case 208:
+                        e.Replacement = 'CrossbowHefty';
+                        break;
                     case 209:
                     case 210:
                     case 211:
                     case 212:
-                        e.Replacement = 'CrossbowAmmo';
-                        break;
                     case 213:
                     case 214:
                     case 215:
+                        e.Replacement = 'GoldWandAmmo';
+                        break;
                     case 216:
                     case 217:
                     case 218:
-                        e.Replacement = 'CrossbowHefty';
-                        break;
                     case 219:
                     case 220:
                     case 221:
                     case 222:
+                        e.Replacement = 'GoldWandHefty';
+                        break;
                     case 223:
                     case 224:
-                        e.Replacement = 'GoldWandAmmo';
-                        break;
                     case 225:
                     case 226:
                     case 227:
                     case 228:
                     case 229:
-                    case 230:
-                        e.Replacement = 'GoldWandHefty';
+                        e.Replacement = 'PhoenixRodAmmo';
                         break;
+                    case 230:
                     case 231:
                     case 232:
                     case 233:
                     case 234:
                     case 235:
                     case 236:
-                        e.Replacement = 'PhoenixRodAmmo';
+                        e.Replacement = 'PhoenixRodHefty';
                         break;
                     case 237:
                     case 238:
@@ -1009,48 +1011,46 @@ class SpawningHandler : EventHandler
                     case 240:
                     case 241:
                     case 242:
-                        e.Replacement = 'PhoenixRodHefty';
-                        break;
                     case 243:
+                        e.Replacement = 'MaceAmmo';
+                        break;
                     case 244:
                     case 245:
                     case 246:
                     case 247:
                     case 248:
-                        e.Replacement = 'MaceAmmo';
-                        break;
                     case 249:
                     case 250:
+                        e.Replacement = 'MaceHefty';
+                        break;
                     case 251:
                     case 252:
                     case 253:
                     case 254:
-                        e.Replacement = 'MaceHefty';
-                        break;
                     case 255:
                     case 256:
                     case 257:
+                        e.Replacement = 'SkullRodAmmo';
+                        break;
                     case 258:
                     case 259:
                     case 260:
-                        e.Replacement = 'SkullRodAmmo';
-                        break;
                     case 261:
                     case 262:
                     case 263:
                     case 264:
-                    case 265:
-                    case 266:
                         e.Replacement = 'SkullRodHefty';
                         break;
+                    case 265:
+                    case 266:
                     case 267:
                     case 268:
                     case 269:
                     case 270:
                     case 271:
-                    case 272:
                         e.Replacement = 'BlasterAmmo';
                         break;
+                    case 272:
                     case 273:
                     case 274:
                     case 275:
