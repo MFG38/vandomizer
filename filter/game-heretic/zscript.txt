@@ -14,7 +14,10 @@ class SpawningHandler : EventHandler
                 break;
 
             case 1:     // Same tier spawns
-                if(e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader')
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+                
+                else if(e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader')
                 {
                     switch(Random[Replacement](0,1))
                     {
@@ -333,7 +336,10 @@ class SpawningHandler : EventHandler
                 break;
 
             case 2:     // All spawns
-                if(e.Replacee == 'Beast' || e.Replacee == 'Clink' || e.Replacee == 'Ironlich' ||
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+
+                else if(e.Replacee == 'Beast' || e.Replacee == 'Clink' || e.Replacee == 'Ironlich' ||
                 e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Minotaur' ||
                 e.Replacee == 'Mummy' || e.Replacee == 'MummyGhost' || e.Replacee == 'MummyLeader' ||
                 e.Replacee == 'MummyLeaderGhost' || e.Replacee == 'Snake' || e.Replacee == 'Wizard' ||
@@ -633,6 +639,9 @@ class SpawningHandler : EventHandler
                 break;
             
             case 3:     // TOTAL FUCKING CHAOS
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+                
                 if(e.Replacee == 'Barrel' || e.Replacee == 'BrownPillar' || e.Replacee == 'Chandelier' || 
                 e.Replacee == 'FireBrazier' || e.Replacee == 'HangingCorpse' || e.Replacee == 'Moss1' || 
                 e.Replacee == 'Moss2' || e.Replacee == 'Pod' || e.Replacee == 'SerpentTorch' || 
@@ -1092,3 +1101,25 @@ class SpawningHandler : EventHandler
         }
     }
 }
+
+class DroppedArtiEgg : ArtiEgg {}
+class DroppedArtiFly : ArtiFly {}
+class DroppedArtiInvisibility : ArtiInvisibility {}
+class DroppedArtiInvulnerability : ArtiInvulnerability {}
+class DroppedArtiSuperHealth : ArtiSuperHealth {}
+class DroppedArtiTeleport : ArtiTeleport {}
+class DroppedArtiTimeBomb : ArtiTimeBomb {}
+class DroppedArtiTomeOfPower : ArtiTomeOfPower {}
+
+class DroppedMaceAmmo : MaceAmmo {}
+class DroppedMaceHefty : MaceHefty {}
+class DroppedBlasterAmmo : BlasterAmmo {}
+class DroppedBlasterHefty : BlasterHefty {}
+class DroppedCrossbowAmmo : CrossbowAmmo {}
+class DroppedCrossbowHefty : CrossbowHefty {}
+class DroppedGoldWandAmmo : GoldWandAmmo {}
+class DroppedGoldWandHefty : GoldWandHefty {}
+class DroppedSkullRodAmmo : SkullRodAmmo {}
+class DroppedSkullRodHefty : SkullRodHefty {}
+class DroppedPhoenixRodAmmo : PhoenixRodAmmo {}
+class DroppedPhoenixRodHefty : PhoenixRodHefty {}
