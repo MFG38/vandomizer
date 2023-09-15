@@ -45,7 +45,7 @@ doom.wad
 doom2.wad
 plutonia.wad
 tnt.wad
-heretic.wad (WIP)
+heretic.wad (unfinished)
 
 
 3. RUNNING THE MOD
