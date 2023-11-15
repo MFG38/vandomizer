@@ -33,18 +33,20 @@ class SpawningHandler : EventHandler
                 else if(e.Replacee == 'Mummy' || e.Replacee == 'MummyGhost' ||
                 e.Replacee == 'MummyLeader' || e.Replacee == 'MummyLeaderGhost')
                 {
-                    switch(Random[Replacement](0,3))
+                    switch(Random[Replacement](0,5))
                     {
                     case 0:
+                    case 1:
                         e.Replacement = 'Mummy';
                         break;
-                    case 1:
+                    case 2:
                         e.Replacement = 'MummyGhost';
                         break;
-                    case 2:
+                    case 3:
+                    case 4:
                         e.Replacement = 'MummyLeader';
                         break;
-                    case 3:
+                    case 5:
                         e.Replacement = 'MummyLeaderGhost';
                         break;
                     }
@@ -52,16 +54,18 @@ class SpawningHandler : EventHandler
 
                 else if(e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Clink')
                 {
-                    switch(Random[Replacement](0,2))
+                    switch(Random[Replacement](0,4))
                     {
                     case 0:
+                    case 1:
                         e.Replacement = 'Knight';
                         break;
-                    case 1:
-                        e.Replacement = 'KnightGhost';
-                        break;
                     case 2:
+                    case 3:
                         e.Replacement = 'Clink';
+                        break;
+                    case 4:
+                        e.Replacement = 'KnightGhost';
                         break;
                     }
                 }
@@ -360,45 +364,42 @@ class SpawningHandler : EventHandler
                         e.Replacement = 'Knight';
                         break;
                     case 6:
-                    case 7:
                         e.Replacement = 'KnightGhost';
                         break;
+                    case 7:
                     case 8:
-                    case 9:
                         e.Replacement = 'Mummy';
+                        break;
+                    case 9:
+                        e.Replacement = 'MummyGhost';
                         break;
                     case 10:
                     case 11:
-                        e.Replacement = 'MummyGhost';
-                        break;
-                    case 12:
-                    case 13:
                         e.Replacement = 'MummyLeader';
                         break;
-                    case 14:
-                    case 15:
+                    case 12:
                         e.Replacement = 'MummyLeaderGhost';
                         break;
-                    case 16:
-                    case 17:
+                    case 13:
+                    case 14:
                         e.Replacement = 'Snake';
                         break;
-                    case 18:
-                    case 19:
+                    case 15:
+                    case 16:
                         e.Replacement = 'Wizard';
                         break;
-                    case 20:
-                    case 21:
+                    case 17:
+                    case 18:
                         e.Replacement = 'HereticImp';
                         break;
-                    case 22:
-                    case 23:
+                    case 19:
+                    case 20:
                         e.Replacement = 'HereticImpLeader';
                         break;
-                    case 24:
+                    case 21:
                         e.Replacement = 'Ironlich';
                         break;
-                    case 25:
+                    case 22:
                         e.Replacement = 'Minotaur';
                         break;
                     }

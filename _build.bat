@@ -1,5 +1,5 @@
 @echo off
-set VERNUM=v11-pre-r107
+set VERNUM=v11-pre-r108
 
 echo Building...
 _tools\7za a -tzip vandomizer_%VERNUM%.pk3 *.* * -x!.gitignore -x!_build.bat -x!_build.sh -xr!.git -xr!_build -xr!_tools
