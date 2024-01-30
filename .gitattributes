@@ -1,1 +1,2 @@
-_build.sh text eol=lf
+_build.sh eol=lf
+_build.bat eol=crlf

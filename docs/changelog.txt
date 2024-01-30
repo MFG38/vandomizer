@@ -1,4 +1,4 @@
-[??-??-????] v1.1:
+[30-01-2024] v1.1:
 - Implemented Heretic compatibility.
 - Added a mode that disables randomization entirely (spawnmode 0).
 - Reorganized existing spawnmodes (mode 0 is now mode 1 etc.).
