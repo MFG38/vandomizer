@@ -14,8 +14,8 @@ class SpawningHandler : EventHandler
                 break;
 
             case 1:     // Same tier spawns
-                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
-                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == 'Ironlich') { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == 'Minotaur') { return; }
                 
                 else if(e.Replacee == 'HereticImp' || e.Replacee == 'HereticImpLeader')
                 {
@@ -340,8 +340,8 @@ class SpawningHandler : EventHandler
                 break;
 
             case 2:     // All spawns
-                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
-                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == 'Ironlich') { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == 'Minotaur') { return; }
 
                 else if(e.Replacee == 'Beast' || e.Replacee == 'Clink' || e.Replacee == 'Ironlich' ||
                 e.Replacee == 'Knight' || e.Replacee == 'KnightGhost' || e.Replacee == 'Minotaur' ||
@@ -642,8 +642,8 @@ class SpawningHandler : EventHandler
                 break;
             
             case 3:     // TOTAL FUCKING CHAOS
-                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == "Ironlich") { return; }
-                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == "Minotaur") { return; }
+                if((level.mapname ~== "E1M8" || level.mapname ~== "E4M8") && e.Replacee == 'Ironlich') { return; }
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E5M8") && e.Replacee == 'Minotaur') { return; }
                 
                 if(e.Replacee == 'Barrel' || e.Replacee == 'BrownPillar' || e.Replacee == 'Chandelier' || 
                 e.Replacee == 'FireBrazier' || e.Replacee == 'HangingCorpse' || e.Replacee == 'Moss1' || 
@@ -672,7 +672,7 @@ class SpawningHandler : EventHandler
                 e.Replacee == 'EnchantedShield' || e.Replacee == 'SilverShield' ||
                 e.Replacee == 'BagOfHolding' || e.Replacee == 'SuperMap')
                 {
-                    switch(Random[Replacement](0,229))
+                    switch(Random[Replacement](0,205))
                     {
                     case 0:
                         e.Replacement = 'Barrel';
@@ -932,112 +932,88 @@ class SpawningHandler : EventHandler
                     case 161:
                     case 162:
                     case 163:
-                    case 164:
-                    case 165:
                         e.Replacement = 'CrossbowAmmo';
                         break;
+                    case 164:
+                    case 165:
                     case 166:
-                    case 167:
-                    case 168:
-                    case 169:
-                    case 170:
                         e.Replacement = 'CrossbowHefty';
                         break;
+                    case 167:
+                    case 168:
+                    case 169: 
+                        e.Replacement = 'GoldWandAmmo';
+                        break;
+                    case 170:
                     case 171:
                     case 172:
+                        e.Replacement = 'GoldWandHefty';
+                        break;
                     case 173:
                     case 174:
                     case 175:
-                        e.Replacement = 'GoldWandAmmo';
+                        e.Replacement = 'PhoenixRodAmmo';
                         break;
                     case 176:
                     case 177:
                     case 178:
+                        e.Replacement = 'PhoenixRodHefty';
+                        break;
                     case 179:
                     case 180:
-                        e.Replacement = 'GoldWandHefty';
-                        break;
                     case 181:
+                        e.Replacement = 'MaceAmmo';
+                        break;
                     case 182:
                     case 183:
                     case 184:
-                    case 185:
-                        e.Replacement = 'PhoenixRodAmmo';
+                        e.Replacement = 'MaceHefty';
                         break;
+                    case 185:
                     case 186:
                     case 187:
+                        e.Replacement = 'SkullRodAmmo';
+                        break;
                     case 188:
                     case 189:
                     case 190:
-                        e.Replacement = 'PhoenixRodHefty';
+                        e.Replacement = 'SkullRodHefty';
                         break;
                     case 191:
                     case 192:
                     case 193:
-                    case 194:
-                    case 195:
-                        e.Replacement = 'MaceAmmo';
-                        break;
-                    case 196:
-                    case 197:
-                    case 198:
-                    case 199:
-                    case 200:
-                        e.Replacement = 'MaceHefty';
-                        break;
-                    case 201:
-                    case 202:
-                    case 203:
-                    case 204:
-                    case 205:
-                        e.Replacement = 'SkullRodAmmo';
-                        break;
-                    case 206:
-                    case 207:
-                    case 208:
-                    case 209:
-                    case 210:
-                        e.Replacement = 'SkullRodHefty';
-                        break;
-                    case 211:
-                    case 212:
-                    case 213:
-                    case 214:
-                    case 215:
                         e.Replacement = 'BlasterAmmo';
                         break;
-                    case 216:
-                    case 217:
-                    case 218:
-                    case 219:
-                    case 220:
+                    case 194:
+                    case 195:
+                    case 196:
                         e.Replacement = 'BlasterHefty';
                         break;
-                    case 221:
+                    case 197:
                         e.Replacement = 'ArtiEgg';
                         break;
-                    case 222:
+                    case 198:
                         e.Replacement = 'ArtiFly';
                         break;
-                    case 223:
+                    case 199:
                         e.Replacement = 'ArtiInvisibility';
                         break;
-                    case 224:
+                    case 200:
                         e.Replacement = 'ArtiInvulnerability';
                         break;
-                    case 225:
+                    case 201:
                         e.Replacement = 'ArtiSuperHealth';
                         break;
-                    case 226:
+                    case 202:
                         e.Replacement = 'ArtiTeleport';
                         break;
-                    case 227:
+                    case 203:
                         e.Replacement = 'ArtiTimeBomb';
                         break;
-                    case 228:
+                    case 204:
                         e.Replacement = 'ArtiTomeOfPower';
                         break;
-                    case 229:
+                    case 205:
                         e.Replacement = 'ArtiTorch';
                         break;
                     }
