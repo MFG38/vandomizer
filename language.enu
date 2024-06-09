@@ -1,6 +1,7 @@
 [enu default]
 VD_SETUPMENU = "Vandomizer Settings";
 VD_MODE = "Randomization mode";
+VD_IRREGULATOR_ON = "Irregulator mode";
 
 VD_CVAR0 = "Disabled";
 VD_CVAR1 = "Same tier enemy and ammo spawns";
@@ -24,3 +25,7 @@ VD_DESCS =
 	"\n"
 	"TOTAL FUCKING CHAOS - Everything is randomized with no restrictions,\n"
 	"with the exception of keys. Beatability is not guaranteed.";
+
+VD_IRREGULATOR_DESC =
+	"When Irregulator mode is enabled, enemy projectiles will also get\n"
+	"randomized.";

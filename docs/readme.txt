@@ -47,6 +47,8 @@ plutonia.wad
 tnt.wad
 heretic.wad
 
+Compatibility with other gameplay mods is neither guaranteed nor necessarily planned.
+
 
 3. RUNNING THE MOD
 ==================
@@ -74,7 +76,12 @@ follows:
 	2 = All enemy and ammo spawns
 	3 = TOTAL FUCKING CHAOS
 
-Note that if the cvar is changed mid-game, the change will not take effect until a new
+As of v1.2, Vandomizer also offers an extra randomization mode that randomizes enemy
+projectiles. This is called the Irregulator mode and is togglable via the vd_irregulator
+cvar. A separate option for toggling the Irregulator mode can be found under the
+Vandomizer settings menu.
+
+Note that if either cvar is changed mid-game, changes will not take effect until a new
 level is loaded or the current level is reloaded.
 
 

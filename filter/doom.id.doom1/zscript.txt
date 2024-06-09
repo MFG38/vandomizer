@@ -6,6 +6,7 @@ class SpawningHandler : EventHandler
 	{
 		e.IsFinal = true;
 		cvar mode = CVar.FindCVar('vd_spawnmode');
+		cvar irreg = CVar.FindCVar('vd_irregulator');
 		
 		switch(mode.GetInt())
 		{
@@ -1203,6 +1204,30 @@ class SpawningHandler : EventHandler
 				}
 				
 				break;
+		}
+
+		if(irreg.GetBool() == true)
+		{
+			if(
+				e.Replacee == 'BaronBall' || e.Replacee == 'CacodemonBall' ||
+				e.Replacee == 'DoomImpBall' || e.Replacee == 'Rocket'
+			) {
+				switch(Random[Replacement](0,3))
+				{
+				case 0:
+					e.Replacement = 'BaronBall';
+					break;
+				case 1:
+					e.Replacement = 'CacodemonBall';
+					break;
+				case 2:
+					e.Replacement = 'DoomImpBall';
+					break;
+				case 3:
+					e.Replacement = 'Rocket';
+					break;
+				}
+			}
 		}
 	}
 }

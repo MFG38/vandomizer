@@ -1,1 +1,2 @@
 server int vd_spawnmode = 1;
+server bool vd_irregulator = false;

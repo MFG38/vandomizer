@@ -6,6 +6,7 @@ class SpawningHandler : EventHandler
     {
         e.IsFinal = true;
         cvar mode = CVar.FindCVar('vd_spawnmode');
+        cvar irreg = CVar.FindCVar('vd_irregulator');
 
         switch(mode.GetInt())
         {
@@ -1018,7 +1019,61 @@ class SpawningHandler : EventHandler
                         break;
                     }
                 }
-            break;        
+            break;
+        }
+
+        if(irreg.GetBool() == true)
+        {
+            if(
+                e.Replacee == 'BeastBall' || e.Replacee == 'HereticImpBall' || e.Replacee == 'KnightAxe' ||
+                e.Replacee == 'MinotaurFX1' || e.Replacee == 'MinotaurFX2' || e.Replacee == 'MummyFX1' ||
+                e.Replacee == 'RedAxe' || e.Replacee == 'SnakeProjA' || e.Replacee == 'SnakeProjB' ||
+                e.Replacee == 'SorcererFX1' || e.Replacee == 'Sorcerer2FX1' || e.Replacee == 'WizardFX1' ||
+                e.Replacee == 'Whirlwind'
+            ) {
+                switch(Random[Replacement](0,12))
+                {
+                case 0:
+                    e.Replacement = 'BeastBall';
+                    break;
+                case 1:
+                    e.Replacement = 'HereticImpBall';
+                    break;
+                case 2:
+                    e.Replacement = 'KnightAxe';
+                    break;
+                case 3:
+                    e.Replacement = 'MinotaurFX1';
+                    break;
+                case 4:
+                    e.Replacement = 'MinotaurFX2';
+                    break;
+                case 5:
+                    e.Replacement = 'MummyFX1';
+                    break;
+                case 6:
+                    e.Replacement = 'RedAxe';
+                    break;
+                case 7:
+                    e.Replacement = 'SnakeProjA';
+                    break;
+                case 8:
+                    e.Replacement = 'SnakeProjB';
+                    break;
+                case 9:
+                    e.Replacement = 'SorcererFX1';
+                    break;
+                case 10:
+                    e.Replacement = 'Sorcerer2FX1';
+                    break;
+                case 11:
+                    e.Replacement = 'WizardFX1';
+                    break;
+                case 12:
+                    e.Replacement = 'Whirlwind';
+                    break;
+                }
+            }
         }
     }
 }

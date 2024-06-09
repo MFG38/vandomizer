@@ -6,6 +6,7 @@ class SpawningHandler : EventHandler
 	{
 		e.IsFinal = true;
 		cvar mode = CVar.FindCVar('vd_spawnmode');
+		cvar irreg = CVar.FindCVar('vd_irregulator');
 		
 		switch(mode.GetInt())
 		{
@@ -1450,6 +1451,43 @@ class SpawningHandler : EventHandler
 				}
 				
 				break;
+		}
+
+		if(irreg.GetBool() == true)
+		{
+			if(
+				e.Replacee == 'BaronBall' || e.Replacee == 'CacodemonBall' || e.Replacee == 'DoomImpBall' ||
+				e.Replacee == 'Rocket' || e.Replacee == 'ArachnotronPlasma' || e.Replacee == 'ArchvileFire' ||
+				e.Replacee == 'FatShot' || e.Replacee == 'RevenantTracer'
+			) {
+				switch(Random[Replacement](0,7))
+				{
+				case 0:
+					e.Replacement = 'BaronBall';
+					break;
+				case 1:
+					e.Replacement = 'CacodemonBall';
+					break;
+				case 2:
+					e.Replacement = 'DoomImpBall';
+					break;
+				case 3:
+					e.Replacement = 'Rocket';
+					break;
+				case 4:
+					e.Replacement = 'ArachnotronPlasma';
+					break;
+				case 5:
+					e.Replacement = 'ArchvileFire';
+					break;
+				case 6:
+					e.Replacement = 'FatShot';
+					break;
+				case 7:
+					e.Replacement = 'RevenantTracer';
+					break;
+				}
+			}
 		}
 	}
 }
