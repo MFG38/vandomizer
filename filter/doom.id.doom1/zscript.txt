@@ -152,7 +152,7 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'Chaingun';
 						break;
 					case 3:
-						e.Replacement = 'RocketLauncher';
+						e.Replacement = 'FixedRLSpawner';
 						break;
 					case 4:
 						e.Replacement = 'PlasmaRifle';
@@ -525,7 +525,7 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'Chaingun';
 						break;
 					case 3:
-						e.Replacement = 'RocketLauncher';
+						e.Replacement = 'FixedRLSpawner';
 						break;
 					case 4:
 						e.Replacement = 'PlasmaRifle';
@@ -1103,7 +1103,7 @@ class SpawningHandler : EventHandler
 						e.Replacement = 'Chaingun';
 						break;
 					case 134:
-						e.Replacement = 'RocketLauncher';
+						e.Replacement = 'FixedRLSpawner';
 						break;
 					case 135:
 						e.Replacement = 'PlasmaRifle';
@@ -1254,3 +1254,28 @@ class DroppedShotgun : WeaponGiver
 		Stop;
 	}
 }
+
+class FixedRLSpawner : WeaponGiver
+{
+	Default { DropItem "FixedRL"; Inventory.PickupMessage "$GOTLAUNCHER"; }
+	States
+	{
+	Spawn:
+		LAUN A -1;
+		Stop;
+	}
+}
+
+class FixedRL : RocketLauncher
+{
+	States
+	{
+	Fire:
+		MISG B 8 A_GunFlash;
+		MISG B 12 A_FireProjectile("FixedRocket");
+		MISG B 0 A_ReFire;
+		Goto Ready;
+	}
+}
+
+class FixedRocket : Rocket {}
