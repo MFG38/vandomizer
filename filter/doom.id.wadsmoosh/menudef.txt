@@ -1,0 +1,42 @@
+AddOptionMenu "OptionsMenu"
+{
+	StaticText ""
+	Submenu "$VD_SETUPMENU", "VandomizerSetup"
+}
+
+OptionMenu "VandomizerSetup"
+{
+	Title "$VD_SETUPMENU"
+	Option "$VD_MODE", "vd_spawnmode", "SpawnMode"
+	StaticText ""
+	StaticText "$VD_DESCS", "Red"
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	Option "$VD_IRREGULATOR_ON", "vd_irregulator", "OnOff"
+	StaticText ""
+	StaticText "$VD_IRREGULATOR_DESC", "Red"
+}
+
+OptionValue "SpawnMode"
+{
+	0, "$VD_CVAR0"
+	1, "$VD_CVAR1"
+	2, "$VD_CVAR2"
+	3, "$VD_CVAR3"
+}
