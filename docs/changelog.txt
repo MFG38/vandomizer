@@ -2,7 +2,7 @@
 - Rockets no longer get randomized when Irregulator mode is active in Doom and Doom 2
   (basically a lazy man's workaround to the rocket launcher shooting random projectiles
   under said circumstances).
-- Slightly decreased enemies' item drop rates in Heretic. 
+- Slightly decreased enemies' artifact drop rates in Heretic. 
 
 [2024-06-09] v1.2:
 - Implemented Irregulator mode: additional randomization for enemy projectiles.
