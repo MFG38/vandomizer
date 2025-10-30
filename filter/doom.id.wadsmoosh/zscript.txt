@@ -1,0 +1,1564 @@
+version "4.3"
+
+class SpawningHandler : EventHandler
+{
+	override void CheckReplacement(ReplaceEvent e)
+	{
+		e.IsFinal = true;
+		cvar mode = CVar.FindCVar('vd_spawnmode');
+		cvar irreg = CVar.FindCVar('vd_irregulator');
+		
+		switch(mode.GetInt())
+		{
+			case 0:		// Off
+				return;
+				break;
+			
+			case 1:		// Same tier enemy and ammo spawns
+                if(level.mapname ~== "E1M8" && e.Replacee == 'BaronOfHell') return;
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E4M6") && e.Replacee == 'Cyberdemon') return;
+                if((level.mapname ~== "E3M8" || level.mapname ~== "E4M8") && e.Replacee == 'SpiderMastermind') return;
+				if((level.mapname ~== "MAP07") && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron'))) return;
+				
+				else if(e.Replacee == 'ZombieMan' ||
+				e.Replacee == 'ShotgunGuy' ||
+				e.Replacee == 'ChaingunGuy' ||
+				e.Replacee == 'DoomImp')
+				{
+					switch(random[Replacement](0,3))
+					{
+					case 0:
+						e.Replacement = 'FixedZombieMan';
+						break;
+					case 1:
+						e.Replacement = 'FixedShotgunGuy';
+						break;
+					case 2:
+						e.Replacement = 'FixedChaingunGuy';
+						break;
+					case 3:
+						e.Replacement = 'DoomImp';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Demon' ||
+				e.Replacee == 'Spectre' ||
+				e.Replacee == 'LostSoul')
+				{
+					switch(random[Replacement](0,2))
+					{
+					case 0:
+						e.Replacement = 'Demon';
+						break;
+					case 1:
+						e.Replacement = 'Spectre';
+						break;
+					case 2:
+						e.Replacement = 'LostSoul';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'HellKnight' ||
+				e.Replacee == 'Cacodemon' ||
+				e.Replacee == 'Revenant' ||
+				e.Replacee == 'PainElemental')
+				{
+					switch(random[Replacement](0,6))
+					{
+					case 0:
+					case 1:
+						e.Replacement = 'HellKnight';
+						break;
+					case 2:
+					case 3:
+						e.Replacement = 'Cacodemon';
+						break;
+					case 4:
+					case 5:
+						e.Replacement = 'Revenant';
+						break;
+					case 6:
+						e.Replacement = 'FixedPainElemental';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Arachnotron' ||
+				e.Replacee == 'Archvile' ||
+				e.Replacee == 'BaronOfHell' ||
+				e.Replacee == 'Fatso')
+				{
+					switch(random[Replacement](0,3))
+					{
+					case 0:
+						e.Replacement = 'Arachnotron';
+						break;
+					case 1:
+						e.Replacement = 'Archvile';
+						break;
+					case 2:
+						e.Replacement = 'BaronOfHell';
+						break;
+					case 3:
+						e.Replacement = 'Fatso';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Cyberdemon' ||
+				e.Replacee == 'SpiderMastermind')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'Cyberdemon';
+						break;
+					case 1:
+						e.Replacement = 'SpiderMastermind';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Clip' ||
+				e.Replacee == 'Shell' ||
+				e.Replacee == 'RocketAmmo' ||
+				e.Replacee == 'Cell')
+				{
+					switch(random[Replacement](0,3))
+					{
+					case 0:
+						e.Replacement = 'Clip';
+						break;
+					case 1:
+						e.Replacement = 'Shell';
+						break;
+					case 2:
+						e.Replacement = 'RocketAmmo';
+						break;
+					case 3:
+						e.Replacement = 'Cell';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'ClipBox' ||
+				e.Replacee == 'ShellBox' ||
+				e.Replacee == 'RocketBox' ||
+				e.Replacee == 'CellPack')
+				{
+					switch(random[Replacement](0,3))
+					{
+					case 0:
+						e.Replacement = 'ClipBox';
+						break;
+					case 1:
+						e.Replacement = 'ShellBox';
+						break;
+					case 2:
+						e.Replacement = 'RocketBox';
+						break;
+					case 3:
+						e.Replacement = 'CellPack';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Chainsaw' ||
+				e.Replacee == 'Shotgun' ||
+				e.Replacee == 'SuperShotgun' ||
+				e.Replacee == 'Chaingun' ||
+				e.Replacee == 'RocketLauncher' ||
+				e.Replacee == 'PlasmaRifle' ||
+				e.Replacee == 'BFG9000')
+				{
+					switch(random[Replacement](0,6))
+					{
+					case 0:
+						e.Replacement = 'Chainsaw';
+						break;
+					case 1:
+						e.Replacement = 'Shotgun';
+						break;
+					case 2:
+						e.Replacement = 'SuperShotgun';
+						break;
+					case 3:
+						e.Replacement = 'Chaingun';
+						break;
+					case 4:
+						e.Replacement = 'RocketLauncher';
+						break;
+					case 5:
+						e.Replacement = 'PlasmaRifle';
+						break;
+					case 6:
+						e.Replacement = 'BFG9000';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'HealthBonus' ||
+				e.Replacee == 'ArmorBonus')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'HealthBonus';
+						break;
+					case 1:
+						e.Replacement = 'ArmorBonus';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Stimpack' ||
+				e.Replacee == 'Medikit')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'Stimpack';
+						break;
+					case 1:
+						e.Replacement = 'Medikit';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'GreenArmor' ||
+				e.Replacee == 'BlueArmor')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'GreenArmor';
+						break;
+					case 1:
+						e.Replacement = 'BlueArmor';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Allmap' ||
+				e.Replacee == 'BlurSphere' ||
+				e.Replacee == 'Berserk' ||
+				e.Replacee == 'Infrared' ||
+				e.Replacee == 'InvulnerabilitySphere' ||
+				e.Replacee == 'RadSuit' ||
+				e.Replacee == 'Megasphere' ||
+				e.Replacee == 'Soulsphere' ||
+				e.Replacee == 'Backpack')
+				{
+					switch(random[Replacement](0,8))
+					{
+					case 0:
+						e.Replacement = 'Allmap';
+						break;
+					case 1:
+						e.Replacement = 'BlurSphere';
+						break;
+					case 2:
+						e.Replacement = 'Berserk';
+						break;
+					case 3:
+						e.Replacement = 'Infrared';
+						break;
+					case 4:
+						e.Replacement = 'InvulnerabilitySphere';
+						break;
+					case 5:
+						e.Replacement = 'RadSuit';
+						break;
+					case 6:
+						e.Replacement = 'Megasphere';
+						break;
+					case 7:
+						e.Replacement = 'Soulsphere';
+						break;
+					case 8:
+						e.Replacement = 'Backpack';
+						break;
+					}
+				}
+					
+				if(e.Replacee == 'BigTree' || e.Replacee == 'BlueTorch' ||
+				e.Replacee == 'Candelabra' || e.Replacee == 'Candlestick' ||
+				e.Replacee == 'EvilEye' || e.Replacee == 'FloatingSkull' ||
+				e.Replacee == 'GreenTorch' || e.Replacee == 'HeadCandles' ||
+				e.Replacee == 'HeadOnAStick' || e.Replacee == 'HeadsOnAStick' ||
+				e.Replacee == 'HeartColumn' || e.Replacee == 'RedTorch' ||
+				e.Replacee == 'ShortBlueTorch' || e.Replacee == 'ShortGreenTorch'||
+				e.Replacee == 'ShortRedTorch' || e.Replacee == 'ShortGreenColumn' ||
+				e.Replacee == 'ShortRedColumn' || e.Replacee == 'SkullColumn' ||
+				e.Replacee == 'Stalagtite' || e.Replacee == 'TallGreenColumn' ||
+				e.Replacee == 'TallRedColumn' || e.Replacee == 'TorchTree' ||
+				e.Replacee == 'DeadCacodemon' || e.Replacee == 'DeadDemon' ||
+				e.Replacee == 'DeadDoomImp' || e.Replacee == 'DeadLostSoul' ||
+				e.Replacee == 'DeadMarine' || e.Replacee == 'DeadShotgunGuy' ||
+				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' ||
+				e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
+				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' ||
+				e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
+				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' ||
+				e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
+				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' ||
+				e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
+				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' ||
+				e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
+				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' ||
+				e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
+				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' ||
+				e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' ||
+				e.Replacee == 'SmallBloodPool')
+				{
+					switch(random[Replacement](0,58))
+					{
+					case 0:
+						e.Replacement = 'BigTree';
+						break;
+					case 1:
+						e.Replacement = 'BlueTorch';
+						break;
+					case 2:
+						e.Replacement = 'Candelabra';
+						break;
+					case 3:
+						e.Replacement = 'Candlestick';
+						break;
+					case 4:
+						e.Replacement = 'EvilEye';
+						break;
+					case 5:
+						e.Replacement = 'FloatingSkull';
+						break;
+					case 6:
+						e.Replacement = 'GreenTorch';
+						break;
+					case 7:
+						e.Replacement = 'HeadCandles';
+						break;
+					case 8:
+						e.Replacement = 'HeadOnAStick';
+						break;
+					case 9:
+						e.Replacement = 'HeadsOnAStick';
+						break;
+					case 10:
+						e.Replacement = 'HeartColumn';
+						break;
+					case 11:
+						e.Replacement = 'RedTorch';
+						break;
+					case 12:
+						e.Replacement = 'ShortBlueTorch';
+						break;
+					case 13:
+						e.Replacement = 'ShortGreenTorch';
+						break;
+					case 14:
+						e.Replacement = 'ShortRedTorch';
+						break;
+					case 15:
+						e.Replacement = 'ShortGreenColumn';
+						break;
+					case 16:
+						e.Replacement = 'ShortRedColumn';
+						break;
+					case 17:
+						e.Replacement = 'SkullColumn';
+						break;
+					case 18:
+						e.Replacement = 'Stalagtite';
+						break;
+					case 19:
+						e.Replacement = 'TallGreenColumn';
+						break;
+					case 20:
+						e.Replacement = 'TallRedColumn';
+						break;
+					case 21:
+						e.Replacement = 'TorchTree';
+						break;
+					case 22:
+						e.Replacement = 'DeadCacodemon';
+						break;
+					case 23:
+						e.Replacement = 'DeadDemon';
+						break;
+					case 24:
+						e.Replacement = 'DeadDoomImp';
+						break;
+					case 25:
+						e.Replacement = 'DeadLostSoul';
+						break;
+					case 26:
+						e.Replacement = 'DeadMarine';
+						break;
+					case 27:
+						e.Replacement = 'DeadShotgunGuy';
+						break;
+					case 28:
+						e.Replacement = 'DeadZombieMan';
+						break;
+					case 29:
+						e.Replacement = 'GibbedMarine';
+						break;
+					case 30:
+						e.Replacement = 'GibbedMarineExtra';
+						break;
+					case 31:
+						e.Replacement = 'Column';
+						break;
+					case 32:
+						e.Replacement = 'ExplosiveBarrel';
+						break;
+					case 33:
+						e.Replacement = 'BurningBarrel';
+						break;
+					case 34:
+						e.Replacement = 'TechLamp';
+						break;
+					case 35:
+						e.Replacement = 'TechLamp2';
+						break;
+					case 36:
+						e.Replacement = 'TechPillar';
+						break;
+					case 37:
+						e.Replacement = 'BloodyTwitch';
+						break;
+					case 38:
+						e.Replacement = 'BrainStem';
+						break;
+					case 39:
+						e.Replacement = 'ColonGibs';
+						break;
+					case 40:
+						e.Replacement = 'DeadStick';
+						break;
+					case 41:
+						e.Replacement = 'Gibs';
+						break;
+					case 42:
+						e.Replacement = 'HangBNoBrain';
+						break;
+					case 43:
+						e.Replacement = 'HangNoGuts';
+						break;
+					case 44:
+						e.Replacement = 'HangTLookingDown';
+						break;
+					case 45:
+						e.Replacement = 'HangTLookingUp';
+						break;
+					case 46:
+						e.Replacement = 'HangTNoBrain';
+						break;
+					case 47:
+						e.Replacement = 'HangTSkull';
+						break;
+					case 48:
+						e.Replacement = 'LiveStick';
+						break;
+					case 49:
+						e.Replacement = 'Meat2';
+						break;
+					case 50:
+						e.Replacement = 'Meat3';
+						break;
+					case 51:
+						e.Replacement = 'Meat4';
+						break;
+					case 52:
+						e.Replacement = 'Meat5';
+						break;
+					case 53:
+						e.Replacement = 'NonsolidMeat2';
+						break;
+					case 54:
+						e.Replacement = 'NonsolidMeat3';
+						break;
+					case 55:
+						e.Replacement = 'NonsolidMeat4';
+						break;
+					case 56:
+						e.Replacement = 'NonsolidMeat5';
+						break;
+					case 57:
+						e.Replacement = 'NonsolidTwitch';
+						break;
+					case 58:
+						e.Replacement = 'SmallBloodPool';
+						break;
+					}
+				}
+				
+				break;
+					
+			case 2:		// All enemy and ammo spawns
+                if(level.mapname ~== "E1M8" && e.Replacee == 'BaronOfHell') return;
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E4M6") && e.Replacee == 'Cyberdemon') return;
+                if((level.mapname ~== "E3M8" || level.mapname ~== "E4M8") && e.Replacee == 'SpiderMastermind') return;
+				if((level.mapname ~== "MAP07") && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron'))) return;
+				
+				else if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' ||
+				e.Replacee == 'ChaingunGuy' || e.Replacee == 'DoomImp' ||
+				e.Replacee == 'LostSoul' || e.Replacee == 'Demon' ||
+				e.Replacee == 'Spectre' || e.Replacee == 'HellKnight' ||
+				e.Replacee == 'Cacodemon' || e.Replacee == 'Revenant' ||
+				e.Replacee == 'Arachnotron' || e.Replacee == 'Archvile' ||
+				e.Replacee == 'BaronOfHell' || e.Replacee == 'Fatso' ||
+				e.Replacee == 'PainElemental' || e.Replacee == 'Cyberdemon' ||
+				e.Replacee == 'SpiderMastermind')
+				{
+					switch(random[Replacement](0,30))
+					{
+					case 0:
+					case 1:
+						e.Replacement = 'FixedZombieMan';
+						break;
+					case 2:
+					case 3:
+						e.Replacement = 'FixedShotgunGuy';
+						break;
+					case 4:
+					case 5:
+						e.Replacement = 'FixedChaingunGuy';
+						break;
+					case 6:
+					case 7:
+						e.Replacement = 'DoomImp';
+						break;
+					case 8:
+					case 9:
+						e.Replacement = 'LostSoul';
+						break;
+					case 10:
+					case 11:
+						e.Replacement = 'Demon';
+						break;
+					case 12:
+					case 13:
+						e.Replacement = 'Spectre';
+						break;
+					case 14:
+					case 15:
+						e.Replacement = 'HellKnight';
+						break;
+					case 16:
+					case 17:
+						e.Replacement = 'Cacodemon';
+						break;
+					case 18:
+					case 19:
+						e.Replacement = 'Revenant';
+						break;
+					case 20:
+					case 21:
+						e.Replacement = 'Arachnotron';
+						break;
+					case 22:
+					case 23:
+						e.Replacement = 'Archvile';
+						break;
+					case 24:
+					case 25:
+						e.Replacement = 'BaronOfHell';
+						break;
+					case 26:
+					case 27:
+						e.Replacement = 'Fatso';
+						break;
+					case 28:
+						e.Replacement = 'FixedPainElemental';
+						break;
+					case 29:
+						e.Replacement = 'Cyberdemon';
+						break;
+					case 30:
+						e.Replacement = 'SpiderMastermind';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Clip' || e.Replacee == 'Shell' ||
+				e.Replacee == 'RocketAmmo' || e.Replacee == 'Cell' ||
+				e.Replacee == 'ClipBox' || e.Replacee == 'ShellBox' ||
+				e.Replacee == 'RocketBox' || e.Replacee == 'CellPack')
+				{
+					switch(random[Replacement](0,7))
+					{
+					case 0:
+						e.Replacement = 'Clip';
+						break;
+					case 1:
+						e.Replacement = 'Shell';
+						break;
+					case 2:
+						e.Replacement = 'RocketAmmo';
+						break;
+					case 3:
+						e.Replacement = 'Cell';
+						break;
+					case 4:
+						e.Replacement = 'ClipBox';
+						break;
+					case 5:
+						e.Replacement = 'ShellBox';
+						break;
+					case 6:
+						e.Replacement = 'RocketBox';
+						break;
+					case 7:
+						e.Replacement = 'CellPack';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Chainsaw' || e.Replacee == 'Shotgun' ||
+				e.Replacee == 'SuperShotgun' || e.Replacee == 'Chaingun' ||
+				e.Replacee == 'RocketLauncher' || e.Replacee == 'PlasmaRifle' ||
+				e.Replacee == 'BFG9000')
+				{
+					switch(random[Replacement](0,6))
+					{
+					case 0:
+						e.Replacement = 'Chainsaw';
+						break;
+					case 1:
+						e.Replacement = 'Shotgun';
+						break;
+					case 2:
+						e.Replacement = 'SuperShotgun';
+						break;
+					case 3:
+						e.Replacement = 'Chaingun';
+						break;
+					case 4:
+						e.Replacement = 'RocketLauncher';
+						break;
+					case 5:
+						e.Replacement = 'PlasmaRifle';
+						break;
+					case 6:
+						e.Replacement = 'BFG9000';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'HealthBonus' ||
+				e.Replacee == 'ArmorBonus')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'HealthBonus';
+						break;
+					case 1:
+						e.Replacement = 'ArmorBonus';
+						break;
+					}
+				}
+				
+				else if(e.Replacee == 'Stimpack' ||
+				e.Replacee == 'Medikit')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'Stimpack';
+						break;
+					case 1:
+						e.Replacement = 'Medikit';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'GreenArmor' ||
+				e.Replacee == 'BlueArmor')
+				{
+					switch(random[Replacement](0,1))
+					{
+					case 0:
+						e.Replacement = 'GreenArmor';
+						break;
+					case 1:
+						e.Replacement = 'BlueArmor';
+						break;
+					}
+				}
+					
+				else if(e.Replacee == 'Allmap' || e.Replacee == 'BlurSphere' ||
+				e.Replacee == 'Berserk' || e.Replacee == 'Infrared' ||
+				e.Replacee == 'InvulnerabilitySphere' || e.Replacee == 'RadSuit' ||
+				e.Replacee == 'Megasphere' || e.Replacee == 'Soulsphere' ||
+				e.Replacee == 'Backpack')
+				{
+					switch(random[Replacement](0,8))
+					{
+					case 0:
+						e.Replacement = 'Allmap';
+						break;
+					case 1:
+						e.Replacement = 'BlurSphere';
+						break;
+					case 2:
+						e.Replacement = 'Berserk';
+						break;
+					case 3:
+						e.Replacement = 'Infrared';
+						break;
+					case 4:
+						e.Replacement = 'InvulnerabilitySphere';
+						break;
+					case 5:
+						e.Replacement = 'RadSuit';
+						break;
+					case 6:
+						e.Replacement = 'Megasphere';
+						break;
+					case 7:
+						e.Replacement = 'Soulsphere';
+						break;
+					case 8:
+						e.Replacement = 'Backpack';
+						break;
+					}
+				}
+					
+				if(e.Replacee == 'BigTree' || e.Replacee == 'BlueTorch' ||
+				e.Replacee == 'Candelabra' || e.Replacee == 'Candlestick' ||
+				e.Replacee == 'EvilEye' || e.Replacee == 'FloatingSkull' ||
+				e.Replacee == 'GreenTorch' || e.Replacee == 'HeadCandles' ||
+				e.Replacee == 'HeadOnAStick' || e.Replacee == 'HeadsOnAStick' ||
+				e.Replacee == 'HeartColumn' || e.Replacee == 'RedTorch' ||
+				e.Replacee == 'ShortBlueTorch' || e.Replacee == 'ShortGreenTorch' ||
+				e.Replacee == 'ShortRedTorch' || e.Replacee == 'ShortGreenColumn' ||
+				e.Replacee == 'ShortRedColumn' || e.Replacee == 'SkullColumn' ||
+				e.Replacee == 'Stalagtite' || e.Replacee == 'TallGreenColumn' ||
+				e.Replacee == 'TallRedColumn' || e.Replacee == 'TorchTree' ||
+				e.Replacee == 'DeadCacodemon' || e.Replacee == 'DeadDemon' ||
+				e.Replacee == 'DeadDoomImp' || e.Replacee == 'DeadLostSoul' ||
+				e.Replacee == 'DeadMarine' || e.Replacee == 'DeadShotgunGuy' ||
+				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' ||
+				e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
+				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' ||
+				e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
+				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' ||
+				e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
+				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' ||
+				e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
+				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' ||
+				e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
+				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' ||
+				e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
+				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' ||
+				e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' ||
+				e.Replacee == 'SmallBloodPool')
+				{
+					switch(random[Replacement](0,58))
+					{
+					case 0:
+						e.Replacement = 'BigTree';
+						break;
+					case 1:
+						e.Replacement = 'BlueTorch';
+						break;
+					case 2:
+						e.Replacement = 'Candelabra';
+						break;
+					case 3:
+						e.Replacement = 'Candlestick';
+						break;
+					case 4:
+						e.Replacement = 'EvilEye';
+						break;
+					case 5:
+						e.Replacement = 'FloatingSkull';
+						break;
+					case 6:
+						e.Replacement = 'GreenTorch';
+						break;
+					case 7:
+						e.Replacement = 'HeadCandles';
+						break;
+					case 8:
+						e.Replacement = 'HeadOnAStick';
+						break;
+					case 9:
+						e.Replacement = 'HeadsOnAStick';
+						break;
+					case 10:
+						e.Replacement = 'HeartColumn';
+						break;
+					case 11:
+						e.Replacement = 'RedTorch';
+						break;
+					case 12:
+						e.Replacement = 'ShortBlueTorch';
+						break;
+					case 13:
+						e.Replacement = 'ShortGreenTorch';
+						break;
+					case 14:
+						e.Replacement = 'ShortRedTorch';
+						break;
+					case 15:
+						e.Replacement = 'ShortGreenColumn';
+						break;
+					case 16:
+						e.Replacement = 'ShortRedColumn';
+						break;
+					case 17:
+						e.Replacement = 'SkullColumn';
+						break;
+					case 18:
+						e.Replacement = 'Stalagtite';
+						break;
+					case 19:
+						e.Replacement = 'TallGreenColumn';
+						break;
+					case 20:
+						e.Replacement = 'TallRedColumn';
+						break;
+					case 21:
+						e.Replacement = 'TorchTree';
+						break;
+					case 22:
+						e.Replacement = 'DeadCacodemon';
+						break;
+					case 23:
+						e.Replacement = 'DeadDemon';
+						break;
+					case 24:
+						e.Replacement = 'DeadDoomImp';
+						break;
+					case 25:
+						e.Replacement = 'DeadLostSoul';
+						break;
+					case 26:
+						e.Replacement = 'DeadMarine';
+						break;
+					case 27:
+						e.Replacement = 'DeadShotgunGuy';
+						break;
+					case 28:
+						e.Replacement = 'DeadZombieMan';
+						break;
+					case 29:
+						e.Replacement = 'GibbedMarine';
+						break;
+					case 30:
+						e.Replacement = 'GibbedMarineExtra';
+						break;
+					case 31:
+						e.Replacement = 'Column';
+						break;
+					case 32:
+						e.Replacement = 'ExplosiveBarrel';
+						break;
+					case 33:
+						e.Replacement = 'BurningBarrel';
+						break;
+					case 34:
+						e.Replacement = 'TechLamp';
+						break;
+					case 35:
+						e.Replacement = 'TechLamp2';
+						break;
+					case 36:
+						e.Replacement = 'TechPillar';
+						break;
+					case 37:
+						e.Replacement = 'BloodyTwitch';
+						break;
+					case 38:
+						e.Replacement = 'BrainStem';
+						break;
+					case 39:
+						e.Replacement = 'ColonGibs';
+						break;
+					case 40:
+						e.Replacement = 'DeadStick';
+						break;
+					case 41:
+						e.Replacement = 'Gibs';
+						break;
+					case 42:
+						e.Replacement = 'HangBNoBrain';
+						break;
+					case 43:
+						e.Replacement = 'HangNoGuts';
+						break;
+					case 44:
+						e.Replacement = 'HangTLookingDown';
+						break;
+					case 45:
+						e.Replacement = 'HangTLookingUp';
+						break;
+					case 46:
+						e.Replacement = 'HangTNoBrain';
+						break;
+					case 47:
+						e.Replacement = 'HangTSkull';
+						break;
+					case 48:
+						e.Replacement = 'LiveStick';
+						break;
+					case 49:
+						e.Replacement = 'Meat2';
+						break;
+					case 50:
+						e.Replacement = 'Meat3';
+						break;
+					case 51:
+						e.Replacement = 'Meat4';
+						break;
+					case 52:
+						e.Replacement = 'Meat5';
+						break;
+					case 53:
+						e.Replacement = 'NonsolidMeat2';
+						break;
+					case 54:
+						e.Replacement = 'NonsolidMeat3';
+						break;
+					case 55:
+						e.Replacement = 'NonsolidMeat4';
+						break;
+					case 56:
+						e.Replacement = 'NonsolidMeat5';
+						break;
+					case 57:
+						e.Replacement = 'NonsolidTwitch';
+						break;
+					case 58:
+						e.Replacement = 'SmallBloodPool';
+						break;
+					}
+				}
+				
+				break;
+				
+			case 3:		// TOTAL FUCKING CHAOS
+                if(level.mapname ~== "E1M8" && e.Replacee == 'BaronOfHell') return;
+                if((level.mapname ~== "E2M8" || level.mapname ~== "E4M6") && e.Replacee == 'Cyberdemon') return;
+                if((level.mapname ~== "E3M8" || level.mapname ~== "E4M8") && e.Replacee == 'SpiderMastermind') return;
+				if((level.mapname ~== "MAP07") && ((e.Replacee == 'Fatso') || (e.Replacee == 'Arachnotron'))) return;
+				
+				else if(e.Replacee == 'ZombieMan' || e.Replacee == 'ShotgunGuy' || e.Replacee == 'ChaingunGuy' ||
+				e.Replacee == 'DoomImp' || e.Replacee == 'LostSoul' ||
+				e.Replacee == 'Demon' || e.Replacee == 'Spectre' || e.Replacee == 'HellKnight' ||
+				e.Replacee == 'Cacodemon' || e.Replacee == 'Revenant' ||
+				e.Replacee == 'Arachnotron' || e.Replacee == 'Archvile' || e.Replacee == 'BaronOfHell' ||
+				e.Replacee == 'Fatso' || e.Replacee == 'PainElemental' ||
+				e.Replacee == 'Cyberdemon' || e.Replacee == 'SpiderMastermind' ||
+				e.Replacee == 'Clip' || e.Replacee == 'Shell' || e.Replacee == 'RocketAmmo' || e.Replacee == 'Cell' ||
+				e.Replacee == 'ClipBox' || e.Replacee == 'ShellBox' || e.Replacee == 'RocketBox' || e.Replacee == 'CellPack' ||
+				e.Replacee == 'Backpack' || e.Replacee == 'Chainsaw' || e.Replacee == 'Shotgun' || e.Replacee == 'SuperShotgun' ||
+				e.Replacee == 'Chaingun' || e.Replacee == 'RocketLauncher' || e.Replacee == 'PlasmaRifle' || e.Replacee == 'BFG9000' ||
+				e.Replacee == 'HealthBonus' || e.Replacee == 'Stimpack' || e.Replacee == 'Medikit' ||
+				e.Replacee == 'ArmorBonus' || e.Replacee == 'GreenArmor' || e.Replacee == 'BlueArmor' ||
+				e.Replacee == 'Allmap' || e.Replacee == 'BlurSphere' || e.Replacee == 'Berserk' || e.Replacee == 'Infrared' ||
+				e.Replacee == 'InvulnerabilitySphere' || e.Replacee == 'RadSuit' || e.Replacee == 'Megasphere' || e.Replacee == 'Soulsphere' ||
+				e.Replacee == 'BigTree' || e.Replacee == 'BlueTorch' || e.Replacee == 'Candelabra' || e.Replacee == 'Candlestick' ||
+				e.Replacee == 'EvilEye' || e.Replacee == 'FloatingSkull' || e.Replacee == 'GreenTorch' || e.Replacee == 'HeadCandles' ||
+				e.Replacee == 'HeadOnAStick' || e.Replacee == 'HeadsOnAStick' || e.Replacee == 'HeartColumn' || e.Replacee == 'RedTorch' ||
+				e.Replacee == 'ShortBlueTorch' || e.Replacee == 'ShortGreenTorch' || e.Replacee == 'ShortRedTorch' || e.Replacee == 'ShortGreenColumn' ||
+				e.Replacee == 'ShortRedColumn' || e.Replacee == 'SkullColumn' || e.Replacee == 'Stalagtite' || e.Replacee == 'TallGreenColumn' ||
+				e.Replacee == 'TallRedColumn' || e.Replacee == 'TorchTree' || e.Replacee == 'DeadCacodemon' || e.Replacee == 'DeadDemon' ||
+				e.Replacee == 'DeadDoomImp' || e.Replacee == 'DeadLostSoul' || e.Replacee == 'DeadMarine' || e.Replacee == 'DeadShotgunGuy' ||
+				e.Replacee == 'DeadZombieMan' || e.Replacee == 'GibbedMarine' || e.Replacee == 'GibbedMarineExtra' || e.Replacee == 'Column' ||
+				e.Replacee == 'ExplosiveBarrel' || e.Replacee == 'BurningBarrel' || e.Replacee == 'TechLamp' || e.Replacee == 'TechLamp2' ||
+				e.Replacee == 'TechPillar' || e.Replacee == 'BloodyTwitch' || e.Replacee == 'BrainStem' || e.Replacee == 'ColonGibs' ||
+				e.Replacee == 'DeadStick' || e.Replacee == 'Gibs' || e.Replacee == 'HangBNoBrain' || e.Replacee == 'HangNoGuts' ||
+				e.Replacee == 'HangTLookingDown' || e.Replacee == 'HangTLookingUp' || e.Replacee == 'HangTNoBrain' || e.Replacee == 'HangTSkull' ||
+				e.Replacee == 'LiveStick' || e.Replacee == 'Meat2' || e.Replacee == 'Meat3' || e.Replacee == 'Meat4' ||
+				e.Replacee == 'Meat5' || e.Replacee == 'NonsolidMeat2' || e.Replacee == 'NonsolidMeat3' || e.Replacee == 'NonsolidMeat4' ||
+				e.Replacee == 'NonsolidMeat5' || e.Replacee == 'NonsolidTwitch' || e.Replacee == 'SmallBloodPool')
+				{
+					switch(random[Replacement](0,255))	// Holy shit.
+					{
+					case 0:
+						e.Replacement = 'BigTree';
+						break;
+					case 1:
+						e.Replacement = 'BlueTorch';
+						break;
+					case 2:
+						e.Replacement = 'Candelabra';
+						break;
+					case 3:
+						e.Replacement = 'Candlestick';
+						break;
+					case 4:
+						e.Replacement = 'EvilEye';
+						break;
+					case 5:
+						e.Replacement = 'FloatingSkull';
+						break;
+					case 6:
+						e.Replacement = 'GreenTorch';
+						break;
+					case 7:
+						e.Replacement = 'HeadCandles';
+						break;
+					case 8:
+						e.Replacement = 'HeadOnAStick';
+						break;
+					case 9:
+						e.Replacement = 'HeadsOnAStick';
+						break;
+					case 10:
+						e.Replacement = 'HeartColumn';
+						break;
+					case 11:
+						e.Replacement = 'RedTorch';
+						break;
+					case 12:
+						e.Replacement = 'ShortBlueTorch';
+						break;
+					case 13:
+						e.Replacement = 'ShortGreenTorch';
+						break;
+					case 14:
+						e.Replacement = 'ShortRedTorch';
+						break;
+					case 15:
+						e.Replacement = 'ShortGreenColumn';
+						break;
+					case 16:
+						e.Replacement = 'ShortRedColumn';
+						break;
+					case 17:
+						e.Replacement = 'SkullColumn';
+						break;
+					case 18:
+						e.Replacement = 'Stalagtite';
+						break;
+					case 19:
+						e.Replacement = 'TallGreenColumn';
+						break;
+					case 20:
+						e.Replacement = 'TallRedColumn';
+						break;
+					case 21:
+						e.Replacement = 'TorchTree';
+						break;
+					case 22:
+						e.Replacement = 'DeadCacodemon';
+						break;
+					case 23:
+						e.Replacement = 'DeadDemon';
+						break;
+					case 24:
+						e.Replacement = 'DeadDoomImp';
+						break;
+					case 25:
+						e.Replacement = 'DeadLostSoul';
+						break;
+					case 26:
+						e.Replacement = 'DeadMarine';
+						break;
+					case 27:
+						e.Replacement = 'DeadShotgunGuy';
+						break;
+					case 28:
+						e.Replacement = 'DeadZombieMan';
+						break;
+					case 29:
+						e.Replacement = 'GibbedMarine';
+						break;
+					case 30:
+						e.Replacement = 'GibbedMarineExtra';
+						break;
+					case 31:
+						e.Replacement = 'Column';
+						break;
+					case 32:
+						e.Replacement = 'ExplosiveBarrel';
+						break;
+					case 33:
+						e.Replacement = 'BurningBarrel';
+						break;
+					case 34:
+						e.Replacement = 'TechLamp';
+						break;
+					case 35:
+						e.Replacement = 'TechLamp2';
+						break;
+					case 36:
+						e.Replacement = 'TechPillar';
+						break;
+					case 37:
+						e.Replacement = 'BloodyTwitch';
+						break;
+					case 38:
+						e.Replacement = 'BrainStem';
+						break;
+					case 39:
+						e.Replacement = 'ColonGibs';
+						break;
+					case 40:
+						e.Replacement = 'DeadStick';
+						break;
+					case 41:
+						e.Replacement = 'Gibs';
+						break;
+					case 42:
+						e.Replacement = 'HangBNoBrain';
+						break;
+					case 43:
+						e.Replacement = 'HangNoGuts';
+						break;
+					case 44:
+						e.Replacement = 'HangTLookingDown';
+						break;
+					case 45:
+						e.Replacement = 'HangTLookingUp';
+						break;
+					case 46:
+						e.Replacement = 'HangTNoBrain';
+						break;
+					case 47:
+						e.Replacement = 'HangTSkull';
+						break;
+					case 48:
+						e.Replacement = 'LiveStick';
+						break;
+					case 49:
+						e.Replacement = 'Meat2';
+						break;
+					case 50:
+						e.Replacement = 'Meat3';
+						break;
+					case 51:
+						e.Replacement = 'Meat4';
+						break;
+					case 52:
+						e.Replacement = 'Meat5';
+						break;
+					case 53:
+						e.Replacement = 'NonsolidMeat2';
+						break;
+					case 54:
+						e.Replacement = 'NonsolidMeat3';
+						break;
+					case 55:
+						e.Replacement = 'NonsolidMeat4';
+						break;
+					case 56:
+						e.Replacement = 'NonsolidMeat5';
+						break;
+					case 57:
+						e.Replacement = 'NonsolidTwitch';
+						break;
+					case 58:
+						e.Replacement = 'SmallBloodPool';
+						break;
+					case 59:
+					case 60:
+					case 61:
+					case 62:
+					case 63:
+					case 64:
+					case 65:
+					case 66:
+						e.Replacement = 'FixedZombieMan';
+						break;
+					case 67:
+					case 68:
+					case 69:	// Heh.
+					case 70:
+					case 71:
+					case 72:
+					case 73:
+					case 74:
+						e.Replacement = 'FixedShotgunGuy';
+						break;
+					case 75:
+					case 76:
+					case 77:
+					case 78:
+					case 79:
+					case 80:
+					case 81:
+					case 82:
+						e.Replacement = 'FixedChaingunGuy';
+						break;
+					case 83:
+					case 84:
+					case 85:
+					case 86:
+					case 87:
+					case 88:
+					case 89:
+					case 90:
+						e.Replacement = 'DoomImp';
+						break;
+					case 91:
+					case 92:
+					case 93:
+					case 94:
+					case 95:
+					case 96:
+					case 97:
+					case 98:
+						e.Replacement = 'LostSoul';
+						break;
+					case 99:
+					case 100:
+					case 101:
+					case 102:
+					case 103:
+					case 104:
+					case 105:
+					case 106:
+						e.Replacement = 'Demon';
+						break;
+					case 107:
+					case 108:
+					case 109:
+					case 110:
+					case 111:
+					case 112:
+					case 113:
+					case 114:
+						e.Replacement = 'Spectre';
+						break;
+					case 115:
+					case 116:
+					case 117:
+					case 118:
+					case 119:
+					case 120:
+					case 121:
+					case 122:
+						e.Replacement = 'HellKnight';
+						break;
+					case 123:
+					case 124:
+					case 125:
+					case 126:
+					case 127:
+					case 128:
+					case 129:
+					case 130:
+						e.Replacement = 'Cacodemon';
+						break;
+					case 131:
+					case 132:
+					case 133:
+					case 134:
+					case 135:
+					case 136:
+					case 137:
+					case 138:
+						e.Replacement = 'Revenant';
+						break;
+					case 139:
+					case 140:
+					case 141:
+					case 142:
+					case 143:
+					case 144:
+						e.Replacement = 'Arachnotron';
+						break;
+					case 145:
+					case 146:
+					case 147:
+					case 148:
+					case 149:
+					case 150:
+						e.Replacement = 'Archvile';
+						break;
+					case 151:
+					case 152:
+					case 153:
+					case 154:
+					case 155:
+					case 156:
+						e.Replacement = 'BaronOfHell';
+						break;
+					case 157:
+					case 158:
+					case 159:
+					case 160:
+					case 161:
+					case 162:
+						if(level.mapname ~== "MAP07" ) { e.Replacement = 'Revenant'; } 
+						else { e.Replacement = 'Fatso'; }
+						break;
+					case 163:
+					case 164:
+						e.Replacement = 'FixedPainElemental';
+						break;
+					case 165:
+					case 166:
+						e.Replacement = 'Cyberdemon';
+						break;
+					case 167:
+					case 168:
+						e.Replacement = 'SpiderMastermind';
+						break;
+					case 169:
+					case 170:
+						e.Replacement = 'Clip';
+						break;
+					case 171:
+					case 172:
+						e.Replacement = 'Shell';
+						break;
+					case 173:
+					case 174:
+						e.Replacement = 'RocketAmmo';
+						break;
+					case 175:
+					case 176:
+						e.Replacement = 'Cell';
+						break;
+					case 177:
+					case 178:
+						e.Replacement = 'ClipBox';
+						break;
+					case 179:
+					case 180:
+						e.Replacement = 'ShellBox';
+						break;
+					case 181:
+					case 182:
+						e.Replacement = 'RocketBox';
+						break;
+					case 183:
+					case 184:
+						e.Replacement = 'CellPack';
+						break;
+					case 185:
+					case 186:
+						e.Replacement = 'Backpack';
+						break;
+					case 187:
+						e.Replacement = 'Chainsaw';
+						break;
+					case 188:
+						e.Replacement = 'Shotgun';
+						break;
+					case 189:
+						e.Replacement = 'SuperShotgun';
+						break;
+					case 190:
+						e.Replacement = 'Chaingun';
+						break;
+					case 191:
+						e.Replacement = 'RocketLauncher';
+						break;
+					case 192:
+						e.Replacement = 'PlasmaRifle';
+						break;
+					case 193:
+						e.Replacement = 'BFG9000';
+						break;
+					case 194:
+					case 195:
+					case 196:
+					case 197:
+					case 198:
+					case 199:
+					case 200:
+					case 201:
+					case 202:
+					case 203:
+						e.Replacement = 'HealthBonus';
+						break;
+					case 204:
+					case 205:
+					case 206:
+					case 207:
+					case 208:
+					case 209:
+					case 210:
+					case 211:
+					case 212:
+					case 213:
+						e.Replacement = 'Stimpack';
+						break;
+					case 214:
+					case 215:
+					case 216:
+					case 217:
+					case 218:
+					case 219:
+					case 220:
+					case 221:
+					case 222:
+					case 223:
+						e.Replacement = 'Medikit';
+						break;
+					case 224:
+					case 225:
+					case 226:
+					case 227:
+					case 228:
+					case 229:
+					case 230:
+					case 231:
+					case 232:
+					case 233:
+						e.Replacement = 'ArmorBonus';
+						break;
+					case 234:
+					case 235:
+					case 236:
+					case 237:
+					case 238:
+					case 239:
+					case 240:
+					case 241:
+						e.Replacement = 'GreenArmor';
+						break;
+					case 242:
+					case 243:
+					case 244:
+					case 245:
+					case 246:
+					case 247:
+						e.Replacement = 'BlueArmor';
+						break;
+					case 248:
+						e.Replacement = 'Allmap';
+						break;
+					case 249:
+						e.Replacement = 'BlurSphere';
+						break;
+					case 250:
+						e.Replacement = 'Berserk';
+						break;
+					case 251:
+						e.Replacement = 'Infrared';
+						break;
+					case 252:
+						e.Replacement = 'InvulnerabilitySphere';
+						break;
+					case 253:
+						e.Replacement = 'RadSuit';
+						break;
+					case 254:
+						e.Replacement = 'Megasphere';
+						break;
+					case 255:
+						e.Replacement = 'Soulsphere';
+						break;
+					}
+				}
+				
+				break;
+		}
+
+		if(irreg.GetBool() == true)
+		{
+			if(
+				e.Replacee == 'BaronBall' || e.Replacee == 'CacodemonBall' || e.Replacee == 'DoomImpBall' ||
+				/* e.Replacee == 'Rocket' || */ e.Replacee == 'ArachnotronPlasma' || e.Replacee == 'ArchvileFire' ||
+				e.Replacee == 'FatShot' || e.Replacee == 'RevenantTracer'
+			) {
+				switch(Random[Replacement](0,6))
+				{
+				case 0:
+					e.Replacement = 'BaronBall';
+					break;
+				case 1:
+					e.Replacement = 'CacodemonBall';
+					break;
+				case 2:
+					e.Replacement = 'DoomImpBall';
+					break;
+				case 3:
+					e.Replacement = 'ArachnotronPlasma';
+					break;
+				case 4:
+					e.Replacement = 'ArchvileFire';
+					break;
+				case 5:
+					e.Replacement = 'FatShot';
+					break;
+				case 6:
+					e.Replacement = 'RevenantTracer';
+					break;
+				/* case 7:
+					e.Replacement = 'Rocket';
+					break; */
+				}
+			}
+		}
+	}
+}
+
+class SpawnedLostSoul : LostSoul {}
+
+class FixedPainElemental : PainElemental
+{
+    States
+    {
+        Missile:
+            PAIN D 5 A_FaceTarget;
+            PAIN E 5 A_FaceTarget;
+            PAIN F 5 BRIGHT A_FaceTarget;
+            PAIN F 0 BRIGHT A_PainAttack("SpawnedLostSoul");
+            Goto See;
+        Death:
+            PAIN H 8 BRIGHT;
+            PAIN I 8 BRIGHT A_Scream;
+            PAIN JK 8 BRIGHT;
+            PAIN L 8 BRIGHT A_PainDie("SpawnedLostSoul");
+            PAIN M 8 BRIGHT;
+            Stop;
+    }
+}
+
+class FixedZombieMan : ZombieMan
+{
+	Default { DropItem "DroppedClip"; }
+}
+
+class FixedWolfensteinSS : WolfensteinSS replaces WolfensteinSS
+{
+	Default { DropItem "DroppedClip"; }
+}
+
+class FixedShotgunGuy : ShotgunGuy
+{
+	Default { DropItem "DroppedShotgun"; }
+}
+
+class FixedChaingunGuy : ChaingunGuy
+{
+	Default { DropItem "DroppedChaingun"; }
+}
+
+class DroppedClip : Clip {}
+
+class DroppedShotgun : WeaponGiver
+{
+	Default { DropItem "Shotgun"; Inventory.PickupMessage "$GOTSHOTGUN"; }
+	States
+	{
+	Spawn:
+		SHOT A -1;
+		Stop;
+	}
+}
+
+class DroppedChaingun : WeaponGiver
+{
+	Default { DropItem "Chaingun"; Inventory.PickupMessage "$GOTCHAINGUN"; }
+	States
+	{
+	Spawn:
+		MGUN A -1;
+		Stop;
+	}
+}
