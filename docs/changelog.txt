@@ -1,4 +1,5 @@
 [????-??-??] v1.3:
+- Implemented WadSmoosh support (untested, play at your own risk).
 - Rockets no longer get randomized when Irregulator mode is active in Doom and Doom 2
   (basically a lazy man's workaround to the rocket launcher shooting random projectiles
   under said circumstances).
