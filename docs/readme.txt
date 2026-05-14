@@ -56,8 +56,8 @@ Compatibility with other gameplay mods is neither guaranteed nor necessarily pla
 
 To run the mod, all you need to do is drag the unzipped .pk3 over gzdoom.exe or use your
 launcher of choice to load the mod. If you downloaded the mod's source from GitHub, unzip
-the archive to your folder of choice and run either _build.bat or _build.sh, depending on
-your OS. This will generate a .pk3 file in the _build folder which can then be loaded in
+the archive to your folder of choice and run either build.bat or build.sh, depending on
+your OS. This will generate a .pk3 file in the _build/ folder which can then be loaded in
 GZDoom.
 
 
