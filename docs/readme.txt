@@ -45,6 +45,7 @@ doom.wad
 doom2.wad
 plutonia.wad
 tnt.wad
+doom_complete.pk3 (untested, play at your own risk)
 heretic.wad
 
 Compatibility with other gameplay mods is neither guaranteed nor necessarily planned.
