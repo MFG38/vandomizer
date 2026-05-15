@@ -1,3 +1,7 @@
+[2026-??-??] v1.3.1:
+- Added checks to prevent randomization of monsters that need to be killed for progress
+  in the relevant Master Levels in WadSmoosh.
+
 [2026-05-14] v1.3:
 - Implemented WadSmoosh support (untested, play at your own risk).
 - Rockets no longer get randomized when Irregulator mode is active in Doom and Doom 2
