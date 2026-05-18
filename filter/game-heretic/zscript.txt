@@ -158,7 +158,7 @@ class SpawningHandler : EventHandler
                 e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
                 e.Replacee == 'SkullRod')
                 {
-                    switch(Random[Replacement](0,12))
+                    switch(Random[Replacement](0,11))
                     {
                     case 0:
                     case 1:
@@ -169,22 +169,21 @@ class SpawningHandler : EventHandler
                         e.Replacement = 'Crossbow';
                         break;
                     case 4:
-                    case 5:
                         e.Replacement = 'Gauntlets';
                         break;
+                    case 5:
                     case 6:
-                    case 7:
                         e.Replacement = 'GoldWand';
                         break;
+                    case 7:
                     case 8:
-                    case 9:
                         e.Replacement = 'PhoenixRod';
                         break;
+                    case 9:
                     case 10:
-                    case 11:
                         e.Replacement = 'SkullRod';
                         break;
-                    case 12:
+                    case 11:
                         e.Replacement = 'Mace';
                         break;
                     }
@@ -460,7 +459,7 @@ class SpawningHandler : EventHandler
                 e.Replacee == 'GoldWand' || e.Replacee == 'Mace' || e.Replacee == 'PhoenixRod' ||
                 e.Replacee == 'SkullRod')
                 {
-                    switch(Random[Replacement](0,12))
+                    switch(Random[Replacement](0,11))
                     {
                     case 0:
                     case 1:
@@ -471,22 +470,21 @@ class SpawningHandler : EventHandler
                         e.Replacement = 'Crossbow';
                         break;
                     case 4:
-                    case 5:
                         e.Replacement = 'Gauntlets';
                         break;
+                    case 5:
                     case 6:
-                    case 7:
                         e.Replacement = 'GoldWand';
                         break;
+                    case 7:
                     case 8:
-                    case 9:
                         e.Replacement = 'PhoenixRod';
                         break;
+                    case 9:
                     case 10:
-                    case 11:
                         e.Replacement = 'SkullRod';
                         break;
-                    case 12:
+                    case 11:
                         e.Replacement = 'Mace';
                         break;
                     }
