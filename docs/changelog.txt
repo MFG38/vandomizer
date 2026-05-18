@@ -1,6 +1,7 @@
 [2026-??-??] v1.3.1:
 - Added checks to prevent randomization of monsters that need to be killed for progress
   in the relevant Master Levels in WadSmoosh.
+- Decreased chance of spawning a chainsaw or BFG in spawnmodes 1 and 2 across all Doom IWADs.
 
 [2026-05-14] v1.3:
 - Implemented WadSmoosh support (untested, play at your own risk).

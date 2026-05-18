@@ -140,24 +140,28 @@ class SpawningHandler : EventHandler
 				e.Replacee == 'PlasmaRifle' ||
 				e.Replacee == 'BFG9000')
 				{
-					switch(random[Replacement](0,5))
+					switch(random[Replacement](0,9))
 					{
 					case 0:
 						e.Replacement = 'Chainsaw';
 						break;
 					case 1:
+                    case 2:
 						e.Replacement = 'Shotgun';
 						break;
-					case 2:
+					case 3:
+                    case 4:
 						e.Replacement = 'Chaingun';
 						break;
-					case 3:
+					case 5:
+                    case 6:
 						e.Replacement = 'RocketLauncher';
 						break;
-					case 4:
+					case 7:
+                    case 8:
 						e.Replacement = 'PlasmaRifle';
 						break;
-					case 5:
+					case 9:
 						e.Replacement = 'BFG9000';
 						break;
 					}
@@ -513,24 +517,28 @@ class SpawningHandler : EventHandler
 				else if(e.Replacee == 'Chainsaw' || e.Replacee == 'Shotgun' ||e.Replacee == 'Chaingun' ||
 				e.Replacee == 'RocketLauncher' || e.Replacee == 'PlasmaRifle' || e.Replacee == 'BFG9000')
 				{
-					switch(random[Replacement](0,5))
+					switch(random[Replacement](0,9))
 					{
 					case 0:
 						e.Replacement = 'Chainsaw';
 						break;
 					case 1:
+                    case 2:
 						e.Replacement = 'Shotgun';
 						break;
-					case 2:
+					case 3:
+                    case 4:
 						e.Replacement = 'Chaingun';
 						break;
-					case 3:
+					case 5:
+                    case 6:
 						e.Replacement = 'RocketLauncher';
 						break;
-					case 4:
+					case 7:
+                    case 8:
 						e.Replacement = 'PlasmaRifle';
 						break;
-					case 5:
+					case 9:
 						e.Replacement = 'BFG9000';
 						break;
 					}
